@@ -2,7 +2,7 @@
 ### Correção do carregamento da interface — 14/10/2026
 Corrigido o formato do catálogo que deixava menus e o diálogo Sobre em inglês. O pacote agora usa os nomes das chaves esperados pelo carregador do Devin, atualiza instalações da mesma versão quando o conteúdo da tradução muda e renova o cache de idioma com backup. O Sobre mostra **Tradução PT-BR: Emerson Teles**. Os textos embutidos da tela inicial são traduzidos com análise lexical de JavaScript, incluindo recursos JSON e templates. O teste com o carregador real confirmou 20.267 de 21.220 mensagens traduzidas (95,5%).
 
-### Revisão do instalador — 13/10/2026
+### Revisão do instalador — 14/10/2026
 O instalador PowerShell foi recuperado após corrupção de aspas que impedia sua execução e agora carrega acentos corretamente com BOM UTF-8, sem mudar o código de página do CMD. Os metadados NLS são buscados na instalação detectada, inclusive quando está em outra unidade. Se ocorrer uma falha, o CMD permanece aberto para leitura. Nenhuma nova string de interface foi incluída nesta correção.
 
 

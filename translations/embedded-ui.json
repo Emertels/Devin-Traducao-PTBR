@@ -1,4 +1,13 @@
 {
+  "Sessions": "Sessões",
+  "Spaces": "Espaços",
+  "New Space": "Novo espaço",
+  "Review": "Revisão",
+  "Automations": "Automações",
+  "Security": "Segurança",
+  "Cloud settings": "Configurações da nuvem",
+  "Send (⏎)": "Enviar (⏎)",
+  "Test Recording": "Gravação de teste",
   "Sessions run on Devin's machine in the cloud": "As sessões são executadas na máquina do Devin na nuvem.",
   "Tests, debugs, and opens a PR when done": "Testa, depura e abre uma solicitação de pull ao concluir.",
   "Run multiple sessions in parallel without conflicts": "Execute várias sessões em paralelo sem conflitos.",

@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿param([switch]$NoPrompt)
+$ErrorActionPreference = 'Stop'
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 [Console]::InputEncoding = $utf8
 [Console]::OutputEncoding = $utf8
@@ -6,6 +7,7 @@ $OutputEncoding = $utf8
 try { $Host.UI.RawUI.WindowTitle = 'Restaurador PT-BR - Devin AI - Emerson Teles' } catch {}
 
 function Read-OpenChoice([string]$Prompt) {
+    if ($NoPrompt) { return $false }
     Write-Host $Prompt -NoNewline
     while ($true) {
         $key = [Console]::ReadKey($true)
@@ -16,7 +18,7 @@ function Read-OpenChoice([string]$Prompt) {
 function Reset-DevinCaches {
     $cacheRoot = Join-Path $env:APPDATA 'Devin'
     $suffix = Get-Date -Format 'yyyyMMdd-HHmmss'
-    foreach ($name in @('Cache', 'Code Cache', 'GPUCache', 'DawnGraphiteCache', 'DawnWebGPUCache')) {
+    foreach ($name in @('Cache', 'Code Cache', 'GPUCache', 'DawnGraphiteCache', 'DawnWebGPUCache', 'clp')) {
         $source = Join-Path $cacheRoot $name
         $destination = Join-Path $cacheRoot ($name + '.before-ptbr-' + $suffix)
         if (Test-Path -LiteralPath $source) {
@@ -125,8 +127,10 @@ try {
     exit 0
 } catch {
     Write-Host "`n[ERRO] $($_.Exception.Message)" -ForegroundColor Red
-    Write-Host 'Pressione uma tecla para fechar.' -ForegroundColor DarkGray
-    [void][Console]::ReadKey($true)
+    if (-not $NoPrompt) {
+        Write-Host 'Pressione uma tecla para fechar.' -ForegroundColor DarkGray
+        [void][Console]::ReadKey($true)
+    }
     exit 1
 }
 

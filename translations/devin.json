@@ -1,4 +1,7 @@
 {
+  "vs/platform/dialogs/electron-browser/dialog": {
+    "aboutDetail": "Versão do Devin Desktop: {0}\nCommit do Devin Desktop: {1}\nVersão do VS Code OSS: {2}\nData: {3}\nElectron: {4}\nChromium: {5}\nNode.js: {6}\nV8: {7}\nSO: {8}"
+  },
   "vs/platform/windsurfAuth/common/windsurfAuth": {
     "windsurfAccount": "Conta Devin",
     "windsurfUsage": "Uso do Devin"

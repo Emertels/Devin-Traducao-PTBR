@@ -4,6 +4,7 @@
 // and Devin-specific strings are added.
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 
 const [sourceDir, targetDir] = process.argv.slice(2);
 const appVersion = process.env.DEVIN_APP_VERSION || '1.0.0';
@@ -62,9 +63,11 @@ for (const [moduleId, entryKeys] of Object.entries(metadata.keys)) {
     const nlsIndex = nlsKeys.get(moduleId)?.get(key);
     const official = nlsIndex === undefined ? undefined : runtimeMessages[nlsIndex];
     const sourceText = source[localIndex];
-    const translated = moduleExtras[key] ?? base[String(localIndex)] ?? base[key] ?? official;
+    // Existing numeric catalogs are accepted only as an input for migration.
+    // Devin's shipped loader reads contents[moduleId][key], never local indices.
+    const translated = moduleExtras[key] ?? base[key] ?? base[String(localIndex)] ?? official;
     if (typeof translated === 'string' && translated.length && translated !== sourceText) {
-      localized[String(localIndex)] = translated;
+      localized[key] = translated;
     }
   }
   if (Object.keys(localized).length) mapped[moduleId] = localized;
@@ -74,8 +77,8 @@ const credit = '\r\nTradução PT-BR: Emerson Teles';
 for (const [moduleId, keys] of nlsKeys) {
   const localIndex = (metadata.keys[moduleId] || []).findIndex((item) => (typeof item === 'string' ? item : item.key) === 'aboutDetail');
   if (localIndex < 0) continue;
-  const about = mapped[moduleId]?.[String(localIndex)];
-  if (about && !about.includes('Tradução PT-BR: Emerson Teles')) mapped[moduleId][String(localIndex)] = about + credit;
+  const about = mapped[moduleId]?.aboutDetail;
+  if (about && !about.includes('Tradução PT-BR: Emerson Teles')) mapped[moduleId].aboutDetail = about + credit;
 }
 fs.writeFileSync(mainPath, JSON.stringify(main));
 
@@ -84,6 +87,11 @@ pkg.displayName = 'Tradução PT-BR para Devin — Emerson Teles';
 pkg.description = 'Pacote PT-BR adaptado para Devin Desktop, com base no pacote oficial Microsoft VS Code.';
 pkg.publisher = 'EmersonTeles';
 pkg.version = appVersion;
+const revision = crypto.createHash('sha256');
+for (const file of [__filename, extraPath, supplementalPath, path.resolve(__dirname, '..', 'translations', 'embedded-ui.json'), path.resolve(__dirname, 'patch-embedded-ui.cjs'), path.resolve(__dirname, 'vendor', 'acorn.cjs')]) {
+  revision.update(fs.readFileSync(file));
+}
+pkg.devinTranslationRevision = revision.digest('hex');
 pkg.engines.vscode = '^1.126.0';
 const localization = pkg.contributes.localizations.find(item => item.languageId.toLowerCase() === 'pt-br');
 if (localization) {

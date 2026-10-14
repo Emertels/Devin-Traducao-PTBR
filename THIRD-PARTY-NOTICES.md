@@ -228,3 +228,7 @@ Copyright (c) 2019-present SheetJS LLC
 
 ---------------------------------------------------------
 
+# Acorn 8.16.0
+
+O tokenizer JavaScript Acorn é distribuído em `tools/vendor/acorn.cjs` sob licença MIT. A licença original está em `tools/vendor/LICENSE-acorn.txt`. Ele é usado para localizar os textos embutidos sem tratar comentários e expressões regulares como strings.
+

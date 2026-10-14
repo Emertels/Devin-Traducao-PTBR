@@ -1,7 +1,8 @@
-Cobertura direta de chaves: 20274/21220 (95.5%)
-Lacunas: 946
+Cobertura direta de chaves: 20267/21220 (95.5%)
+Lacunas: 953
 vs/base/browser/ui/actionbar/actionViewItems	titleLabel	{0} ({1})
 vs/base/browser/ui/dialog/dialog	ok	OK
+vs/base/browser/ui/tree/abstractTree	filter	Filter
 vs/base/common/constants/appMetadata	app.description	Premier AI-powered IDE, built by Codeium.
 vs/base/common/constants/appMetadata	app.name	Devin
 vs/base/common/date	duration.s	{0}s
@@ -31,9 +32,7 @@ vs/editor/common/languages	suggestWidget.kind.struct	Struct
 vs/editor/common/languages	symbolAriaLabel	{0} ({1})
 vs/editor/contrib/find/browser/findWidget	findInputAriaLabelWithHint	{0}, {1}
 vs/editor/contrib/find/browser/findWidget	replaceInputAriaLabelWithHint	{0}, {1}
-vs/editor/contrib/gotoError/browser/gotoError	windsurfExplainProblem.label	Explain and Fix Problem
 vs/editor/contrib/gotoSymbol/browser/peek/referencesController	metaTitle.N	{0} ({1})
-vs/editor/contrib/hover/browser/markerHoverParticipant	windsurf explain and fix problem	Explain and Fix
 vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	disableDebounce	Whether debounce should be disabled for inline suggestions
 vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	windsurf.richGhostTextShown	Whether a custom windsurf rich ghost text is currently shown
 vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	windsurf.sideHintShown	Whether a custom windsurf side hint is currently shown
@@ -86,6 +85,7 @@ vs/platform/browserView/common/browserView	browserZoomPercent	{0}%
 vs/platform/browserView/electron-main/browserViewMainService	browser.contextMenu.copyLinkUrl	Copy URL
 vs/platform/dialogs/common/dialogs	okButton	&&OK
 vs/platform/keybinding/common/abstractKeybindingService	keybindingLabel	{0} ({1})
+vs/platform/languagePacks/common/localizedStrings	find	find
 vs/platform/list/browser/listService	workbenchConfigurationTitle	Workbench
 vs/platform/menubar/electron-main/menubar	confirmRestartUpdate.cancel	Cancel
 vs/platform/menubar/electron-main/menubar	confirmRestartUpdate.yes	Yes
@@ -257,6 +257,8 @@ vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonAriaLabe
 vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonAriaLabelWithoutKeybinding	New Session
 vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonTitle	New Session ({0})
 vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonTitleWithoutKeybinding	New Session
+vs/sessions/contrib/sessions/browser/views/sessionsViewActions	filter	Filter
+vs/sessions/contrib/sessions/browser/views/sessionsViewActions	find	Find Session
 vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.connecting	Establishing tunnel connection...
 vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.enabled	Remote session access is enabled
 vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.idle	Allow remote session access
@@ -409,6 +411,7 @@ vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostTerminalContr
 vs/workbench/contrib/chat/browser/agentSessions/agentHost/stateToProgressAdapter	ahp.running	Running {0}...
 vs/workbench/contrib/chat/browser/agentSessions/agentSessions	chat.session.providerLabel.agentHostCopilot	Copilot
 vs/workbench/contrib/chat/browser/agentSessions/agentSessions	chat.session.providerLabel.local	Local
+vs/workbench/contrib/chat/browser/agentSessions/agentSessionsActions	find	Find Agent Session
 vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	countPromptsOne	1 prompt
 vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	hooks	Hooks
 vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	itemAriaLabel	{0}. {1}
@@ -471,6 +474,7 @@ vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.loca
 vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.sessionType.local	Local
 vs/workbench/contrib/chat/browser/chatDebug/chatDebugToolCallContentRenderer	chatDebug.toolCall.statusLabel	Status: {0}
 vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay	0Of0	—
+vs/workbench/contrib/chat/browser/chatManagement/chatModelsWidget	filter	Filter
 vs/workbench/contrib/chat/browser/chatManagement/chatModelsWidget	status.ariaLabel	Status: {0}
 vs/workbench/contrib/chat/browser/chatParticipant.contribution	chat.viewContainer.label	Chat
 vs/workbench/contrib/chat/browser/chatSessions/chatSessions.contribution	chat	Chat
@@ -548,6 +552,7 @@ vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinClou
 vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.waking	The session machine starts. The explorer shows your local folders until its files arrive.
 vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFilesStatusView	Devin Cloud Files
 vs/workbench/contrib/extensions/browser/extensionEditor	cache size	Cache
+vs/workbench/contrib/extensions/browser/extensionEditor	find	Find
 vs/workbench/contrib/extensions/browser/extensionEditor	Marketplace Info	Marketplace
 vs/workbench/contrib/extensions/browser/extensionEditor	other	Local
 vs/workbench/contrib/extensions/browser/extensionEditor	vsix	VSIX
@@ -704,6 +709,7 @@ vs/workbench/contrib/mcp/common/mcpConfiguration	id	ID
 vs/workbench/contrib/mcp/common/mcpConfiguration	mcp.discovery.source.cursor-global	Cursor (Global)
 vs/workbench/contrib/mcp/common/mcpConfiguration	mcp.discovery.source.cursor-workspace	Cursor (Workspace)
 vs/workbench/contrib/mergeEditor/browser/view/editors/baseCodeEditorView	base	Base
+vs/workbench/contrib/notebook/browser/contrib/outline/notebookOutline	filter	Filter Entries
 vs/workbench/contrib/notebook/browser/controller/coreActions	notebookActions.category	Notebook
 vs/workbench/contrib/notebook/browser/controller/editActions	languageDescriptionConfigured	({0})
 vs/workbench/contrib/notebook/browser/controller/insertCellActions	notebookActions.menu.insertMarkdown	Markdown
@@ -725,6 +731,7 @@ vs/workbench/contrib/preferences/browser/settingsLayout	chatMcp	MCP
 vs/workbench/contrib/preferences/browser/settingsLayout	cursor	Cursor
 vs/workbench/contrib/preferences/browser/settingsLayout	devin	Devin
 vs/workbench/contrib/preferences/browser/settingsLayout	experimental	Experimental
+vs/workbench/contrib/preferences/browser/settingsLayout	find	Find
 vs/workbench/contrib/preferences/browser/settingsLayout	notebook	Notebook
 vs/workbench/contrib/preferences/browser/settingsLayout	proxy	Proxy
 vs/workbench/contrib/preferences/browser/settingsLayout	terminal	Terminal

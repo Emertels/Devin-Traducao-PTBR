@@ -1,64 +1,28 @@
 # Devin PT-BR — montagem e auditoria
 
-O instalador gera um pacote VSIX ajustado à versão encontrada no computador, usando o pacote-base oficial Português (Brasil) e os metadados NLS da instalação atual.
+Revisão de 14/10/2026 para Devin Desktop 3.10.48 / VS Code OSS 1.126.0.
 
-<!-- devin-current-audit -->
-## Auditoria vigente — Devin 1.126.0 / mecanismo 3.10.48
-O catálogo-base recebeu 51 entradas e esta rodada acrescentou duas traduções de rótulos visíveis específicos do Devin. Auditoria do pacote gerado: 20.276/21.220 mensagens NLS (95,6%), com 944 entradas sem tradução direta, em grande parte conteúdo técnico e de acessibilidade. Os scripts de instalação e restauração deduplicam caminhos encontrados por fontes diferentes e mantêm o backup vinculado à versão da instalação escolhida.
-<!-- /devin-current-audit -->
+O catálogo precisa usar `contents[moduleId][key]`, com o nome simbólico de cada chave de `nls.keys.json`. Um catálogo com índices numéricos é ignorado pelo carregador do Devin. A limpeza de cache é necessária após corrigir o conteúdo, mas não corrige um catálogo incompatível.
 
-## Montar manualmente
+## Montagem
 
-1. Extraia `assets/base-language-pack-ptbr-1.128.vsix` para uma pasta temporária.
-2. Defina `DEVIN_APP_VERSION` para a versão do Devin desejada.
+1. Extraia `assets/Devin-PTBR.vsix` para uma pasta temporária.
+2. Defina `DEVIN_APP_VERSION=1.126.0` e, para outra instalação, os caminhos `DEVIN_NLS_METADATA`, `DEVIN_NLS_KEYS` e `DEVIN_NLS_MESSAGES`.
 3. Execute `node tools/build-language-pack.cjs <pasta-extraida> <pasta-de-saida>`.
-4. Compacte o conteúdo da pasta de saída como VSIX.
+4. Compacte o conteúdo da pasta de saída como VSIX, sem adicionar uma pasta externa.
 
-O empacotador lê `nls.metadata.json`, `nls.keys.json` e `nls.messages.json` da instalação encontrada. `translations/devin.json` mantém os complementos próprios do Devin. Cada atualização do aplicativo deve passar por uma nova auditoria de catálogo.
+A base e o aplicativo devem ter a mesma versão. O pacote `base-language-pack-ptbr-1.128.vsix` é uma referência histórica e não é a base usada pelo instalador da versão 1.126.0.
 
-## Auditoria
+## Verificação
 
-`node tools/audit-catalog.cjs <nls.metadata.json> <main.i18n.json>` compara a cobertura com os arquivos NLS da instalação Devin 1.126.0.
+- `node tools/audit-catalog.cjs <nls.metadata.json> <main.i18n.json> --summary`: conta apenas as chaves que o carregador realmente procura e rejeita chaves desconhecidas.
+- `node tools/verify-shipped-nls.cjs <pasta-out-do-Devin> <main.i18n.json>`: extrai e executa o gerador NLS do aplicativo em uma pasta temporária isolada, sem iniciar Electron nem alterar o perfil do usuário. Verifica menus, campos do Sobre e crédito único. A extração é específica da compilação analisada e falha explicitamente se o carregador mudar.
+- `node tests/embedded-ui.cjs`: verifica recursos JSON, chaves de objeto, expressões regulares, comentários, templates e reaplicação.
 
-As chaves internas são índices NLS ordenados e precisam corresponder à versão-alvo; não copie um catálogo gerado para uma versão diferente sem reconstruí-lo.
-<!-- devin-status -->
-## Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+O carregador real confirmou 20.267 de 21.220 mensagens diferentes do inglês (95,5%). O mesmo resultado foi observado no cache criado pelo Devin instalado após a aplicação. As 953 entradas restantes incluem nomes, termos técnicos, textos de acessibilidade e outros rótulos ainda sem tradução direta; os textos embutidos fora do NLS são contados separadamente.
 
-- Foram acrescentadas 51 entradas ao catálogo-base e, nesta rodada, 2 rótulos visíveis específicos do Devin. O pacote gerado foi auditado com 20.276/21.220 mensagens NLS traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte técnicas ou de acessibilidade.
-- Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.
-- Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
-<!-- /devin-status -->
+## Instalador e restaurador
 
+Ambos oferecem `-NoPrompt` para execução sem a pergunta de abertura. O instalador calcula a revisão dos arquivos da tradução e a compara com a extensão instalada, evitando considerar um pacote antigo atualizado apenas por ter a mesma versão. A revisão precisa corresponder aos arquivos publicados no ZIP. O cache `clp` é arquivado antes de ser recriado. O restaurador usa os backups originais da versão selecionada e remove a extensão do mesmo identificador.
 
-- Devin AI: revisão de acentuação concluída; 0 textos de script precisaram de correção e 0 novas strings foram adicionadas nesta revisão.
-# Devin PT-BR — montagem e auditoria
-
-O instalador gera um pacote VSIX ajustado à versão encontrada no computador, usando o pacote-base oficial Português (Brasil) e os metadados NLS da instalação atual.
-
-<!-- devin-current-audit -->
-## Auditoria vigente — Devin 1.126.0 / mecanismo 3.10.48
-O catálogo-base recebeu 51 entradas e esta rodada acrescentou duas traduções de rótulos visíveis específicos do Devin. Auditoria do pacote gerado: 20.276/21.220 mensagens NLS (95,6%), com 944 entradas sem tradução direta, em grande parte conteúdo técnico e de acessibilidade. Os scripts de instalação e restauração deduplicam caminhos encontrados por fontes diferentes e mantêm o backup vinculado à versão da instalação escolhida.
-<!-- /devin-current-audit -->
-
-## Montar manualmente
-
-1. Extraia `assets/base-language-pack-ptbr-1.128.vsix` para uma pasta temporária.
-2. Defina `DEVIN_APP_VERSION` para a versão do Devin desejada.
-3. Execute `node tools/build-language-pack.cjs <pasta-extraida> <pasta-de-saida>`.
-4. Compacte o conteúdo da pasta de saída como VSIX.
-
-O empacotador lê `nls.metadata.json`, `nls.keys.json` e `nls.messages.json` da instalação encontrada. `translations/devin.json` mantém os complementos próprios do Devin. Cada atualização do aplicativo deve passar por uma nova auditoria de catálogo.
-
-## Auditoria
-
-`node tools/audit-catalog.cjs <nls.metadata.json> <main.i18n.json>` compara a cobertura com os arquivos NLS da instalação Devin 1.126.0.
-
-As chaves internas são índices NLS ordenados e precisam corresponder à versão-alvo; não copie um catálogo gerado para uma versão diferente sem reconstruí-lo.
-<!-- devin-status -->
-## Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
-
-- Foram acrescentadas 51 entradas ao catálogo-base e, nesta rodada, 2 rótulos visíveis específicos do Devin. O pacote gerado foi auditado com 20.276/21.220 mensagens NLS traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte técnicas ou de acessibilidade.
-- Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.
-- Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
-<!-- /devin-status -->
-
+O tradutor embutido usa Acorn 8.16.0, incluído sob licença MIT em `tools/vendor`. Os arquivos JavaScript são preparados antes da troca, e os backups originais são preservados.

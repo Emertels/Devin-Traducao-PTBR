@@ -25,14 +25,28 @@ for (const [moduleId, entryKeys] of Object.entries(metadata.keys)) {
     const text = runtimeIndex >= 0 ? runtime[runtimeIndex] : source[index];
     if (typeof text !== 'string' || !text.trim()) return;
     total++;
-    const localizedText = localized[String(index)] ?? localized[key];
+    // Match the lookup in the shipped Devin loader: contents[moduleId][key].
+    const localizedText = localized[key];
     if (typeof localizedText === 'string' && localizedText.length && localizedText !== text) translated++;
     else missing.push({ module: moduleId, key, text });
   });
 }
 console.log(`Cobertura direta de chaves: ${translated}/${total} (${(translated / total * 100).toFixed(1)}%)`);
 console.log(`Lacunas: ${missing.length}`);
-for (const item of missing) console.log(`${item.module}\t${item.key}\t${item.text.replace(/\s+/g, ' ')}`);
+const invalid = [];
+for (const [moduleId, entries] of Object.entries(catalog)) {
+  const validKeys = nlsKeys.get(moduleId);
+  for (const key of Object.keys(entries)) {
+    if (!validKeys?.has(key)) invalid.push(`${moduleId}\t${key}`);
+  }
+}
+if (invalid.length) {
+  console.error(`Catálogo incompatível: ${invalid.length} chaves não reconhecidas pelo carregador NLS.`);
+  process.exitCode = 1;
+}
+if (!process.argv.includes('--summary')) {
+  for (const item of missing) console.log(`${item.module}\t${item.key}\t${item.text.replace(/\s+/g, ' ')}`);
+}
 
 
 

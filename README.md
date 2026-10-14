@@ -1,4 +1,7 @@
 # 🤖 Devin AI Desktop — Tradução para Português do Brasil (PT-BR) 🇧🇷
+### Correção do carregamento da interface — 14/10/2026
+Corrigido o formato do catálogo que deixava menus e o diálogo Sobre em inglês. O pacote agora usa os nomes das chaves esperados pelo carregador do Devin, atualiza instalações da mesma versão quando o conteúdo da tradução muda e renova o cache de idioma com backup. O Sobre mostra **Tradução PT-BR: Emerson Teles**. Os textos embutidos da tela inicial são traduzidos com análise lexical de JavaScript, incluindo recursos JSON e templates. O teste com o carregador real confirmou 20.267 de 21.220 mensagens traduzidas (95,5%).
+
 ### Revisão do instalador — 13/10/2026
 O instalador PowerShell foi recuperado após corrupção de aspas que impedia sua execução e agora carrega acentos corretamente com BOM UTF-8, sem mudar o código de página do CMD. Os metadados NLS são buscados na instalação detectada, inclusive quando está em outra unidade. Se ocorrer uma falha, o CMD permanece aberto para leitura. Nenhuma nova string de interface foi incluída nesta correção.
 
@@ -6,13 +9,13 @@ O instalador PowerShell foi recuperado após corrupção de aspas que impedia su
 ![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/Idioma-Português%20(Brasil)-green?style=for-the-badge)
 
-Pacote portátil de localização oficial do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. A tradução cobre mais de 20.276 mensagens NLS (95,6% de cobertura direta), módulos exclusivos do Devin/Windsurf (agentes, editor, sessões em nuvem, alternâncias, SSH e painéis integrados), com instalador e restaurador automatizados.
+Pacote portátil de localização do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. A tradução cobre 20.267 mensagens NLS (95,5% de cobertura direta), módulos exclusivos do Devin/Windsurf (agentes, editor, sessões em nuvem, alternâncias, SSH e painéis integrados), com instalador e restaurador automatizados.
 
 <!-- devin-status -->
-## Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+## Estado da atualização — 14/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
 
-- O pacote gerado foi auditado contra os metadados NLS da instalação Devin 1.126.0: 20.276/21.220 mensagens traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte conteúdo técnico e de acessibilidade. A auditoria encontrou dois rótulos visíveis sem tradução — “Explain and Fix Problem” e “Explain and Fix” — agora mapeados em PT-BR.
-- Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.
+- O pacote gerado foi auditado contra os metadados NLS da instalação Devin 1.126.0: 20.267/21.220 mensagens traduzidas diretamente (95,5%), com 953 entradas restantes, em grande parte conteúdo técnico e de acessibilidade. A auditoria encontrou dois rótulos visíveis sem tradução — “Explain and Fix Problem” e “Explain and Fix” — agora mapeados em PT-BR.
+- Corrigido o catálogo incompatível, o reconhecimento da revisão instalada e os textos embutidos da tela inicial. O aplicativo foi aberto após a instalação, e seu cache NLS confirmou as mensagens em português e o crédito no Sobre.
 - Em 14/10/2026, o usuário confirmou que testou a instalação e a restauração do Devin; ambas estão funcionando. A correção de BOM UTF-8 do instalador também foi validada sintaticamente.
 - Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
 <!-- /devin-status -->
@@ -44,7 +47,7 @@ Pacote portátil de localização oficial do **Devin Desktop (Devin AI)** para P
 Este pacote foi desenvolvido para localizar profundamente as mensagens e interfaces do Devin Desktop para pt-BR com detecção automática de versão, backup e restauração:
 * **Portátil e Independente:** Pode ser executado de qualquer pasta (ex: `C:\Projetos`, `Área de Trabalho`, `Downloads`, `Pen-drive`, `HD Externo`), sem necessidade de conexão com a internet.
 * **Base Oficial e Extensões Devin:** Deriva do pacote oficial Português (Brasil) da Microsoft para VS Code, complementado cirurgicamente com 53 módulos e extensões exclusivas do Devin.
-* **Remontagem Dinâmica:** Detecta a versão do Devin, remonta o catálogo PT-BR para os índices NLS daquela versão e atualiza os checksums de `product.json` preservando a integridade do aplicativo.
+* **Remontagem Dinâmica:** Detecta a versão do Devin, remonta o catálogo PT-BR pelas chaves NLS daquela versão e atualiza os checksums de `product.json` preservando a integridade do aplicativo.
 * **Backup Automático e Seguro:** Salva a configuração original em `<pasta do Devin>\_backups\<versão>` sem sobrescrever backups prévios antes de qualquer alteração.
 * **Execução Limpa e Desacoplada:** Ao iniciar o Devin após a tradução, o aplicativo é aberto em processo isolado e independente, configurando explicitamente `--locale=pt-br`.
 
@@ -54,7 +57,7 @@ Este pacote foi desenvolvido para localizar profundamente as mensagens e interfa
 
 | Categoria | Detalhes da Localização |
 | :--- | :--- |
-| **Catálogo NLS (20.276+ Mensagens)** | Cobertura de 95,6% das mensagens do Devin Desktop, abrangendo menus, comandos, sessões na nuvem, alternância Agente/Editor, diagnósticos, barra lateral e atalhos. |
+| **Catálogo NLS (20.267+ Mensagens)** | Cobertura de 95,5% das mensagens do Devin Desktop, abrangendo menus, comandos, sessões na nuvem, alternância Agente/Editor, diagnósticos, barra lateral e atalhos. |
 | **Módulos do Devin/Windsurf** | Telas de boas-vindas, configurações do modelo, alternância entre chat e editor de código, SSH para agentes remotos e comandos de interface. |
 | **Diálogo "Sobre o Devin"** | Crédito oficial integrado: *"Tradução PT-BR: Emerson Teles"* visível diretamente na caixa Sobre em português. |
 | **Ações de IA e Diagnóstico** | Localização de botões como *"Explicar e corrigir o problema"* (*Explain and Fix Problem*) e orientações de execução de agentes. |
@@ -66,7 +69,7 @@ Este pacote foi desenvolvido para localizar profundamente as mensagens e interfa
 
 Diferente de métodos manuais que causam inconsistências de versão, este pacote conta com o **`core/instalar.ps1`** e **`tools/build-language-pack.cjs`**:
 * **Busca em Camadas (`Find-Installations.ps1`):** Localiza a instalação ativa através de processos em execução, chaves de registro do Windows e varredura recursiva de unidades montadas.
-* **Remontagem de Índices:** Mapeia os identificadores numéricos exatos da versão instalada, evitando mensagens trocadas ou descompassadas.
+* **Chaves NLS:** Grava os nomes simbólicos da versão instalada; o carregador do Devin transforma essas chaves na lista final de mensagens.
 * **Injeção Segura:** Atualiza checksums de `product.json` para permitir que o Electron carregue os bundles sem alertas de corrupção.
 
 ---
@@ -82,7 +85,8 @@ Devin-Traducao-PTBR/
 ├── tools/
 │   ├── audit-catalog.cjs               # Auditoria estática de chaves e lacunas
 │   ├── build-language-pack.cjs         # Construtor dinâmico do pacote de idioma
-│   └── EmbeddedUiLiteralReplacer.cs    # Substituidor de literais da interface embutida
+│   ├── patch-embedded-ui.cjs           # Tokenizador de strings, templates e recursos JSON
+│   └── vendor/                        # Acorn e sua licença MIT
 ├── translations/
 │   ├── devin.json                      # Catálogo central de traduções do Devin
 │   ├── devin-complemento.json          # Complementos e termos específicos

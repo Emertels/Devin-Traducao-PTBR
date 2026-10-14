@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿param([switch]$NoPrompt)
+$ErrorActionPreference = 'Stop'
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 [Console]::InputEncoding = $utf8
 [Console]::OutputEncoding = $utf8
@@ -6,6 +7,7 @@ $OutputEncoding = $utf8
 try { $Host.UI.RawUI.WindowTitle = 'Instalador PT-BR - Devin AI - Emerson Teles' } catch {}
 
 function Read-OpenChoice([string]$Prompt) {
+    if ($NoPrompt) { return $false }
     Write-Host $Prompt -NoNewline
     while ($true) {
         $key = [Console]::ReadKey($true)
@@ -85,7 +87,7 @@ function Stop-DevinWindows {
 function Reset-DevinCaches {
     $cacheRoot = Join-Path $env:APPDATA 'Devin'
     $suffix = Get-Date -Format 'yyyyMMdd-HHmmss'
-    foreach ($name in @('Cache', 'Code Cache', 'GPUCache', 'DawnGraphiteCache', 'DawnWebGPUCache')) {
+    foreach ($name in @('Cache', 'Code Cache', 'GPUCache', 'DawnGraphiteCache', 'DawnWebGPUCache', 'clp')) {
         $source = Join-Path $cacheRoot $name
         $destination = Join-Path $cacheRoot ($name + '.before-ptbr-' + $suffix)
         if (Test-Path -LiteralPath $source) {
@@ -94,6 +96,19 @@ function Reset-DevinCaches {
             Move-Item -LiteralPath $source -Destination $destination
         }
     }
+}
+
+function Get-DevinTranslationRevision([string]$Root) {
+    $hash = [Security.Cryptography.SHA256]::Create()
+    $buffer = [IO.MemoryStream]::new()
+    try {
+        foreach ($relative in @('tools\build-language-pack.cjs', 'translations\devin.json', 'translations\devin-complemento.json', 'translations\embedded-ui.json', 'tools\patch-embedded-ui.cjs', 'tools\vendor\acorn.cjs')) {
+            $bytes = [IO.File]::ReadAllBytes((Join-Path $Root $relative))
+            $buffer.Write($bytes, 0, $bytes.Length)
+        }
+        $buffer.Position = 0
+        return ([BitConverter]::ToString($hash.ComputeHash($buffer))).Replace('-', '').ToLowerInvariant()
+    } finally { $buffer.Dispose(); $hash.Dispose() }
 }
 
 function Get-DevinFileChecksum([string]$Path) {
@@ -127,23 +142,10 @@ function Update-DevinIntegrityChecksums([string]$Install) {
 
 function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Root) {
     $translationsPath = Join-Path $Root 'translations\embedded-ui.json'
-    $translations = ConvertFrom-Json -InputObject ([IO.File]::ReadAllText($translationsPath))
-    $replacerPath = Join-Path $Root 'tools\EmbeddedUiLiteralReplacer.cs'
+    $replacerPath = Join-Path $Root 'tools\patch-embedded-ui.cjs'
     if (-not (Test-Path -LiteralPath $replacerPath)) { throw 'O otimizador de textos internos está ausente.' }
-    if (-not ('DevinEmbeddedUiLiteralReplacer' -as [type])) { Add-Type -Path $replacerPath | Out-Null }
-    $literalMap = [System.Collections.Generic.Dictionary[string,string]]::new([System.StringComparer]::Ordinal)
-    foreach ($entry in $translations.PSObject.Properties) {
-        $source = [string]$entry.Name
-        $localized = [string]$entry.Value
-        foreach ($quote in @('"', "'")) {
-            $sourceLiteral = $quote + $source.Replace('\', '\\').Replace($quote, '\' + $quote) + $quote
-            $localizedLiteral = $quote + $localized.Replace('\', '\\').Replace($quote, '\' + $quote) + $quote
-            $literalMap[$sourceLiteral] = $localizedLiteral
-            $literalMap[$localizedLiteral] = $localizedLiteral
-        }
-    }
-    $literalMap['"Send (\u23CE)"'] = '"Enviar (\u23CE)"'
-    $literalMap['"Enviar (\u23CE)"'] = '"Enviar (\u23CE)"'
+    $patchNode = Get-Command node -ErrorAction SilentlyContinue
+    if (-not $patchNode) { throw 'Node.js é necessário para traduzir os textos internos do Devin.' }
     $relativeFiles = @('resources\app\out\vs\workbench\workbench.desktop.main.js', 'resources\app\out\vs\workbench\windsurf-chat-client\index.js', 'resources\app\out\vs\sessions\sessions.desktop.main.js', 'resources\app\node_modules\@exa\chat-client\index.js')
     $changed = New-Object System.Collections.ArrayList
     $matchCount = 0
@@ -154,14 +156,12 @@ function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Ro
         if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
         $fileInfo = Get-Item -LiteralPath $path
         Write-Host "  [$fileNumber/$($relativeFiles.Count)] Traduzindo textos internos: $(Split-Path -Leaf $relativeFile) ($([math]::Round($fileInfo.Length / 1MB, 1)) MB)..." -ForegroundColor DarkGray
-        $original = [IO.File]::ReadAllText($path)
-        $replaceResult = [DevinEmbeddedUiLiteralReplacer]::Replace($original, $literalMap)
-        $matchCount += $replaceResult.MatchCount
-        if ($replaceResult.MatchCount -eq 0) { continue }
-        $updated = [regex]::Replace($replaceResult.Text, '(?<=`)Start recording(?=\$\{)', 'Iniciar gravação')
-        $updated = [regex]::Replace($updated, '(?<=`)Stop recording(?=\$\{)', 'Parar gravação')
-        $updated = $updated.Replace('"Test Recording"', '"Gravação de teste"')
-        if ($updated -cne $original) { [void]$changed.Add([pscustomobject]@{ Path = $path; RelativePath = $relativeFile; Contents = $updated }) }
+        $staged = $path + ".ptbr-stage-$PID"
+        $resultJson = & $patchNode.Source $replacerPath $translationsPath $path $staged
+        if ($LASTEXITCODE -ne 0) { throw "Falha ao analisar os textos internos de $relativeFile." }
+        $replaceResult = $resultJson | ConvertFrom-Json
+        $matchCount += $replaceResult.matchCount
+        if ($replaceResult.changed) { [void]$changed.Add([pscustomobject]@{ Path = $path; RelativePath = $relativeFile; StagedPath = $staged }) }
     }
     if ($matchCount -eq 0) { throw 'Não encontrei os textos internos do Devin para traduzir nesta versão.' }
     foreach ($item in $changed) {
@@ -170,7 +170,7 @@ function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Ro
             New-Item -ItemType Directory -Path (Split-Path -Parent $backupPath) -Force | Out-Null
             Copy-Item -LiteralPath $item.Path -Destination $backupPath
         }
-        [IO.File]::WriteAllText($item.Path, $item.Contents, [System.Text.UTF8Encoding]::new($false))
+        Move-Item -LiteralPath $item.StagedPath -Destination $item.Path -Force
     }
     Update-DevinIntegrityChecksums $Install
     return $changed.Count
@@ -240,7 +240,13 @@ try {
     if ((Test-Path -LiteralPath $langpacks) -and -not (Test-Path -LiteralPath $langpackBackup)) { Copy-Item -LiteralPath $langpacks -Destination $langpackBackup }
     $list = & $cli --extensions-dir $extensionsDir --list-extensions --show-versions 2>$null | Out-String
     $expectedExtension = '(?im)emersonteles\.devin-language-pack-pt-br@' + [regex]::Escape($engineVersion)
-    if ($list -match $expectedExtension -and (Select-String -LiteralPath $argv -Pattern '"locale"\s*:\s*"pt-br"' -Quiet)) {
+    $expectedRevision = Get-DevinTranslationRevision $root
+    $installedManifest = Join-Path $extensionsDir "emersonteles.devin-language-pack-pt-br-$engineVersion\package.json"
+    $installedRevision = $null
+    if (Test-Path -LiteralPath $installedManifest) {
+        try { $installedRevision = ([IO.File]::ReadAllText($installedManifest) | ConvertFrom-Json).devinTranslationRevision } catch {}
+    }
+    if ($list -match $expectedExtension -and $installedRevision -ceq $expectedRevision -and (Select-String -LiteralPath $argv -Pattern '"locale"\s*:\s*"pt-br"' -Quiet)) {
         Write-Host "A versão $version já está traduzida para PT-BR." -ForegroundColor Green
         $stage = 'atualização das traduções internas e dos checksums'
         Stop-DevinWindows
@@ -273,6 +279,8 @@ try {
         $stage = 'geração do pacote de idioma'
         & $node.Source $builder $sourceDir $buildDir
         if ($LASTEXITCODE -ne 0) { throw 'Não foi possível gerar o pacote compatível com esta versão do Devin.' }
+        & $node.Source (Join-Path $root 'tools\audit-catalog.cjs') $env:DEVIN_NLS_METADATA (Join-Path $buildDir 'extension\translations\main.i18n.json') --summary
+        if ($LASTEXITCODE -ne 0) { throw 'O catálogo gerado não corresponde às chaves que o Devin carrega.' }
         $builtZip = Join-Path $workDir 'Devin-PTBR.zip'
         $vsix = Join-Path $workDir 'Devin-PTBR.vsix'
         [System.IO.Compression.ZipFile]::CreateFromDirectory($buildDir, $builtZip, [System.IO.Compression.CompressionLevel]::Optimal, $false)

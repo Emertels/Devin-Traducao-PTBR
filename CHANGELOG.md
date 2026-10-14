@@ -1,4 +1,16 @@
 # Histórico de Alterações
+### Correção do carregamento PT-BR — Devin Desktop 1.126.0 / 3.10.48 — 14/10/2026
+- Corrigido o catálogo para gravar os nomes simbólicos de `nls.keys.json`, conforme o carregador distribuído com o Devin. O catálogo numérico anterior era ignorado e produzia um cache em inglês; limpar o cache sozinho não resolvia.
+- O instalador compara a revisão do conteúdo da tradução, além da versão do aplicativo e do locale, para atualizar instalações que ainda tenham o catálogo incompatível.
+- O diálogo Sobre usa os campos específicos do Devin e mostra `Tradução PT-BR: Emerson Teles` uma única vez, preservando a ordem correta de versões, commit e data.
+- A tradução dos textos embutidos usa o tokenizer Acorn, cobre os recursos JSON e templates, e preserva as chaves dos objetos, comentários e expressões regulares. Adicionados rótulos da tela inicial, incluindo espaços, sessões, automações e configurações da nuvem.
+- Instalador e restaurador renovam o cache NLS com cópia de segurança. Ambos permitem execução sem perguntas pelo parâmetro `-NoPrompt`.
+- O teste com o código real do carregador confirmou 20.267/21.220 mensagens diferentes do inglês (95,5%), incluindo menus e crédito; o catálogo anterior falhou no mesmo teste.
+
+### Correção do cache de idioma — Devin Desktop 1.126.0 — 14/10/2026
+- O instalador e o restaurador agora renovam também o cache NLS (`AppData\Roaming\Devin\clp`), que podia manter mensagens em inglês e ocultar traduções já presentes no pacote, inclusive o crédito no diálogo Sobre.
+- O cache anterior é preservado com sufixo de data e hora antes de ser renovado.
+
 ### Codificação do instalador Devin — 13/10/2026
 - Corrigido o `core/instalar.ps1`, salvo sem BOM: o Windows PowerShell lia as mensagens UTF-8 como ANSI e corrompia acentos no console. Agora o arquivo usa BOM UTF-8, como os demais scripts PowerShell.
 - Mantidos os lançadores sem chcp 65001; o código de página do CMD não é alterado.

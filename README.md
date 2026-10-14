@@ -9,7 +9,7 @@ O instalador PowerShell foi recuperado após corrupção de aspas que impedia su
 Pacote portátil de localização oficial do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. A tradução cobre mais de 20.276 mensagens NLS (95,6% de cobertura direta), módulos exclusivos do Devin/Windsurf (agentes, editor, sessões em nuvem, alternâncias, SSH e painéis integrados), com instalador e restaurador automatizados.
 
 <!-- devin-status -->
-## Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+## Estado da atualização — 14/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
 
 - O pacote gerado foi auditado contra os metadados NLS da instalação Devin 1.126.0: 20.276/21.220 mensagens traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte conteúdo técnico e de acessibilidade. A auditoria encontrou dois rótulos visíveis sem tradução — “Explain and Fix Problem” e “Explain and Fix” — agora mapeados em PT-BR.
 - Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.

@@ -1,0 +1,60 @@
+TRADUÇÃO PT-BR PARA DEVIN DESKTOP
+Tradução PT-BR: Emerson Teles
+
+===== DEVIN-STATUS =====
+Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+
+• Foram acrescentadas 51 entradas ao catálogo-base e, nesta rodada, 2 rótulos visíveis específicos do Devin. O pacote gerado foi auditado com 20.276/21.220 mensagens NLS traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte técnicas ou de acessibilidade.
+• Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.
+• Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
+===== /DEVIN-STATUS =====
+
+INSTALAÇÃO
+1. Extraia o pacote para uma pasta local.
+2. Execute Instalar-Traducao.bat.
+3. O instalador detecta a versão do Devin e gera o pacote PT-BR compatível com o catálogo dessa versão.
+4. A configuração, product.json e bundles originais são salvos em <pasta raiz do Devin>\_backups\<versão>. Um backup já existente nunca é substituído.
+5. Pressione S para abrir o Devin ao terminar. Enter fecha o instalador sem abrir o aplicativo.
+
+ATUALIZAÇÕES
+Depois que o Devin for atualizado, execute novamente o instalador. Ele detectará a nova versão, criará uma nova pasta de backup se necessário e reconstruirá as traduções para essa versão. Na mesma versão, mantém o backup original existente e atualiza o pacote se a versão dele estiver desatualizada.
+
+RESTAURAÇÃO
+Execute Restaurar-Original.bat. O pacote PT-BR será removido e a configuração, product.json e bundles originais serão recuperados do backup.
+
+Os bundles traduzidos e seus checksums são salvos com backup para restauração. O Devin precisa ser reiniciado para aplicar o idioma.
+
+Auditoria do pacote PT-BR para Devin 1.126.0: 20.276/21.220 mensagens NLS cobertas (95,6%); 944 entradas sem tradução direta incluem conteúdo técnico e de acessibilidade. O relatório de lacunas inclui recursos opcionais, mensagens de acessibilidade, termos técnicos e nomes que podem permanecer em inglês; consulte CATALOGO.md.
+
+O pacote-base Português (Brasil) vem do projeto oficial de localização do VS Code. Consulte LICENSE-MICROSOFT.md e THIRD-PARTY-NOTICES.md.
+
+- Devin AI: corrigida a leitura dos acentos no instalador com BOM UTF-8; nenhum `chcp 65001` foi adicionado e o código de página do CMD permanece inalterado.
+TRADUÇÃO PT-BR PARA DEVIN DESKTOP
+Tradução PT-BR: Emerson Teles
+
+===== DEVIN-STATUS =====
+Estado da atualização — 13/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+
+• Foram acrescentadas 51 entradas ao catálogo-base e, nesta rodada, 2 rótulos visíveis específicos do Devin. O pacote gerado foi auditado com 20.276/21.220 mensagens NLS traduzidas diretamente (95,6%), com 944 entradas restantes, em grande parte técnicas ou de acessibilidade.
+• Os textos mostrados nas capturas desta rodada já estavam no catálogo, portanto não foram contados de novo. A revisão de novas strings específicas do Devin fica para uma próxima rodada.
+• Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
+===== /DEVIN-STATUS =====
+
+INSTALAÇÃO
+1. Extraia o pacote para uma pasta local.
+2. Execute Instalar-Traducao.bat.
+3. O instalador detecta a versão do Devin e gera o pacote PT-BR compatível com o catálogo dessa versão.
+4. A configuração, product.json e bundles originais são salvos em <pasta raiz do Devin>\_backups\<versão>. Um backup já existente nunca é substituído.
+5. Pressione S para abrir o Devin ao terminar. Enter fecha o instalador sem abrir o aplicativo.
+
+ATUALIZAÇÕES
+Depois que o Devin for atualizado, execute novamente o instalador. Ele detectará a nova versão, criará uma nova pasta de backup se necessário e reconstruirá as traduções para essa versão. Na mesma versão, mantém o backup original existente e atualiza o pacote se a versão dele estiver desatualizada.
+
+RESTAURAÇÃO
+Execute Restaurar-Original.bat. O pacote PT-BR será removido e a configuração, product.json e bundles originais serão recuperados do backup.
+
+Os bundles traduzidos e seus checksums são salvos com backup para restauração. O Devin precisa ser reiniciado para aplicar o idioma.
+
+Auditoria do pacote PT-BR para Devin 1.126.0: 20.276/21.220 mensagens NLS cobertas (95,6%); 944 entradas sem tradução direta incluem conteúdo técnico e de acessibilidade. O relatório de lacunas inclui recursos opcionais, mensagens de acessibilidade, termos técnicos e nomes que podem permanecer em inglês; consulte CATALOGO.md.
+
+O pacote-base Português (Brasil) vem do projeto oficial de localização do VS Code. Consulte LICENSE-MICROSOFT.md e THIRD-PARTY-NOTICES.md.

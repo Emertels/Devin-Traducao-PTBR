@@ -1,0 +1,948 @@
+Cobertura direta de chaves: 20274/21220 (95.5%)
+Lacunas: 946
+vs/base/browser/ui/actionbar/actionViewItems	titleLabel	{0} ({1})
+vs/base/browser/ui/dialog/dialog	ok	OK
+vs/base/common/constants/appMetadata	app.description	Premier AI-powered IDE, built by Codeium.
+vs/base/common/constants/appMetadata	app.name	Devin
+vs/base/common/date	duration.s	{0}s
+vs/base/common/errorMessage	stackTrace.format	{0}: {1}
+vs/base/common/keybindingLabels	altKey	Alt
+vs/base/common/keybindingLabels	altKey.long	Alt
+vs/base/common/keybindingLabels	cmdKey.long	Command
+vs/base/common/keybindingLabels	ctrlKey	Ctrl
+vs/base/common/keybindingLabels	ctrlKey.long	Control
+vs/base/common/keybindingLabels	shiftKey	Shift
+vs/base/common/keybindingLabels	shiftKey.long	Shift
+vs/base/common/keybindingLabels	superKey	Super
+vs/base/common/keybindingLabels	superKey.long	Super
+vs/base/common/keybindingLabels	windowsKey	Windows
+vs/base/common/keybindingLabels	windowsKey.long	Windows
+vs/base/common/policy	interactiveSessionConfigurationTitle	Chat
+vs/code/node/cliProcessMain	cli	CLI
+vs/editor/browser/controller/editContext/native/screenReaderSupport	editor	editor
+vs/editor/browser/controller/editContext/textArea/textAreaEditContext	editor	editor
+vs/editor/common/config/editorConfigurationSchema	editorConfigurationTitle	Editor
+vs/editor/common/editorContextKeys	editorHasMultilineSelection	Whether the editor has a multiline selection
+vs/editor/common/languages	Interface	interface
+vs/editor/common/languages	Namespace	namespace
+vs/editor/common/languages	Struct	struct
+vs/editor/common/languages	suggestWidget.kind.interface	Interface
+vs/editor/common/languages	suggestWidget.kind.struct	Struct
+vs/editor/common/languages	symbolAriaLabel	{0} ({1})
+vs/editor/contrib/find/browser/findWidget	findInputAriaLabelWithHint	{0}, {1}
+vs/editor/contrib/find/browser/findWidget	replaceInputAriaLabelWithHint	{0}, {1}
+vs/editor/contrib/gotoError/browser/gotoError	windsurfExplainProblem.label	Explain and Fix Problem
+vs/editor/contrib/gotoSymbol/browser/peek/referencesController	metaTitle.N	{0} ({1})
+vs/editor/contrib/hover/browser/markerHoverParticipant	windsurf explain and fix problem	Explain and Fix
+vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	disableDebounce	Whether debounce should be disabled for inline suggestions
+vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	windsurf.richGhostTextShown	Whether a custom windsurf rich ghost text is currently shown
+vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	windsurf.sideHintShown	Whether a custom windsurf side hint is currently shown
+vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys	windsurf.tabActionShown	Whether a custom windsurf tab action is currently shown
+vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess	class	classes ({0})
+vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess	interface	interfaces ({0})
+vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess	namespace	namespaces ({0})
+vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess	struct	structs ({0})
+vs/editor/contrib/quickAccess/browser/gotoSymbolQuickAccess	unknown	unknown ({0})
+vs/editor/contrib/snippet/browser/snippetVariables	JanuaryShort	Jan
+vs/editor/contrib/snippet/browser/snippetVariables	JulyShort	Jul
+vs/editor/contrib/snippet/browser/snippetVariables	JuneShort	Jun
+vs/editor/contrib/snippet/browser/snippetVariables	MarchShort	Mar
+vs/editor/contrib/snippet/browser/snippetVariables	NovemberShort	Nov
+vs/editor/contrib/suggest/browser/suggestController	inDebugRepl	True when focus is in the debug console, false otherwise.
+vs/editor/contrib/suggest/browser/suggestWidget	label	{0}, {1}
+vs/editor/contrib/suggest/browser/suggestWidget	label.desc	{0}, {1}, {2}
+vs/editor/contrib/suggest/browser/suggestWidget	label.detail	{0} {1}, {2}
+vs/editor/contrib/suggest/browser/suggestWidget	label.full	{0} {1}, {2}, {3}
+vs/editor/contrib/suggest/browser/suggestWidgetRenderer	acceptSuggestion	Accept suggestion
+vs/platform/actions/browser/menuEntryActionViewItem	content	{0} ({1})
+vs/platform/agentHost/browser/agentHostConnectionsService	agentHost.connection.ambient	Local
+vs/platform/agentHost/common/agentHostSchema	agentHost.config.mcpServers.url.title	URL
+vs/platform/agentHost/common/agentHostSchema	agentHost.sessionConfig.mode.autopilot	Autopilot
+vs/platform/agentHost/node/agentSideEffects	agentHostRename.renamed	Renamed: {0}
+vs/platform/agentHost/node/claude/claudeAgent	claudeAgent.displayName	Claude
+vs/platform/agentHost/node/claude/claudeToolDisplay	claude.toolComplete.generic	Used "{0}"
+vs/platform/agentHost/node/claude/customizations/claudeSdkCustomizationBundler	claude.discovered.displayName	Discovered in Claude
+vs/platform/agentHost/node/codex/codexAgent	codex.sessionConfig.sandboxMode	Sandbox
+vs/platform/agentHost/node/codex/codexAgent	codexAgent.displayName	Codex
+vs/platform/agentHost/node/copilot/copilotAgent	agentHost.sessionConfig.branch	Branch
+vs/platform/agentHost/node/copilot/copilotAgent	copilot.modelContextTier.default	Default
+vs/platform/agentHost/node/copilot/copilotAgent	copilot.modelContextTier.description	Selects the context window size for this model.
+vs/platform/agentHost/node/copilot/copilotAgent	copilot.modelContextTier.longerSessions	Longer sessions
+vs/platform/agentHost/node/copilot/copilotAgent	copilot.modelContextTier.longerSessionsNoCompaction	Longer sessions without compaction
+vs/platform/agentHost/node/copilot/copilotAgent	copilot.modelContextTier.title	Context Size
+vs/platform/agentHost/node/copilot/copilotAgentSession	agentHost.planReview.viewPlanLink	View full plan
+vs/platform/agentHost/node/copilot/copilotAgentSession	copilotSlashCommand.unsupportedRuntimeResult	The /{0} command returned an unsupported result.
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.compact.description	Free up context by compacting the conversation history
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.env.description	Show loaded environment details
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.plan.description	Create an implementation plan before coding
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.research.description	Run deep research on a topic using search and web sources
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.review.description	Run code review agent to analyze changes
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.rubberDuck.description	Get an independent critique of the current approach
+vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider	copilotSlashCommand.securityReview.description	Analyze staged and unstaged changes for security vulnerabilities
+vs/platform/agentHost/node/copilot/copilotToolDisplay	toolComplete.generic	Used "{0}"
+vs/platform/agentHost/node/copilot/copilotToolDisplay	toolInvoke.generic	Using "{0}"
+vs/platform/agentHost/node/copilot/copilotToolDisplay	toolName.patch	Patch
+vs/platform/browserView/common/browserView	browserZoomPercent	{0}%
+vs/platform/browserView/electron-main/browserViewMainService	browser.contextMenu.copyLinkUrl	Copy URL
+vs/platform/dialogs/common/dialogs	okButton	&&OK
+vs/platform/keybinding/common/abstractKeybindingService	keybindingLabel	{0} ({1})
+vs/platform/list/browser/listService	workbenchConfigurationTitle	Workbench
+vs/platform/menubar/electron-main/menubar	confirmRestartUpdate.cancel	Cancel
+vs/platform/menubar/electron-main/menubar	confirmRestartUpdate.yes	Yes
+vs/platform/menubar/electron-main/menubar	mTerminal	&&Terminal
+vs/platform/native/electron-main/nativeHostMainService	devinCliExists	A file already exists at {0}. Maybe it's already installed?
+vs/platform/native/electron-main/nativeHostMainService	devinCliMissing	Unable to find the Devin CLI binary. It may not be bundled with this version of {0}.
+vs/platform/native/electron-main/nativeHostMainService	devinCliRemoveLegacyFailed	Unable to replace the existing Devin CLI at {0}. Close any running `{1}` processes and try again.
+vs/platform/native/electron-main/nativeHostMainService	noSymlinksCreated	Unable to install the shell command '{0}'.
+vs/platform/native/electron-main/nativeHostMainService	noSymlinksUninstalled	Unable to uninstall the shell command '{0}'.
+vs/platform/native/electron-main/nativeHostMainService	ok	&&OK
+vs/platform/native/electron-main/nativeHostMainService	targetMissing	Unable to find shell script at '{0}'
+vs/platform/native/electron-main/nativeHostMainService	trace.ok	&&OK
+vs/platform/process/electron-main/processMainService	local	Local
+vs/platform/quickinput/browser/commandsQuickAccess	commandPickAriaLabelWithKeybinding	{0}, {1}
+vs/platform/quickinput/browser/helpQuickAccess	helpPickAriaLabel	{0}, {1}
+vs/platform/quickinput/browser/quickInput	ok	OK
+vs/platform/quickinput/browser/quickInput	quickInput.steps	{0}/{1}
+vs/platform/quickinput/browser/quickInputController	ok	OK
+vs/platform/request/common/request	httpConfigurationTitle	HTTP
+vs/platform/telemetry/common/telemetryService	telemetry.windsurfCodeSnippet	To manage how {0} stores code snippet telemetry, visit your [Devin Profile Settings]({1}). 
+vs/platform/terminal/common/terminalLogService	terminalLoggerName	Terminal
+vs/platform/terminal/node/ptyHostMain	ptyHost	Pty Host
+vs/platform/theme/common/colors/editorColors	diffEditor.windsurfRemovedTextBackground	Background color for deleted text in Devin inline completions.
+vs/platform/theme/common/colors/windsurfCustomColors	listHoverBackgroundSubtle	A subtler version of list.hoverBackground, a theme-aware hover color that often has a bit more color than a neutral translucent gray.
+vs/platform/theme/common/colors/windsurfCustomColors	starkButtonBackground	The background color used in stark buttons.
+vs/platform/theme/common/colors/windsurfCustomColors	starkButtonForeground	The foreground color used in stark buttons.
+vs/platform/theme/common/colors/windsurfCustomColors	starkButtonHoverBackground	The background color used in stark buttons when hovered.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfBlack	Devin black color used for custom UI elements.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSea	Devin sea color used for custom UI elements.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSeaShade	Devin sea shade color used for custom UI elements.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSeaTint	Devin sea tint color used for custom UI elements.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSessionStatusBlue	Blue session status color.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSessionStatusGreen	Green session status color.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSessionStatusOrange	Orange session status color.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSessionStatusPurple	Purple session status color.
+vs/platform/theme/common/colors/windsurfCustomColors	windsurfSessionStatusRed	Red session status color.
+vs/platform/theme/common/colors/windsurfDiffColors	diffEditorInsertedCustom	Background color for text that got inserted. The color must not be opaque so as not to hide underlying decorations.
+vs/platform/theme/common/colors/windsurfDiffColors	diffEditorInsertedFallback	Fallback background color for text that got inserted. The color must not be opaque so as not to hide underlying decorations.
+vs/platform/theme/common/colors/windsurfDiffColors	diffEditorRemovedCustom	Background color for text that got removed. The color must not be opaque so as not to hide underlying decorations.
+vs/platform/theme/common/colors/windsurfDiffColors	diffEditorRemovedFallback	Fallback background color for text that got removed. The color must not be opaque so as not to hide underlying decorations.
+vs/platform/update/electron-main/updateService.linux	close	Close
+vs/platform/update/electron-main/updateService.linux	linux_update_available_detail	A new version of Devin is available ({0}). If you originally installed Devin via your system's package manager (eg. apt), you can get the new version through your standard system update process. If you originally installed Devin with the tarball, you can manually download the new tarball from the instructions below.
+vs/platform/update/electron-main/updateService.linux	linux_update_available_message	Update is available
+vs/platform/update/electron-main/updateService.linux	update_instructions	Instructions to update...
+vs/platform/webview/common/embeddedWebappContextMenu	embeddedWebapp.contextMenu.copyImageUrl	Copy Image URL
+vs/platform/webview/common/embeddedWebappContextMenu	embeddedWebapp.contextMenu.copyLink	Copy Link
+vs/platform/webview/common/embeddedWebappContextMenu	embeddedWebapp.contextMenu.copyLinkUrl	Copy URL
+vs/platform/webview/common/embeddedWebappContextMenu	embeddedWebapp.contextMenu.openLinkInExternalBrowser	Open Link in External Browser
+vs/platform/windows/electron-main/windowImpl	appGoneDetailLogsExported	The logs were exported. {0}
+vs/platform/windows/electron-main/windowImpl	exportCrashLogs	&&Export logs...
+vs/platform/windows/electron-main/windowImpl	exportCrashLogsButton	Export
+vs/platform/windows/electron-main/windowImpl	exportCrashLogsError	Unable to export logs
+vs/platform/windows/electron-main/windowImpl	exportCrashLogsTitle	Export crash logs
+vs/platform/windows/electron-main/windowImpl	ok	&&OK
+vs/platform/windows/electron-main/windowImpl	zipArchive	ZIP archive
+vs/platform/windows/electron-main/windowsMainService	ok	&&OK
+vs/platform/windsurfChatClient/common/chatClientPreview	incompatibleChatClientPreview	This chat client preview requires a different Desktop API. Use a compatible full Desktop build instead.
+vs/platform/windsurfChatClient/common/chatClientPreview	invalidChatClientPreviewId	Invalid chat client preview ID.
+vs/platform/windsurfChatClient/common/chatClientPreview	invalidChatClientPreviewLink	Invalid chat client preview link.
+vs/platform/windsurfChatClient/common/chatClientPreview	invalidChatClientPreviewManifest	Invalid chat client preview manifest.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewBundleHash	The chat client preview bundle checksum or length is incorrect.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewIncomplete	The chat client preview download is incomplete.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewManifestHash	The chat client preview manifest checksum does not match its ID.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewManifestJson	The chat client preview manifest is not valid UTF-8 JSON.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewTimeout	The chat client preview download timed out.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	chatClientPreviewTooLarge	The chat client preview download exceeds its size limit.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewDownload	invalidChatClientPreviewResponse	The preview server returned an invalid response. Redirects are not allowed.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	cancelChatClientPreview	Cancel
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewCacheFull	At most eight windows can run chat client previews. Return another window to normal first.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewClosedWindow	The target window is no longer available.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewFailed	Could not load the chat client preview.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewLinkMismatch	The preview link does not match the requested resource.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewNoWindow	Open a Desktop workbench window before loading a chat client preview.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewOk	OK
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewUnavailable	Chat client previews are only available in unrestricted Devin Desktop Insiders.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	chatClientPreviewWindowChanged	The target window changed while loading the preview.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	confirmChatClientPreview	Load this chat client preview?
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	confirmChatClientPreviewDetail	{0} Repository: {1} PR: #{2} Commit: {3} Created: {4} Bundle ID: {5} This runs preview code with your chat client's privileges and authenticated Desktop access. Only load code you trust. This window and its floating windows will reload. Other windows are unchanged. To return to normal, fully quit Desktop and reopen it.
+vs/platform/windsurfChatClient/electron-main/chatClientPreviewMainService	loadChatClientPreview	Load preview
+vs/platform/windsurfSvg/browser/windsurfCodicons	acpAgentIcon	ACP agent icon
+vs/platform/windsurfSvg/browser/windsurfCodicons	acpConnectorIcon	ACP agent icon for {0}
+vs/platform/windsurfSvg/browser/windsurfCodicons	deepwikiIcon	DeepWiki icon
+vs/platform/windsurfSvg/browser/windsurfCodicons	devinLogoIcon	Devin logo icon
+vs/platform/windsurfSvg/browser/windsurfCodicons	windsurfLogoIcon	Devin logo icon
+vs/platform/windsurfSvg/browser/windsurfCodicons	windsurfSlackIcon	Slack icon
+vs/platform/workspaces/electron-main/workspacesHistoryMainService	workspaceName	{0} (Workspace)
+vs/platform/workspaces/electron-main/workspacesManagementMainService	ok	&&OK
+vs/sessions/browser/layoutActions	agentSecondarySidebarToggleClosedIcon	Icon for the sessions secondary sidebar when closed.
+vs/sessions/browser/layoutActions	agentSecondarySidebarToggleOpenIcon	Icon for the sessions secondary sidebar when open.
+vs/sessions/browser/layoutActions	openAndCloseSidePanel	Open/Show and Close/Hide the Side Panel (editor area and auxiliary bar)
+vs/sessions/browser/layoutActions	sidePanelHidden	Side Panel hidden
+vs/sessions/browser/layoutActions	sidePanelVisible	Side Panel shown
+vs/sessions/browser/layoutActions	toggleSecondarySidebar	Toggle Side Panel
+vs/sessions/browser/parts/chatCompositeBar	chatTabsAriaLabel	Chats
+vs/sessions/browser/parts/chatCompositeBar	closeChat	Close
+vs/sessions/browser/parts/menubar.contribution	mTerminal	&&Terminal
+vs/sessions/browser/parts/mobile/contributions/mobileChangesView	changesView.rowAria	{0}, {1}, +{2} -{3}
+vs/sessions/browser/parts/mobile/contributions/mobileMultiDiffView	multiDiffView.fileCount	{0} {1}
+vs/sessions/browser/parts/sessionHeader	agentSessions.newSession	New Session
+vs/sessions/common/contextkeys	activeSessionHasGitRepository	Whether the active session has an associated git repository
+vs/sessions/common/contextkeys	activeSessionHasGitSyncActionRunning	Whether the active session has a git sync action currently running
+vs/sessions/common/contextkeys	activeSessionProviderId	The provider ID of the active session
+vs/sessions/common/contextkeys	activeSessionType	The session type of the active session
+vs/sessions/common/contextkeys	activeSessionUsesCombinedConfigPicker	Whether the active session's provider offers a combined mode and model configuration picker (used on phone layouts in place of the standalone pickers)
+vs/sessions/common/contextkeys	activeSessionWorkspaceIsVirtual	Whether the active session's workspace is virtual
+vs/sessions/common/contextkeys	chatSessionProviderId	The provider ID of a session in context menu overlays
+vs/sessions/common/contextkeys	chatSessionSupportsDelete	Whether a session in context menu overlays can be deleted
+vs/sessions/common/contextkeys	chatSessionSupportsRename	Whether a session in context menu overlays can be renamed
+vs/sessions/common/contextkeys	chatSessionType	The session type of a session in context menu overlays
+vs/sessions/common/contextkeys	isActiveSessionArchived	Whether the active session is archived (marked as done)
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorInputContribution	altEnter	Alt+Enter
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorInputContribution	enter	Enter
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorOverlay	nOfM	{0}/{1}
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorOverlay	zero	0/0
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorWidgetContribution	acceptComment	Accept
+vs/sessions/contrib/agentFeedback/browser/agentFeedbackEditorWidgetContribution	convertComment	Accept
+vs/sessions/contrib/aiCustomizationTreeView/browser/aiCustomizationTreeViewViews	fileAriaLabel	{0}, {1}
+vs/sessions/contrib/aiCustomizationTreeView/browser/aiCustomizationTreeViewViews	workspaceWithCount	Workspace ({0})
+vs/sessions/contrib/changes/browser/changesActions	agentSessions.viewChanges	View All Changes
+vs/sessions/contrib/changes/browser/changesActions	sessions.changes.title	Session Changes
+vs/sessions/contrib/changes/browser/changesView	sessions.changes.title	Session Changes
+vs/sessions/contrib/changes/browser/checksWidget	ci.checkAriaLabel	{0}, {1}
+vs/sessions/contrib/changes/browser/checksWidget	ci.checkTitle	{0}: {1}
+vs/sessions/contrib/changes/browser/checksWidget	ci.fixChecks	Fix Checks
+vs/sessions/contrib/chat/browser/chat.contribution	chat.newEdits.label	New Chat
+vs/sessions/contrib/chat/browser/runScriptAction	npmTaskCommandPreview	npm run {0}
+vs/sessions/contrib/chat/browser/runScriptAction	runActionTooltipKeybinding	{0} ({1})
+vs/sessions/contrib/chat/browser/sessionTypePicker	sessionTypePicker.itemAriaLabel	{0}, {1}
+vs/sessions/contrib/chat/browser/sessionWorkspacePicker	pickWorkspace	workspace
+vs/sessions/contrib/chat/browser/sessionWorkspacePicker	workspacePicker.experimental	Experimental
+vs/sessions/contrib/chat/browser/variableCompletions	fileEntryDescription	{0} ({1})
+vs/sessions/contrib/codeReview/browser/codeReview.contributions	sessions.runCodeReview.tooltip	Run Code Review
+vs/sessions/contrib/editor/browser/editor.contribution	addFileAsContext	Add File as Context
+vs/sessions/contrib/editor/browser/editor.contribution	closeMainEditorPart	Close Editor Area
+vs/sessions/contrib/editor/browser/editor.contribution	maximizeMainEditorPart	Maximize Editor Area
+vs/sessions/contrib/editor/browser/editor.contribution	openEditorInModal	Open in Modal Editor
+vs/sessions/contrib/editor/browser/editor.contribution	openModalEditorInEditor	Open in Editor Area
+vs/sessions/contrib/editor/browser/editor.contribution	pullEditorLeft	Show Secondary Side Bar
+vs/sessions/contrib/editor/browser/editor.contribution	pushEditorRight	Push Editor Right
+vs/sessions/contrib/editor/browser/editor.contribution	restoreMainEditorPart	Restore Editor Area
+vs/sessions/contrib/providers/agentHost/browser/agentHostSessionConfigPicker	agentHostSessionConfig.triggerAria	{0}: {1}
+vs/sessions/contrib/providers/agentHost/browser/baseAgentHostSessionsProvider	copilotCLI	Copilot
+vs/sessions/contrib/providers/copilotChatSessions/browser/branchPicker	branchPicker.select	Branch
+vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions	branchPicker	Branch
+vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider	claudeCode	Claude
+vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider	copilotChatSessionsProvider	Copilot Chat
+vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsProvider	sessionWorkspaceGroup.github	GitHub
+vs/sessions/contrib/providers/localChatSessions/browser/localChatSessionsProvider	localChatSessionsProvider	Copilot Chat
+vs/sessions/contrib/providers/localChatSessions/browser/localChatSessionsProvider	localSession	Local
+vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostActions	connectViaSSHShort	SSH...
+vs/sessions/contrib/providers/remoteAgentHost/browser/remoteAgentHostActions	connectViaWSLShort	WSL...
+vs/sessions/contrib/providers/remoteAgentHost/browser/remoteHostOptions	workspacePicker.statusOffline	Offline
+vs/sessions/contrib/providers/remoteAgentHost/browser/remoteHostOptions	workspacePicker.statusOnline	Online
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	customizationAction	{0}
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	hooks	Hooks
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	plugins	Plugins
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	sessions.customizations.sidebarMode	Controls how the Customizations section in the Agents sidebar is presented and what happens when an entry is clicked.
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	sessions.customizations.sidebarMode.section	Show one item per customization category. Clicking a category deep-links to that category's section in the Customizations editor.
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	sessions.customizations.sidebarMode.single	Show a single "Customizations" entry instead of one item per category. Clicking it opens the Customizations welcome page.
+vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution	sessions.customizations.sidebarMode.welcome	Show one item per customization category. Clicking a category opens the Customizations welcome page.
+vs/sessions/contrib/sessions/browser/sessionHoverContent	agentSessions.newSession	New Session
+vs/sessions/contrib/sessions/browser/sessionsActions	untitledSession	New Session
+vs/sessions/contrib/sessions/browser/sessionsTitleBarWidget	newSession	New Session
+vs/sessions/contrib/sessions/browser/views/sessionsList	lastSevenDays	Last 7 Days
+vs/sessions/contrib/sessions/browser/views/sessionsList	today	Today
+vs/sessions/contrib/sessions/browser/views/sessionsList	yesterday	Yesterday
+vs/sessions/contrib/sessions/browser/views/sessionsView	newCompact	New
+vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonAriaLabel	New Session ({0})
+vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonAriaLabelWithoutKeybinding	New Session
+vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonTitle	New Session ({0})
+vs/sessions/contrib/sessions/browser/views/sessionsView	newSessionButtonTitleWithoutKeybinding	New Session
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.connecting	Establishing tunnel connection...
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.enabled	Remote session access is enabled
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.idle	Allow remote session access
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.sharing	Remote session access enabled via tunnel '{0}'
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.hover.showOutput	Show Output
+vs/sessions/contrib/tunnelHost/electron-browser/toggleRemoteConnectionsActionViewItem	tunnelHost.toast	Remote session access is now enabled
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHost.contribution	showTunnelHostOutput	Show Remote Connections Output
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHost.contribution	tunnelHost.category	Remote Connections
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHost.contribution	tunnelHost.enableMicrosoftAuth	Enable Microsoft account authentication for agent host tunnels. When disabled, only GitHub authentication is used.
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHost.contribution	tunnelHost.error	Failed to toggle remote connections: {0}
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHostService	tunnelHost.noAuth	No authentication token available. Please sign in and try again.
+vs/sessions/contrib/tunnelHost/electron-browser/tunnelHostService	tunnelHost.outputChannel	Remote Connections
+vs/sessions/services/sessions/common/session	sessionWorkspaceGroup.local	Local
+vs/sessions/services/sessions/common/sessionsManagement	activeSessionSupportsMultiChat	Whether the active session supports multiple chats
+vs/workbench/api/browser/mainThreadChatSessions	chatEditorContributionName	{0}
+vs/workbench/api/browser/mainThreadFileSystemEventService	ok	&&OK
+vs/workbench/api/browser/mainThreadMessageService	ok	&&OK
+vs/workbench/api/browser/mainThreadTask	task.label	{0}: {1}
+vs/workbench/api/browser/viewsExtensionPoint	view container id	ID
+vs/workbench/api/browser/viewsExtensionPoint	view id	ID
+vs/workbench/api/browser/viewsExtensionPoint	views.container.auxiliaryactivitybar	Contribute views containers to Secondary Activity Bar
+vs/workbench/api/common/configurationExtensionPoint	setting name	ID
+vs/workbench/browser/actions/developerActions	global	Global
+vs/workbench/browser/actions/layoutActions	compositePart.showSideBarLabel	Show Primary Side Bar
+vs/workbench/browser/agentWindowLabels	agentWindowDevinCloudWorkspaceNamed	Devin cloud files ({0})
+vs/workbench/browser/agentWindowLabels	agentWindowMultiRootWorkspace	{0} (Workspace)
+vs/workbench/browser/parts/activitybar/activitybarPart	menu	Menu
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	menu	Menu
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	miBottomAuxiliaryActivityBar	&&Bottom
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	miDefaultAuxiliaryActivityBar	&&Default
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	miHideAuxiliaryActivityBar	&&Hidden
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	miTopAuxiliaryActivityBar	&&Top
+vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart	positionAuxiliaryActivituBar	Secondary Activity Bar Position
+vs/workbench/browser/parts/auxiliarybar/auxiliaryBarPart	auxiliary activity bar position	Secondary Activity Bar Position
+vs/workbench/browser/parts/auxiliarybar/auxiliaryBarPart	toggleAuxiliaryActivityBar	Toggle Secondary Activity Bar Visibility
+vs/workbench/browser/parts/compositeBarActions	numberBadge	{0} ({1})
+vs/workbench/browser/parts/compositeBarActions	titleKeybinding	{0} ({1})
+vs/workbench/browser/parts/compositePart	titleTooltip	{0} ({1})
+vs/workbench/browser/parts/dialogs/dialogHandler	ok	OK
+vs/workbench/browser/parts/editor/agentWindowDirectoryPicker	windsurfWelcome.browseFolder2	Browse...
+vs/workbench/browser/parts/editor/agentWindowDirectoryPicker	windsurfWelcome.pickDirectory	Select a directory
+vs/workbench/browser/parts/editor/agentWindowDirectoryPicker	windsurfWelcome.remoteFoldersSkipped	Folders that cannot be opened in this agent window were skipped.
+vs/workbench/browser/parts/editor/agentWindowDirectoryPicker	windsurfWelcome.selectFolder	Select Folder
+vs/workbench/browser/parts/editor/binaryDiffEditor	metadataDiff	{0} ↔ {1}
+vs/workbench/browser/parts/editor/editor.contribution	copySessionId	Copy Session ID
+vs/workbench/browser/parts/editor/editor.contribution	copySessionUrl	Copy Session URL
+vs/workbench/browser/parts/editor/editorCommands	addFileToSpace	Search for a file to add to this space
+vs/workbench/browser/parts/editor/editorCommands	editorGroupLayout.horizontal	Horizontal
+vs/workbench/browser/parts/editor/editorCommands	editorGroupLayout.vertical	Vertical
+vs/workbench/browser/parts/editor/editorDropTarget	dropIntoAgentPrompt	Hold __{0}__ to drop into agent
+vs/workbench/browser/parts/editor/editorGroupWindsurfWelcome	windsurfWelcome.windsurf	Devin
+vs/workbench/browser/parts/editor/editorPanes	ok	&&OK
+vs/workbench/browser/parts/editor/editorQuickAccess	entryAriaLabelWithGroup	{0}, {1}
+vs/workbench/browser/parts/editor/editorStatus	addToGitignore	Add to .gitignore
+vs/workbench/browser/parts/editor/editorStatus	addToGitignoreError	Failed to add file to .gitignore: {0}
+vs/workbench/browser/parts/editor/editorStatus	alreadyInGitignore	File is already in .gitignore
+vs/workbench/browser/parts/editor/editorStatus	cannotReadGitignore	Cannot read .gitignore
+vs/workbench/browser/parts/editor/editorStatus	endOfLineCarriageReturnLineFeed	CRLF
+vs/workbench/browser/parts/editor/editorStatus	endOfLineLineFeed	LF
+vs/workbench/browser/parts/editor/editorStatus	inputModeOvertype	OVR
+vs/workbench/browser/parts/editor/editorStatus	languageDescriptionConfigured	({0})
+vs/workbench/browser/parts/editor/editorStatus	noGitignoreFile	No .gitignore file exists in the workspace
+vs/workbench/browser/parts/editor/editorStatus	singleSelection	Ln {0}, Col {1}
+vs/workbench/browser/parts/editor/editorTabsControl	draggedEditorGroup	{0} (+{1})
+vs/workbench/browser/parts/editor/textEditor	editor	Editor
+vs/workbench/browser/parts/editor/workbenchEditorGroupChrome	ariaLabelGroupActions	Empty editor group actions
+vs/workbench/browser/parts/leftHeader/leftHeaderPart	toggleBarWithKb	{0} ({1})
+vs/workbench/browser/parts/leftHeader/leftHeaderPart	toggleSecondarySideBar	Toggle Agent Sidebar
+vs/workbench/browser/parts/leftHeader/leftHeaderPart	toggleSideBar	Toggle Primary Side Bar
+vs/workbench/browser/parts/paneCompositePart	pane.resetLink	reset views
+vs/workbench/browser/parts/titlebar/agentEditorSwitch	agentEditorSwitchTooltipWithKeybinding	{0} ({1})
+vs/workbench/browser/parts/titlebar/agentEditorSwitch	editorSegment	Editor
+vs/workbench/browser/parts/titlebar/agentEditorSwitch	focusEditorWindow	Editor
+vs/workbench/browser/parts/titlebar/agentSearchButton	searchAgentsWithKb	Search agents ({0})
+vs/workbench/browser/parts/titlebar/commandCenterControl	label1	{0} {1}
+vs/workbench/browser/parts/titlebar/commandCenterControl	label2	{0} {1}
+vs/workbench/browser/parts/titlebar/menubar.contribution	mTerminal	&&Terminal
+vs/workbench/browser/parts/titlebar/titlebarPart	ariaLabelTitleActivityActions	Title activity actions
+vs/workbench/browser/windsurfSaveFile	windsurfSaveFileTitle	Save
+vs/workbench/browser/workbench.contribution	auxiliaryActivityBarLocation	Controls the location of the Secondary Activity Bar relative to the Secondary Side Bar.
+vs/workbench/browser/workbench.contribution	devin.agentWindow.location	Where the Agent Command Center opens.
+vs/workbench/browser/workbench.contribution	devin.agentWindow.location.currentWindow	The current window switches between the Agent Command Center and the editor.
+vs/workbench/browser/workbench.contribution	devin.agentWindow.location.separateWindow	The Agent Command Center gets a window of its own, and switching moves focus between the two windows.
+vs/workbench/browser/workbench.contribution	devin.desktopShell.enabled	Render the Devin Agent Window as the mounted Devin webapp. On by default for accounts where the feature is enabled; has no effect otherwise. Editor mode is unaffected. Turn it off to use the stock Agent Window layout. Requires a window reload.
+vs/workbench/browser/workbench.contribution	devin.editor.agentInboxVisible	When enabled, the agent inbox welcome view is shown in place of the default editor welcome. Automatically activated when switching to the Devin Agent Window mode.
+vs/workbench/browser/workbench.contribution	devin.editor.managedSpaces	When enabled, the agent space window manager tracks, saves, and restores editor state for each space. When disabled, only ensures the active session is open.
+vs/workbench/browser/workbench.contribution	devin.spaces.shareContext	When enabled, the first message sent into a space automatically includes a summary of all other sessions in that space as context for the agent.
+vs/workbench/browser/workbench.contribution	windsurf.editor.agentInboxVisible	When enabled, the agent inbox welcome view is shown in place of the default editor welcome. Automatically activated when switching to the Devin Agent Window mode.
+vs/workbench/browser/workbench.contribution	windsurf.editor.agentInboxVisible.deprecated	Deprecated: Use 'devin.editor.agentInboxVisible' instead.
+vs/workbench/browser/workbench.contribution	windsurf.editor.managedSpaces	When enabled, the agent space window manager tracks, saves, and restores editor state for each space. When disabled, only ensures the active session is open.
+vs/workbench/browser/workbench.contribution	windsurf.editor.managedSpaces.deprecated	Deprecated: Use 'devin.editor.managedSpaces' instead.
+vs/workbench/browser/workbench.contribution	windsurf.spaces.shareContext	When enabled, the first message sent into a space automatically includes a summary of all other sessions in that space as context for the agent.
+vs/workbench/browser/workbench.contribution	windsurf.spaces.shareContext.deprecated	Deprecated: Use 'devin.spaces.shareContext' instead.
+vs/workbench/browser/workbench.contribution	workbench.auxiliaryActivityBar.location.bottom	Show the Secondary Activity Bar at the bottom of the Secondary Side Bar.
+vs/workbench/browser/workbench.contribution	workbench.auxiliaryActivityBar.location.default	Show the Secondary Activity Bar on the side of the Secondary Side Bar.
+vs/workbench/browser/workbench.contribution	workbench.auxiliaryActivityBar.location.hide	Hide the Secondary Activity Bar in the Secondary Side Bar.
+vs/workbench/browser/workbench.contribution	workbench.auxiliaryActivityBar.location.top	Show the Secondary Activity Bar on top of the Secondary Side Bar.
+vs/workbench/common/configuration	workbenchConfigurationTitle	Workbench
+vs/workbench/common/contextkeys	activeCascadeEditorHasExternalUrl	Whether the active editor is a cascade editor whose session has an external session URL
+vs/workbench/common/contextkeys	activeEditorGroupAutoLocked	Whether the active editor group is permanently auto-locked
+vs/workbench/common/contextkeys	agentInboxVisible	Whether the agent inbox (all sessions view) is currently visible.
+vs/workbench/common/contextkeys	agentWorkspaceConversionInFlight	Whether this window is currently converting onto a synthetic agent workspace.
+vs/workbench/common/contextkeys	cascadeEditorCanRenameSession	Whether the cascade editor tab session can be renamed
+vs/workbench/common/contextkeys	cascadeEditorHasExternalUrl	Whether the cascade editor tab has an external session URL
+vs/workbench/common/contextkeys	cascadeEditorHasSessionId	Whether the cascade editor tab has a resolvable session ID
+vs/workbench/common/contextkeys	cascadeEditorIsDevinCloudAndAwake	Whether the cascade editor tab is for a Devin Cloud session that is currently awake (has an external URL and is not sleeping)
+vs/workbench/common/contextkeys	isAgentSessionsWorkspace	Whether the current workspace is the agent sessions workspace.
+vs/workbench/common/contextkeys	leftSidePartVisible	Whether the left-side part (sidebar or auxiliary bar) is visible
+vs/workbench/common/contextkeys	pullRequestEditorTab	Whether the editor tab is an integrated pull request tab
+vs/workbench/common/contextkeys	workbenchMode	The current workbench mode.
+vs/workbench/common/editor/diffEditorInput	sideBySideLabels	{0} ↔ {1}
+vs/workbench/common/theme	editorGroupDepthShadow	Color of the shadow the side bar, panel and secondary side bar cast onto the edges of the editor area. Set to transparent for a flat layout.
+vs/workbench/contrib/accessibility/browser/accessibleView	symbolLabel	({0}) {1}
+vs/workbench/contrib/accessibility/browser/accessibleView	symbolLabelAria	({0}) {1}
+vs/workbench/contrib/agentsVoice/browser/agentsVoiceWidgetBinding	agentsVoice.chat	Chat
+vs/workbench/contrib/announcements/browser/announcements.contribution	announcement.ariaLabel	Announcement: {0}
+vs/workbench/contrib/announcements/browser/announcements.contribution	announcement.seeChangelog	View Changelog
+vs/workbench/contrib/architectureWarning/electron-browser/architectureWarning.contribution	architectureMismatchWarning	Architecture Mismatch
+vs/workbench/contrib/architectureWarning/electron-browser/architectureWarning.contribution	wrongArchitecture	Wrong architecture — download the native ARM64 build
+vs/workbench/contrib/architectureWarning/electron-browser/architectureWarning.contribution	wrongArchitectureAria	You are running an emulated x64 version of {0}. Download the native ARM64 version for better performance.
+vs/workbench/contrib/architectureWarning/electron-browser/architectureWarning.contribution	wrongArchitectureTooltip	You are running an emulated version of {0}. Performance may be degraded. Click to download the native ARM64 build.
+vs/workbench/contrib/authentication/browser/authentication.contribution	authenticationid	ID
+vs/workbench/contrib/browserView/common/browserSearch	browser.search.engine.bing	Bing
+vs/workbench/contrib/browserView/common/browserSearch	browser.search.engine.duckduckgo	DuckDuckGo
+vs/workbench/contrib/browserView/common/browserSearch	browser.search.engine.google	Google
+vs/workbench/contrib/browserView/common/browserSearch	browser.search.engine.yahoo	Yahoo!
+vs/workbench/contrib/browserView/electron-browser/features/browserEditorChatFeatures	browser.agentSharingContentWarning.ok	&&OK
+vs/workbench/contrib/browserView/electron-browser/features/browserEditorChatFeatures	workbench.browser.agentHostChatToolsEnabled	When enabled, integrated browser tools are exposed as client-provided tools to agent host sessions in the Sessions window. Requires {0} and {1}.
+vs/workbench/contrib/browserView/electron-browser/features/browserEditorEmulationFeatures	browser.device.dprLabel	DPR:
+vs/workbench/contrib/browserView/electron-browser/features/browserEditorErrorFeatures	browser.errorUrlLabel	URL:
+vs/workbench/contrib/browserView/electron-browser/features/browserTabManagementFeatures	browserEntryAriaLabelWithGroup	{0}, {1}
+vs/workbench/contrib/bulkEdit/browser/preview/bulkEditTree	rename.label	{0} → {1}
+vs/workbench/contrib/chat/browser/accessibility/chatAccessibilityProvider	chat	Chat
+vs/workbench/contrib/chat/browser/accessibility/chatAccessibilityProvider	noCodeBlocks	{0}{1}{2} {3}
+vs/workbench/contrib/chat/browser/accessibility/chatAccessibilityProvider	noCodeBlocksHint	{0}{1}{2}{3}{4} {5}
+vs/workbench/contrib/chat/browser/accessibility/chatAccessibilityService	chatTitle	Chat: {0}
+vs/workbench/contrib/chat/browser/accessibility/chatResponseAccessibleView	todoItem	{0} ({1})
+vs/workbench/contrib/chat/browser/actions/chatAccessibilityActions	chat.category	Chat
+vs/workbench/contrib/chat/browser/actions/chatActions	chat.category	Chat
+vs/workbench/contrib/chat/browser/actions/chatContext	terminal	Terminal
+vs/workbench/contrib/chat/browser/actions/chatLanguageModelActions	extensionOwner	{0}
+vs/workbench/contrib/chat/browser/actions/chatPluginActions	localMarketplace	Local
+vs/workbench/contrib/chat/browser/actions/createPluginAction	hooks	Hooks
+vs/workbench/contrib/chat/browser/actions/createPluginAction	prompts	Prompts
+vs/workbench/contrib/chat/browser/agentPluginsView	chat.category	Chat
+vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker	agentHostChatInputPicker.triggerAria	{0}: {1}
+vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionHandler	agentHost.responseDetails.credit	{0} credit
+vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionHandler	agentHost.responseDetails.credits	{0} credits
+vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostTerminalContribution	agentHostTerminal.local	Local
+vs/workbench/contrib/chat/browser/agentSessions/agentHost/stateToProgressAdapter	ahp.running	Running {0}...
+vs/workbench/contrib/chat/browser/agentSessions/agentSessions	chat.session.providerLabel.agentHostCopilot	Copilot
+vs/workbench/contrib/chat/browser/agentSessions/agentSessions	chat.session.providerLabel.local	Local
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	countPromptsOne	1 prompt
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	hooks	Hooks
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	itemAriaLabel	{0}. {1}
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	prompt	Prompt
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	prompts	Prompts
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	remoteClientGroupShort	Local
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationListWidget	workspaceGroup	Workspace
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagementEditor	localHarnessLabel	Local
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagementEditor	prompts	Prompts
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagementEditor	selectHarness	Select customization target
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagementEditor	workspaceSaveTarget	Workspace
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationWelcomePagePromptLaunchers	hooks	Hooks
+vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationWelcomePagePromptLaunchers	plugins	Plugins
+vs/workbench/contrib/chat/browser/aiCustomization/mcpListWidget	install	Install
+vs/workbench/contrib/chat/browser/aiCustomization/mcpListWidget	installed	Installed
+vs/workbench/contrib/chat/browser/aiCustomization/mcpListWidget	installing	Installing...
+vs/workbench/contrib/chat/browser/aiCustomization/mcpListWidget	workspaceGroup	Workspace
+vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget	byPublisher	by {0}
+vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget	install	Install
+vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget	installed	Installed
+vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget	installing	Installing...
+vs/workbench/contrib/chat/browser/aiCustomization/pluginListWidget	pluginItemAriaLabel	{0}. {1}
+vs/workbench/contrib/chat/browser/attachments/chatAttachmentWidgets	chat.imageAttachmentPreviewFeaturesDisabled	Vision is disabled by your organization.
+vs/workbench/contrib/chat/browser/attachments/chatAttachmentWidgets	prompt	Prompt
+vs/workbench/contrib/chat/browser/attachments/implicitContextAttachment	implicitContextFallback	context
+vs/workbench/contrib/chat/browser/chat.shared.contribution	chat	Chat
+vs/workbench/contrib/chat/browser/chat.shared.contribution	chat.agentHost.clientTools	Tool reference names to expose as client-provided tools in agent host sessions.
+vs/workbench/contrib/chat/browser/chat.shared.contribution	chat.customizations.harnessSelector.enabled	Controls whether the harness selector is shown in the Chat Customizations editor sidebar. When disabled, the editor always shows all customizations without filtering.
+vs/workbench/contrib/chat/browser/chat.shared.contribution	chat.sendElementsToChat.attachImages	Controls whether a screenshot of the selected element will be added to the chat.
+vs/workbench/contrib/chat/browser/chat.shared.contribution	interactiveSessionConfigurationTitle	Chat
+vs/workbench/contrib/chat/browser/chatDebug/agentHostChatDebugProvider	agentHost.debug.sessionStartedDetails	model={0}, reasoningEffort={1}
+vs/workbench/contrib/chat/browser/chatDebug/agentHostChatDebugProvider	agentHost.debug.sessionStartedModel	model={0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.agentItem	{0} ({1})
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.chunkIdxCol	#
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.endTime	endTime
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.hitChip	[cache {0}%]
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.msChip	[{0}ms]
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.pctValue	{0}%
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.requestId	requestId
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.segTooltip	{0} ({1}): {2}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.sessionHealthChip	{0} ×{1} · {2} tok
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.startTime	startTime
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.tokCol	≈ tok
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.totalRow	Total
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheExplorerView	chatDebug.cache.ttft	timeToFirstToken
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheInsights	chatDebug.cache.insight.model.detail	{0} → {1}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugCacheInsights	chatDebug.cache.volatile.timestamp	timestamp
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugEventDetailRenderer	chatDebug.detail.status	Status: {0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugEventList	chatDebug.tokens	{0} tokens
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugFlowGraph	tokenCount	{0} tokens
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugFlowGraph	tooltipStatus	Status: {0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugFlowGraph	tooltipTokens	Tokens: {0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugHomeView	chatDebug.claudeCodeSessionWithId	Claude Code: {0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugLogsView	chatDebug.aria.tokenCount	 {0} tokens
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugLogsView	chatDebug.logs	Logs
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugModelTurnContentRenderer	chatDebug.modelTurn.statusLabel	Status: {0}
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.detail.status	Status
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.location.notebook	Notebook
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.location.terminal	Terminal
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugOverviewView	chatDebug.sessionType.local	Local
+vs/workbench/contrib/chat/browser/chatDebug/chatDebugToolCallContentRenderer	chatDebug.toolCall.statusLabel	Status: {0}
+vs/workbench/contrib/chat/browser/chatEditing/chatEditingEditorOverlay	0Of0	—
+vs/workbench/contrib/chat/browser/chatManagement/chatModelsWidget	status.ariaLabel	Status: {0}
+vs/workbench/contrib/chat/browser/chatParticipant.contribution	chat.viewContainer.label	Chat
+vs/workbench/contrib/chat/browser/chatSessions/chatSessions.contribution	chat	Chat
+vs/workbench/contrib/chat/browser/chatSessions/chatSessions.contribution	chatEditorContributionName	{0}
+vs/workbench/contrib/chat/browser/chatSetup/chatSetupContributions	chat.category	Chat
+vs/workbench/contrib/chat/browser/chatStatus/chatStatusDashboard	quotaDisplay	{0}%
+vs/workbench/contrib/chat/browser/chatStatus/chatStatusEntry	chatSessionInProgressStatus	1 agent session in progress
+vs/workbench/contrib/chat/browser/chatStatus/chatStatusEntry	chatSessionsInProgressStatus	{0} agent sessions in progress
+vs/workbench/contrib/chat/browser/defaultModelContribution	modelLabelWithVendor	{0} ({1})
+vs/workbench/contrib/chat/browser/planReviewFeedback/planReviewFeedbackEditorContribution	planReviewFeedback.navStatus.nOfM	{0}/{1}
+vs/workbench/contrib/chat/browser/planReviewFeedback/planReviewFeedbackEditorContribution	planReviewFeedback.navStatus.zero	0/0
+vs/workbench/contrib/chat/browser/pluginInstallService	localSourceNotSupported	Local file paths are not supported. Enter a GitHub repository (owner/repo) or a git clone URL.
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatMarkdownContentPart	chat.codeblock.applyingPercentage	({0}%)...
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatQuestionCarouselPart	chat.questionCarousel.labelWithKeybinding	{0} ({1})
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatQuestionCarouselPart	chat.questionCarousel.listSeparator	, 
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatQuestionCarouselPart	chat.questionCarousel.stepIndicator	{0}/{1}
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatSubagentContentPart	chat.subagent.prompt	Prompt
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatSuggestNextWidget	chat.suggestNext.item	{0}
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatThinkingContentPart	chat.thinking.label	{0}: {1}
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatThinkingContentPart	chat.thinking.shimmer	{0}: 
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatThinkingContentPart	chat.thinking.titleWithDiff	{0}, {1}, {2}
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatTodoListWidget	chat.todoList.currentTask	{0} ({1}/{2})
+vs/workbench/contrib/chat/browser/widget/chatContentParts/chatTodoListWidget	chat.todoList.item	{0}, {1}
+vs/workbench/contrib/chat/browser/widget/chatContentParts/codeBlockPart	original	Original
+vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatTerminalToolProgressPart	terminalToolCommand	{0}
+vs/workbench/contrib/chat/browser/widget/chatDragAndDrop	url	URL
+vs/workbench/contrib/chat/browser/widget/chatListRenderer	chat.planReview.feedbackInline	{0}: {1}
+vs/workbench/contrib/chat/browser/widget/input/chatInputPart	chatInput.mode.custom	({0}), {1}
+vs/workbench/contrib/chat/browser/widget/input/chatInputPart	chatInput.model	, {0}. 
+vs/workbench/contrib/chat/browser/widget/input/chatModelPicker	chat.config.costHint	Non-default options may increase cost
+vs/workbench/contrib/chat/browser/widget/input/editor/chatInputCompletions	fileEntryDescription	{0} ({1})
+vs/workbench/contrib/chat/browser/widget/input/editor/chatInputCompletions	tool_source_completion	{0}: {1}
+vs/workbench/contrib/chat/browser/widget/input/modelPickerActionItem	chat.modelPicker.label	Pick Model
+vs/workbench/contrib/chat/browser/widgetHosts/editor/chatEditorInput	chatEditorName	Chat
+vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatContextUsageDetails	quotaDisplay	{0}%
+vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatContextUsageDetails	tokenCount	{0} / {1} tokens
+vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatViewTitleControl	chat	Chat
+vs/workbench/contrib/chat/common/customizationHarnessService	harness.cli	Copilot CLI
+vs/workbench/contrib/chat/common/customizationHarnessService	harness.local	Local
+vs/workbench/contrib/chat/common/languageModelStats	chat	chat
+vs/workbench/contrib/chat/common/languageModelStats	Language Models	Copilot
+vs/workbench/contrib/chat/common/promptSyntax/languageProviders/promptValidator	promptValidator.toolNotFound	Unknown tool '{0}' will be ignored.
+vs/workbench/contrib/chat/common/promptSyntax/promptTypes	source.agentsPersonal	Global
+vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint	defaultHintAriaLabelWindsurf	Execute {0} to launch Devin. Start typing to dismiss.
+vs/workbench/contrib/codeEditor/browser/emptyTextEditorHint/emptyTextEditorHint	emptyTextEditorHintWindsurf	[[{0}]] to launch Devin. Start typing to dismiss.
+vs/workbench/contrib/codeEditor/browser/outline/documentSymbolsTree	title.template	{0} ({1})
+vs/workbench/contrib/comments/browser/commentsTreeViewer	commentLine	[Ln {0}]
+vs/workbench/contrib/comments/browser/commentsTreeViewer	commentRange	[Ln {0}-{1}]
+vs/workbench/contrib/comments/browser/commentsView	resourceWithRepliesLabel	{0} {1}
+vs/workbench/contrib/customEditor/browser/customEditorDiffInput	customEditorDiffTitle	{0} ({1})
+vs/workbench/contrib/customEditor/browser/customEditorDiffInput	customEditorSideBySideDiffTitle	{0} ({1})
+vs/workbench/contrib/debug/browser/breakpointEditorContribution	disableLogPoint	{0} {1}
+vs/workbench/contrib/debug/browser/breakpointEditorContribution	logPoint	Logpoint
+vs/workbench/contrib/debug/browser/breakpointWidget	ok	OK
+vs/workbench/contrib/debug/browser/callStackView	threadAriaLabel	Thread {0} {1}
+vs/workbench/contrib/debug/browser/debugConfigurationManager	workspace	workspace
+vs/workbench/contrib/debug/browser/debugEditorActions	miDisassemblyView	&&DisassemblyView
+vs/workbench/contrib/debug/browser/debugEditorActions	miLogPoint	&&Logpoint...
+vs/workbench/contrib/debug/browser/debugEditorActions	mitogglesource	&&ToggleSource
+vs/workbench/contrib/debug/browser/disassemblyView	instructionBytes	Bytes
+vs/workbench/contrib/debug/common/loadedScriptsPicker	moveFocusedView.selectView	Search loaded scripts by name
+vs/workbench/contrib/deepwiki/browser/deepwiki.contribution	deepwiki	DeepWiki
+vs/workbench/contrib/deepwiki/browser/deepwiki.contribution	deepwiki view	DeepWiki
+vs/workbench/contrib/deepwiki/browser/deepwiki.contribution	deepwiki-category	DeepWiki
+vs/workbench/contrib/deepwiki/browser/deepwiki.contribution	deepwikiMain	DeepWiki
+vs/workbench/contrib/deepwiki/browser/deepwiki.contribution	miViewDeepwiki	Deep&&Wiki
+vs/workbench/contrib/deepwiki/browser/deepwikiActivity	deepwikiNewBadge	New DeepWiki feature available
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFiles.contribution	devinCloudFiles.category	Devin
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFiles.contribution	devinCloudFiles.showDevinVmFiles	Show Devin VM files
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFiles.contribution	devinCloudFiles.showLocalFiles	Show local files
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.asleep	The session machine is asleep, so the explorer shows your local folders.
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.connecting	The explorer shows your local folders until the files of the session machine arrive.
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.failed	The files of the session machine are not available, so the explorer shows your local folders.
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.localPreferred	You chose to show your local folders instead of the files on your Devin VM.
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFiles.waking	The session machine starts. The explorer shows your local folders until its files arrive.
+vs/workbench/contrib/devinCloudFiles/browser/devinCloudFilesStatusView	devinCloudFilesStatusView	Devin Cloud Files
+vs/workbench/contrib/extensions/browser/extensionEditor	cache size	Cache
+vs/workbench/contrib/extensions/browser/extensionEditor	Marketplace Info	Marketplace
+vs/workbench/contrib/extensions/browser/extensionEditor	other	Local
+vs/workbench/contrib/extensions/browser/extensionEditor	vsix	VSIX
+vs/workbench/contrib/extensions/browser/extensions.contribution	off	Off
+vs/workbench/contrib/extensions/browser/extensions.contribution	on	On
+vs/workbench/contrib/extensions/browser/extensions.contribution	windsurf.marketplaceExtensionGalleryServiceURL	Changes the base URL for marketplace search results.
+vs/workbench/contrib/extensions/browser/extensions.contribution	windsurf.marketplaceGalleryItemURL	Changes the base URL on each extension page.
+vs/workbench/contrib/extensions/browser/extensionsActions	Devin for Web	{0} for the Web
+vs/workbench/contrib/extensions/browser/extensionsViewlet	dismissButton	dismiss
+vs/workbench/contrib/extensions/browser/extensionsViewlet	dismissImport	Dismiss this import suggestion
+vs/workbench/contrib/extensions/browser/extensionsViewlet	extensionImportError	Failed to import extensions: {0}
+vs/workbench/contrib/extensions/browser/extensionsViewlet	extensionsImportedFromSource	Successfully imported {0} extensions from {1}
+vs/workbench/contrib/extensions/browser/extensionsViewlet	importExtensionFromSource	Import 1 extension from {0}
+vs/workbench/contrib/extensions/browser/extensionsViewlet	importExtensionsFromSource	Import {0} extensions from {1}
+vs/workbench/contrib/extensions/browser/extensionsViewlet	importExtensionsFromSourceTitle	Click to import extensions from {0}
+vs/workbench/contrib/extensions/browser/extensionsViewlet	marketPlace	Marketplace
+vs/workbench/contrib/extensions/browser/extensionsViewlet	popularExtensions	Popular
+vs/workbench/contrib/extensions/browser/extensionsViewlet	preview	preview
+vs/workbench/contrib/extensions/browser/extensionsViewlet	previewExtensions	Preview extensions
+vs/workbench/contrib/extensions/browser/extensionsWorkbenchService	disallowed extensions	Some extensions are disabled because they are configured not to be allowed.
+vs/workbench/contrib/extensions/browser/extensionsWorkbenchService	disallowed extensions by policy	Some extensions are disabled because they are not allowed by your system administrator.
+vs/workbench/contrib/extensions/browser/extensionsWorkbenchService	not compatible	This extension is not compatible with Devin.
+vs/workbench/contrib/files/browser/fileActions.contribution	newAgentSessionEditor	New Session
+vs/workbench/contrib/files/browser/files.contribution	eol.CRLF	CRLF
+vs/workbench/contrib/files/browser/files.contribution	eol.LF	LF
+vs/workbench/contrib/issue/browser/baseIssueReporterService	windsurfHandlesIssues	Devin handles feedback outside of Github.
+vs/workbench/contrib/issue/browser/baseIssueReporterService	windsurfHandlesIssuesDescription	Thanks you for helping us improve Devin! To open the issue/feedback reporter for Devin, click the button below.
+vs/workbench/contrib/issue/browser/baseIssueReporterService	windsurfOpenIssueReporter	Open Devin Issue Reporter
+vs/workbench/contrib/issue/browser/issueFormService	ok	&&OK
+vs/workbench/contrib/issue/browser/issueReporterOverlay	bug	Bug
+vs/workbench/contrib/issue/browser/issueReporterOverlay	vscode	Visual Studio Code
+vs/workbench/contrib/issue/browser/screenshotAnnotation	colorValue	{0}: {1}
+vs/workbench/contrib/keybindings/browser/keybindings.contribution	toggleKeybindingsLog	Toggle Keyboard Shortcuts Troubleshooting
+vs/workbench/contrib/languageStatus/browser/languageStatus	aria.1	{0}, {1}
+vs/workbench/contrib/languageStatus/browser/languageStatus	aria.2	{0}
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	lifeguard.beta	Lifeguard (Beta)
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	lifeguardIcon	Lifeguard icon
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	miViewLifeguard	&&Lifeguard
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	openLifeguardHistory	History
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	openLifeguardRules	Rules
+vs/workbench/contrib/lifeguard/browser/lifeguard.contribution	openLifeguardSettings	Settings
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.accepted	Accepted
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.acceptFix	Accept Fix
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.cascadeFix	Fix with Cascade
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismiss	Dismiss
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissed	Dismissed
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissFeedback	Why should this bug be ignored? (optional)
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissFeedbackPlaceholder	e.g., This is intentional behavior
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissFooter.fixMyself	I'll fix it
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissFooter.notABug	Not a bug
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.dismissFooter.remember	Don't suggest again
+vs/workbench/contrib/lifeguard/browser/lifeguardBugCard	lifeguard.untitledBug	Untitled Bug
+vs/workbench/contrib/lifeguard/browser/lifeguardIcon	lifeguard.bugsFound	{0} bugs found
+vs/workbench/contrib/lifeguard/browser/lifeguardIcon	lifeguard.notification.issuesFound	Lifeguard: {0} issues found
+vs/workbench/contrib/lifeguard/browser/lifeguardIcon	lifeguard.notification.view	View
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.autoSelectRepo	Auto (follow editor)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.cancel	Cancel
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.cancel.tooltip	Cancel the currently running check
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.checkLastCommit	Check Last Commit
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.compareWithRefAction	Check Changes Against Ref...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.current	(current)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.detail.analyzed	Analyzed 
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.detail.analyzedChangesOnTopOf	Analyzed uncommitted changes on top of 
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.detail.vsRef	 vs ref 
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.disabled.message	Lifeguard is not enabled for your account. Please upgrade your plan or contact your administrator.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.disabled.title	Lifeguard is not available
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.emptyText	Press {0} or click "Check Changes" above to check for bugs.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.emptyTitle	Catch bugs before you push
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.enterBaseRef	Enter base ref to compare against
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.error.message	Something went wrong. Please reload the window to try again.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.error.reload	Reload Window
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.error.title	Failed to initialize Lifeguard
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.header.fileChanged	{0} file changed
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.header.filesChanged	{0} files changed
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.header.runTime	Run {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.deletion	{0} deletion(-)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.deletions	{0} deletions(-)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.fileChanged	{0} file changed
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.filesChanged	{0} files changed
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.insertion	{0} insertion(+)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.hover.insertions	{0} insertions(+)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.initializing	Initializing Lifeguard...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.commit	Checking commit: {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.commitGeneric	Checking commit...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.current	Checking current changes...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.default	Checking for bugs...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.ref	Checking changes vs {0}...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.loading.refGeneric	Checking changes...
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.mode.agent	Agent mode - uses AI agent for deeper analysis. Change in Devin Settings.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.mode.default	Analysis mode. Change in Devin Settings.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.mode.fast	Fast mode - quick analysis. Change in Devin Settings.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.mode.smart	Smart mode - thorough analysis. Change in Devin Settings.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noBugsFound	No bugs found
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noChanges	(no changes)
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noChanges.tooltip	No tracked changes in {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noRepo	No repository
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noRepos.tooltip	No git repositories found in workspace
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noReposText	Open a folder containing a git repository to use Lifeguard.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.noReposTitle	No git repositories found
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.openRepository	Open Repository
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.parentRepoText	A Git repository was found but is not opened by VS Code.
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.parentRepoTitle	Git repository found in parent folder
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.refPlaceholder	e.g., main, origin/main
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.repositories	Repositories
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.runCheck	Check Changes
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.runCheck.repoTooltip	Check tracked changes in {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardPane	lifeguard.selectRepo	Select repository
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.allResolved	All resolved ({0})
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.checkFailed	Lifeguard: Check failed
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.compareWithRef	Compare with Ref
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.currentChanges	Current Changes
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.dailyRateLimitExceeded	Lifeguard: Daily limit reached. Try again tomorrow.
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.justNow	just now
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.lastCommit	Last Commit
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.noBugs	No bugs found
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.noChanges	Lifeguard: No changes to check
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.noHistory	No check history available
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.rateLimitExceeded	Lifeguard: Too many requests. Please wait a moment.
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.resolved	{0}/{1} resolved
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.selectCheck	Select a check from history
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.timedOut	Lifeguard: Analysis timed out. The diff may be too large or complex.
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.undo.dismiss	Dismiss Lifeguard Bug: {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardService	lifeguard.undo.resolve	Resolve Lifeguard Bug: {0}
+vs/workbench/contrib/lifeguard/browser/lifeguardToast	lifeguard.issueFound	{0} issue found
+vs/workbench/contrib/lifeguard/browser/lifeguardToast	lifeguard.issuesFound	{0} issues found
+vs/workbench/contrib/lifeguard/common/lifeguard	lifeguardEnabled	Whether the Lifeguard feature is enabled for this build
+vs/workbench/contrib/lifeguard/common/lifeguard	lifeguardHasRepos	Whether there are git repositories available for Lifeguard
+vs/workbench/contrib/lifeguard/common/lifeguard	lifeguardHistoryAvailable	Whether there is Lifeguard check history available
+vs/workbench/contrib/localHistory/browser/localHistoryCommands	localHistoryCompareToFileEditorLabel	{0} ({1} • {2}) ↔ {3}
+vs/workbench/contrib/localHistory/browser/localHistoryCommands	localHistoryCompareToPreviousEditorLabel	{0} ({1} • {2}) ↔ {3} ({4} • {5})
+vs/workbench/contrib/localHistory/browser/localHistoryCommands	localHistoryEditorLabel	{0} ({1} • {2})
+vs/workbench/contrib/logs/common/logsActions	loggers	Logs
+vs/workbench/contrib/logs/electron-browser/logsActions	openWindsurfLogsFile	Download Devin Logs File
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.actions.status	Status
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.disable	Disable Server
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.enable	Enable Server
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.noServers	No MCP servers
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.noServers.description	This session does not expose any MCP servers
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.showLocal	Show locally configured servers...
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.status.authRequired	Authentication required
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.status.error	Error
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.status.ready	Running
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.status.starting	Starting
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHost.status.stopped	Stopped
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.agentHostOptions	Agent Host Server Options
+vs/workbench/contrib/mcp/browser/mcpCommands	mcp.selectAgentHostServer	Select an MCP Server for this session
+vs/workbench/contrib/mcp/browser/mcpCommandsAddConfiguration	mcp.target.agentHost	Add to Current Agent Session
+vs/workbench/contrib/mcp/browser/mcpCommandsAddConfiguration	mcp.target.local	Install Server Locally...
+vs/workbench/contrib/mcp/browser/mcpCommandsAddConfiguration	mcp.target.user	Global
+vs/workbench/contrib/mcp/browser/mcpResourceQuickAccess	mcp.resource.template.empty	<Empty>
+vs/workbench/contrib/mcp/browser/mcpServerEditor	Marketplace Info	Marketplace
+vs/workbench/contrib/mcp/browser/mcpServerEditor	url	URL:
+vs/workbench/contrib/mcp/common/mcpConfiguration	id	ID
+vs/workbench/contrib/mcp/common/mcpConfiguration	mcp.discovery.source.cursor-global	Cursor (Global)
+vs/workbench/contrib/mcp/common/mcpConfiguration	mcp.discovery.source.cursor-workspace	Cursor (Workspace)
+vs/workbench/contrib/mergeEditor/browser/view/editors/baseCodeEditorView	base	Base
+vs/workbench/contrib/notebook/browser/controller/coreActions	notebookActions.category	Notebook
+vs/workbench/contrib/notebook/browser/controller/editActions	languageDescriptionConfigured	({0})
+vs/workbench/contrib/notebook/browser/controller/insertCellActions	notebookActions.menu.insertMarkdown	Markdown
+vs/workbench/contrib/notebook/browser/controller/insertCellActions	notebookActions.menu.insertMarkdown.ontoolbar	Markdown
+vs/workbench/contrib/notebook/browser/notebook.contribution	notebookConfigurationTitle	Notebook
+vs/workbench/contrib/notebook/browser/notebookAccessibilityProvider	notebookTreeAriaLabel	Notebook
+vs/workbench/contrib/notebook/browser/notebookExtensionPoint	Notebook id	ID
+vs/workbench/contrib/notebook/browser/notebookExtensionPoint	Notebook mimetypes	Mimetypes
+vs/workbench/contrib/notebook/browser/notebookExtensionPoint	notebooks	Notebooks
+vs/workbench/contrib/preferences/browser/keybindingsEditor	command	Command
+vs/workbench/contrib/preferences/browser/keybindingsEditor	title	{0} ({1})
+vs/workbench/contrib/preferences/browser/preferencesActions	languageDescriptionConfigured	({0})
+vs/workbench/contrib/preferences/browser/preferencesWidgets	windsurfSettings	Devin Settings
+vs/workbench/contrib/preferences/browser/preferencesWidgets	workspaceSettings	Workspace
+vs/workbench/contrib/preferences/browser/settingsEditorSettingIndicators	experimentalLabel	Experimental
+vs/workbench/contrib/preferences/browser/settingsEditorSettingIndicators	workspace	Workspace
+vs/workbench/contrib/preferences/browser/settingsLayout	chat	Chat
+vs/workbench/contrib/preferences/browser/settingsLayout	chatMcp	MCP
+vs/workbench/contrib/preferences/browser/settingsLayout	cursor	Cursor
+vs/workbench/contrib/preferences/browser/settingsLayout	devin	Devin
+vs/workbench/contrib/preferences/browser/settingsLayout	experimental	Experimental
+vs/workbench/contrib/preferences/browser/settingsLayout	notebook	Notebook
+vs/workbench/contrib/preferences/browser/settingsLayout	proxy	Proxy
+vs/workbench/contrib/preferences/browser/settingsLayout	terminal	Terminal
+vs/workbench/contrib/preferences/browser/settingsLayout	workbench	Workbench
+vs/workbench/contrib/preferences/browser/settingsSearchMenu	experimental	Experimental
+vs/workbench/contrib/preferences/browser/settingsWidgets	itemInputPlaceholder	Item...
+vs/workbench/contrib/preferences/browser/settingsWidgets	objectKeyHeader	Item
+vs/workbench/contrib/preferences/browser/settingsWidgets	okButton	OK
+vs/workbench/contrib/processExplorer/browser/processExplorerControl	processCpu	CPU (%)
+vs/workbench/contrib/processExplorer/browser/processExplorerControl	processPid	PID
+vs/workbench/contrib/quickaccess/browser/commandsQuickAccess	commandWithCategory	{0}: {1}
+vs/workbench/contrib/quickaccess/browser/viewQuickAccess	terminals	Terminal
+vs/workbench/contrib/quickaccess/browser/viewQuickAccess	terminalTitle	{0}: {1}
+vs/workbench/contrib/remote/browser/tunnelView	remote.tunnel.protocolHttp	HTTP
+vs/workbench/contrib/remote/browser/tunnelView	remote.tunnel.protocolHttps	HTTPS
+vs/workbench/contrib/scm/browser/scm.contribution	quickDiffDecoration	Diff Decorations
+vs/workbench/contrib/scm/browser/scmViewPane	label.close	Close
+vs/workbench/contrib/scm/browser/scmViewPane	scmInput.accessibilityHelp	{0}, Use {1} to open Source Control Accessibility Help.
+vs/workbench/contrib/scm/browser/scmViewPane	scmInput.accessibilityHelpNoKb	{0}, Run the Open Accessibility Help command for more information.
+vs/workbench/contrib/scm/browser/scmViewPane	scmInputCancelAction	Cancel
+vs/workbench/contrib/scm/browser/scmViewPane	scmInputMoreActions	More Actions...
+vs/workbench/contrib/search/browser/anythingQuickAccess	helpPickAriaLabel	{0}, {1}
+vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions	snippets	Snippets
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	detail.label	({0}) {1}
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	global.1	({0})
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	global.scope	(global)
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	miOpenSnippets	&&Snippets
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	new.global_scope	global
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	new.workspace_scope	{0} workspace
+vs/workbench/contrib/snippets/browser/commands/configureSnippets	userSnippets	Snippets
+vs/workbench/contrib/snippets/browser/snippetCodeActionProvider	codeAction	{0}
+vs/workbench/contrib/snippets/browser/snippetCompletionProvider	detail.snippet	{0} ({1})
+vs/workbench/contrib/snippets/browser/snippetCompletionProvider	snippetSuggest.longLabel	{0}, {1}
+vs/workbench/contrib/tasks/browser/abstractTaskService	task.longRunningTaskDurationMinutes	{0}m
+vs/workbench/contrib/tasks/browser/abstractTaskService	task.longRunningTaskDurationMinutesSeconds	{0}m {1}s
+vs/workbench/contrib/tasks/browser/abstractTaskService	task.longRunningTaskDurationSeconds	{0}s
+vs/workbench/contrib/terminal/browser/baseTerminalBackend	ptyHostStatus	Pty Host Status
+vs/workbench/contrib/terminal/browser/baseTerminalBackend	ptyHostStatus.short	Pty Host
+vs/workbench/contrib/terminal/browser/environmentVariableInfo	ScopedEnvironmentContributionInfo	workspace
+vs/workbench/contrib/terminal/browser/terminal.contribution	miToggleIntegratedTerminal	&&Terminal
+vs/workbench/contrib/terminal/browser/terminal.contribution	terminal	Terminal
+vs/workbench/contrib/terminal/browser/terminalActions	workbench.action.terminal.maybeCopySelection	Copy Selection (No Warning)
+vs/workbench/contrib/terminal/browser/terminalInstance	terminalTextBoxAriaLabel	Terminal {0}
+vs/workbench/contrib/terminal/browser/terminalInstance	terminalTextBoxAriaLabelNumberAndTitle	Terminal {0}, {1}
+vs/workbench/contrib/terminal/browser/terminalMenus	sendTerminalToChat	Send Terminal to Chat
+vs/workbench/contrib/terminal/browser/terminalTabsList	label	Terminal
+vs/workbench/contrib/terminal/browser/terminalTabsList	sendToChat	Send to Chat
+vs/workbench/contrib/terminal/browser/terminalTabsList	terminalAriaLabel	Terminal {0} {1}
+vs/workbench/contrib/terminal/common/terminalConfiguration	terminal.integrated.showCommandHint	Controls whether to show the command generation hint at the bottom of the terminal.
+vs/workbench/contrib/terminal/common/terminalContextKey	terminalCascadeManagedTerminalFocusContextKey	Whether a terminal managed by Cascade is focused.
+vs/workbench/contrib/terminal/common/terminalContextKey	terminalCascadeTerminalFocusContextKey	Whether a terminal in the Cascade panel is focused.
+vs/workbench/contrib/terminal/common/terminalStrings	local	Local
+vs/workbench/contrib/terminal/common/terminalStrings	terminal	Terminal
+vs/workbench/contrib/terminal/common/terminalStrings	terminalCategory	Terminal
+vs/workbench/contrib/terminalContrib/cascadeManagedFooter/browser/terminal.cascadeManagedFooter.contribution	cascadeManagedTerminal	This read-only terminal is managed by Cascade
+vs/workbench/contrib/terminalContrib/chat/browser/terminalChatActions	terminalCategory	Terminal
+vs/workbench/contrib/terminalContrib/chat/browser/terminalChatActions	terminalCategory2	Terminal
+vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool	runInTerminal.allowNetwork.autoRetry.confirmationMessage	`{0}`
+vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/runInTerminalTool	runInTerminal.unsandboxed.autoRetry.confirmationMessage	`{0}`
+vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration	agentSandbox.enabledSetting.allowNetworkDescription	Enable sandboxing for agent mode tools and allow all network domains.
+vs/workbench/contrib/terminalContrib/chatAgentTools/common/terminalChatAgentToolsConfiguration	agentSandbox.windowsEnabledSetting.allowNetworkDescription	Enable sandboxing for agent mode tools on Windows and allow all network domains.
+vs/workbench/contrib/terminalContrib/links/browser/terminalLinkManager	followLinkUrl	Link
+vs/workbench/contrib/terminalContrib/notification/browser/terminalNotificationHandler	terminalNotificationSource	Terminal
+vs/workbench/contrib/terminalContrib/sendSignal/browser/terminal.sendSignal.contribution	SIGHUP	Hangup
+vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminalStickyScrollOverlay	labelWithKeybinding	{0} ({1})
+vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon	alias	Alias
+vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon	branch	Branch
+vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon	pullRequest	Pull Request
+vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon	stash	Stash
+vs/workbench/contrib/terminalContrib/suggest/browser/terminalSuggestAddon	tag	Tag
+vs/workbench/contrib/terminalContrib/terminalCommandPopup/browser/terminal.terminalCommandPopupHint.contribution	dismissHint	Dismiss
+vs/workbench/contrib/terminalContrib/terminalCommandPopup/browser/terminal.terminalCommandPopupHint.contribution	emptyHintText	{0} to generate a command. 
+vs/workbench/contrib/terminalContrib/terminalCommandPopup/browser/terminal.terminalCommandPopupHint.contribution	workbench.action.terminal.hideCommandHint	Hide Command Hint
+vs/workbench/contrib/terminalContrib/terminalCommandPopup/browser/terminal.terminalCommandPopupHint.contribution	workbench.action.terminal.showCommandHint	Show Command Hint
+vs/workbench/contrib/terminalContrib/terminalCommandPopup/browser/terminal.terminalCommandPopupHint.contribution	workbench.action.terminal.toggleCommandHint	Hide Command Hint
+vs/workbench/contrib/testing/common/constants	testing.treeElementLabel	{0} ({1})
+vs/workbench/contrib/themes/browser/themes.contribution	installExtension.button.ok	OK
+vs/workbench/contrib/timeline/browser/timelinePane	timeline.aria.item	{0}: {1}
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.cancel	Cancel
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.cancelRestart	Cancel
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.localAgentRunning	A local agent is still working. Restarting to update will stop it.
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.localAgentsRunning	{0} local agents are still working. Restarting to update will stop them.
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.restartAnyway	&&Restart anyway
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.untitledSession	Untitled session
+vs/workbench/contrib/update/browser/update	confirmRestartUpdate.yes	Yes
+vs/workbench/contrib/update/browser/update	download update	Download Update
+vs/workbench/contrib/update/browser/update	installUpdate	Install Update
+vs/workbench/contrib/update/browser/update	later	Later
+vs/workbench/contrib/update/browser/update	learn more	Learn More
+vs/workbench/contrib/update/browser/update	thereIsUpdateAvailable	There is an available update.
+vs/workbench/contrib/update/browser/update	update service	Update Service
+vs/workbench/contrib/update/browser/update	update service disabled	Updates are disabled because you are running the user-scope installation of {0} as Administrator.
+vs/workbench/contrib/update/browser/update	updateAvailable	There's an update available: {0} {1}
+vs/workbench/contrib/update/browser/update	updateAvailableAfterRestart	Restart {0} to apply the latest update.
+vs/workbench/contrib/update/browser/update	updateNow	Update Now
+vs/workbench/contrib/update/browser/update	use insiders	&&Insiders
+vs/workbench/contrib/update/browser/update.contribution	devApplyUpdateFromUrl	[Dev] Apply update from URL...
+vs/workbench/contrib/update/browser/update.contribution	devUpdateUrlInvalid	Please enter a valid URL
+vs/workbench/contrib/update/browser/update.contribution	devUpdateUrlPrompt	Enter the URL to the update package (.zip for macOS, .exe for Windows, .tar.gz for Linux)
+vs/workbench/contrib/update/browser/update.contribution	devUpdateUrlRequired	URL is required
+vs/workbench/contrib/update/browser/updateTooltip	updateTooltip.downloadSpeed	{0}/s
+vs/workbench/contrib/update/common/updateUtils	update.bytes	{0} B
+vs/workbench/contrib/update/common/updateUtils	update.gigabytes	{0} GB
+vs/workbench/contrib/update/common/updateUtils	update.kilobytes	{0} KB
+vs/workbench/contrib/update/common/updateUtils	update.timeRemainingMinutes	{0} min
+vs/workbench/contrib/update/common/updateUtils	update.timeRemainingSeconds	{0}s
+vs/workbench/contrib/userDataProfile/browser/userDataProfile	openShort	{0}
+vs/workbench/contrib/userDataProfile/browser/userDataProfilesEditor	hostColumnLabel	Host
+vs/workbench/contrib/userDataProfile/browser/userDataProfilesEditor	localAuthority	Local
+vs/workbench/contrib/userDataProfile/browser/userDataProfilesEditor	snippets	Snippets
+vs/workbench/contrib/userDataSync/browser/userDataSync	insiders	Insiders
+vs/workbench/contrib/userDataSync/browser/userDataSyncConflictsView	localResourceName	{0} (Local)
+vs/workbench/contrib/userDataSync/browser/userDataSyncViews	remoteToLocalDiff	{0} ↔ {1}
+vs/workbench/contrib/userDataSync/browser/userDataSyncViews	rightResourceName	{0} (Local)
+vs/workbench/contrib/userDataSync/browser/userDataSyncViews	sideBySideLabels	{0} ↔ {1}
+vs/workbench/contrib/userDataSync/browser/userDataSyncViews	sync logs	Logs
+vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted	showMore	More...
+vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted	showMoreWindsurfShortcuts	Show More...
+vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted	windsurfOnboarding	Onboarding
+vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted	windsurfStart	Shortcuts
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	gettingStarted.notebook.walkthroughPageTitle	Notebooks
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.acceptCompletion.description	Tab to accept an Autocomplete
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.acceptCompletion.title	Accept an Autocomplete
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.finishIDESetup.description	Finish IDE Setup
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.finishIDESetup.title	Finish IDE Setup
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.openDocumentation.description	Open Documentation
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.openDocumentation.title	Open Documentation
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.openWindsurfCommand.description	Trigger Command
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.openWindsurfCommand.title	Trigger Command
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.SignInToWindsurf.description	Sign in to Devin
+vs/workbench/contrib/welcomeGettingStarted/common/gettingStartedContent	windsurfStart.signInToWindsurf.title	Sign in to Devin
+vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile	colab	Colab
+vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile	jupyter	Jupyter
+vs/workbench/contrib/welcomeViews/common/newFile.contribution	notebook	Notebook
+vs/workbench/contrib/welcomeWalkthrough/browser/editor/editorWalkThrough	editorWalkThrough.title	Editor Playground
+vs/workbench/contrib/welcomeWalkthrough/browser/walkThrough.contribution	miPlayground	Editor Playgrou&&nd
+vs/workbench/contrib/welcomeWalkthrough/browser/walkThrough.contribution	walkThrough.editor.label	Playground
+vs/workbench/contrib/windsurfAcpDev/browser/acpDev.contribution	windsurfAcpDev	ACP Dev
+vs/workbench/contrib/windsurfAcpService/browser/acpRemoteHostActions	acpSshConfigCreateFailed	Failed to create the SSH config file: {0}
+vs/workbench/contrib/windsurfAcpService/browser/acpRemoteHostActions	acpSshConfigListFailed	Failed to list SSH config files: {0}
+vs/workbench/contrib/windsurfAcpService/browser/acpRemoteHostActions	devin	Devin
+vs/workbench/contrib/windsurfAcpService/browser/acpSessionsQuickAccess	acpSessionSlack	Slack
+vs/workbench/contrib/windsurfAcpService/browser/cascadeMigrationWizard.contribution	devin	Devin
+vs/workbench/contrib/windsurfAcpService/browser/cascadeMigrationWizardEditor	cascadeMigrationWizardEditorName	Cascade Migration Wizard
+vs/workbench/contrib/windsurfAcpService/browser/windsurfAcp.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfAcpService/browser/windsurfAcpService	acpMessageCache.shutdown	Saving agent session cache
+vs/workbench/contrib/windsurfAgentWindow/browser/windsurfAgentWindowFont	devinConfigurationTitle	Devin
+vs/workbench/contrib/windsurfCascade/browser/windsurfCascade.contribution	windsurf	Cascade
+vs/workbench/contrib/windsurfCascadeView/browser/loadCloudSessionByIdDev.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfCascadeView/browser/readOnlyDiffContentProvider	devinCloudResource	Devin Cloud Resource
+vs/workbench/contrib/windsurfCascadeView/browser/snippetEditorPane	snippetEditor	Snippet
+vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapBookmarkDecorationService	addBookmarkHelper	Click to add bookmark
+vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapExportAction	exportCodeMap	Share Codemap
+vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapExportAction	windsurf	Devin
+vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapHomeEditorInput	codemaps	Codemaps
+vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapViewer.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfCustomAppIcon/browser/windsurfAppIconCustomization.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfDatadogRum/browser/datadogRum.contribution	datadogRum.category	Devin
+vs/workbench/contrib/windsurfDesignTokenEditor/browser/designTokenEditor.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfDesktopShell/browser/desktopShell.contribution	desktopShell.category	Devin
+vs/workbench/contrib/windsurfFeedback/browser/windsurfFeedback.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfMcpService/browser/windsurfMcp.contribution	acpMcpRegistryMarketplacePage	Devin MCP Registry
+vs/workbench/contrib/windsurfMcpService/browser/windsurfMcp.contribution	acpMcpRegistryPluginPage	Devin MCP Registry Plugin
+vs/workbench/contrib/windsurfMcpService/browser/windsurfMcp.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfMigration/electron-browser/windsurfMigration.contribution	devinDesktopCategory	Devin Desktop
+vs/workbench/contrib/windsurfMigration/electron-browser/windsurfMigration.contribution	windsurfMigration.welcomeImageAlt	Devin Desktop
+vs/workbench/contrib/windsurfOnboarding/browser/windsurfOnboarding.contribution	resetOnboarding	Reset Onboarding
+vs/workbench/contrib/windsurfOnboarding/browser/windsurfOnboarding.contribution	resetOnboardingDescription	Log out of the current account and start onboarding again.
+vs/workbench/contrib/windsurfOnboarding/browser/windsurfOnboarding.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfPullRequest/browser/pullRequest.contribution	pullRequest.configuration.title	Devin Review
+vs/workbench/contrib/windsurfPullRequest/browser/pullRequest.contribution	pullRequest.embeddedReview.enabled	Render Devin Review in an embedded webview iframe instead of a native browser view. Intended for local development; in production this is controlled by a feature rollout.
+vs/workbench/contrib/windsurfPullRequest/browser/pullRequest.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfSettingsPage/browser/windsurfSettingsPage.contribution	windsurf	Devin
+vs/workbench/contrib/windsurfStatusBarSettingsService/browser/windsurfStatusBarSettingsPanel	windsurf	Devin
+vs/workbench/contrib/workspace/browser/workspace.contribution	workspacesCategory	Workspaces
+vs/workbench/contrib/workspace/browser/workspaceTrustEditor	hostColumnLabel	Host
+vs/workbench/contrib/workspace/browser/workspaceTrustEditor	localAuthority	Local
+vs/workbench/electron-browser/actions/installActions	devinCliDisallowed	Please contact your Devin team administrator to enable installing Devin CLI via Devin Desktop
+vs/workbench/electron-browser/actions/installActions	devinCliInstalledUnix	Devin CLI successfully installed. Run `{0}` in a new terminal to use it.
+vs/workbench/electron-browser/actions/installActions	devinCliInstalledWindows	Devin CLI successfully installed. Run `{0}` in a new terminal to use it. You must quit and re-open (not just reload) Devin to use it in the integrated terminal.
+vs/workbench/electron-browser/actions/installActions	devinCliInstallError	Failed to install Devin CLI: {0}
+vs/workbench/electron-browser/actions/installActions	devinCliNotAuthed	Please sign in to Devin before installing Devin CLI.
+vs/workbench/electron-browser/actions/installActions	devinCliNoTeamConfig	Unable to retrieve team settings. Please try again later.
+vs/workbench/electron-browser/actions/installActions	installDevinCli	Install Devin CLI
+vs/workbench/electron-browser/desktop.contribution	argv.force-renderer-accessibility	Forces the renderer to be accessible. ONLY change this if you are using a screen reader on Linux. On other platforms the renderer will automatically be accessible. This flag is automatically set if you have editor.accessibilitySupport: on.
+vs/workbench/electron-browser/parts/dialogs/dialogHandler	okButton	OK
+vs/workbench/services/actions/common/menusExtensionPoint	command name	ID
+vs/workbench/services/chat/common/chatEntitlementService	ok	OK
+vs/workbench/services/chat/common/chatEntitlementService	plan.businessName	Copilot Business
+vs/workbench/services/chat/common/chatEntitlementService	plan.eduName	Copilot Student
+vs/workbench/services/chat/common/chatEntitlementService	plan.enterpriseName	Copilot Enterprise
+vs/workbench/services/chat/common/chatEntitlementService	plan.freeName	Copilot Free
+vs/workbench/services/chat/common/chatEntitlementService	plan.maxName	Copilot Max
+vs/workbench/services/chat/common/chatEntitlementService	plan.proName	Copilot Pro
+vs/workbench/services/chat/common/chatEntitlementService	plan.proPlusName	Copilot Pro+
+vs/workbench/services/dialogs/browser/abstractFileDialogService	filterName.workspace	Workspace
+vs/workbench/services/extensionManagement/browser/extensionEnablementService	cannot disable auth extension	Cannot change enablement {0} extension because Settings Sync depends on it.
+vs/workbench/services/extensionManagement/browser/extensionEnablementService	cannot disable auth extension in workspace	Cannot change enablement of {0} extension in workspace because it contributes authentication providers
+vs/workbench/services/extensionManagement/common/extensionManagementService	Devin for Web	{0} for the Web
+vs/workbench/services/extensionManagement/electron-browser/extensionManagementServerService	local	Local
+vs/workbench/services/extensionRecommendations/common/workspaceExtensionsConfig	workspace	Workspace
+vs/workbench/services/label/common/labelService	temporaryWorkspace	Workspace
+vs/workbench/services/label/common/labelService	workspaceName	{0} (Workspace)
+vs/workbench/services/label/common/labelService	workspaceNameVerbose	{0} (Workspace)
+vs/workbench/services/language/common/languageService	language id	ID
+vs/workbench/services/language/common/languageService	snippets	Snippets
+vs/workbench/services/preferences/browser/keybindingsEditorModel	cat.title	{0}: {1}
+vs/workbench/services/preferences/browser/keybindingsEditorModel	meta	meta
+vs/workbench/services/progress/browser/progressService	progress.text2	{0}: {1}
+vs/workbench/services/progress/browser/progressService	progress.title2	[{0}]: {1}
+vs/workbench/services/progress/browser/progressService	progress.title3	[{0}] {1}: {2}
+vs/workbench/services/suggest/browser/simpleSuggestWidget	label	{0}, {1}
+vs/workbench/services/suggest/browser/simpleSuggestWidget	label.desc	{0}, {1} {2}
+vs/workbench/services/suggest/browser/simpleSuggestWidget	label.detail	{0}{1} {2}
+vs/workbench/services/suggest/browser/simpleSuggestWidget	label.full	{0}{1}, {2} {3}
+vs/workbench/services/themes/common/colorExtensionPoint	id	ID
+vs/workbench/services/userDataProfile/browser/snippetsResource	snippets	Snippets
+vs/workbench/services/userDataProfile/browser/userDataProfileImportExportService	local	Local
+vs/workbench/services/userDataProfile/common/userDataProfileIcons	settingsViewDropdownIcon	Settings dropdown icon.
+vs/workbench/services/userDataSync/common/userDataSync	snippets	Snippets
+vs/workbench/services/workingCopy/electron-browser/workingCopyBackupTracker	ok	&&OK

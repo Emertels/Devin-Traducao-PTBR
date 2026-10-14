@@ -1,0 +1,215 @@
+{
+  "vs/workbench/browser/parts/titlebar/agentEditorSwitch": {
+    "agentSegment": "Agente",
+    "editorSegment": "Editor",
+    "focusEditorWindow": "Editor",
+    "openAgentWindow": "Agente"
+  },
+  "vs/workbench/browser/actions/quickAccessActions": {
+    "windsurf.agentManager": "Gerenciador de agentes"
+  },
+  "vs/workbench/browser/parts/editor/editorActions": {
+    "windsurf.agentManager": "Gerenciador de agentes"
+  },
+  "vs/workbench/contrib/windsurfAgentSidebar/browser/windsurfAgentSidebar.contribution": {
+    "windsurfAgentSidebar": "Espaços de agentes"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/browser/agentSpaceNavHistory": {
+    "agentSpaceCanGoBack": "Indica se a janela do agente pode voltar a uma sessão ou à caixa de entrada visualizada anteriormente.",
+    "agentSpaceCanGoForward": "Indica se a janela do agente pode avançar para uma sessão ou para a caixa de entrada da qual voltou.",
+    "agentSpaceNavigateBack": "Voltar",
+    "agentSpaceNavigateForward": "Avançar"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/browser/windsurfAgentWindowActions": {
+    "commandCenter.goToAllSessions": "Ir para todas as sessões",
+    "openAgentKanbanView": "Abrir quadro Kanban de agentes",
+    "openAgentListView": "Abrir lista de agentes",
+    "switchFromWindsurfAgentWindowToNormalMode": "Alternar para o modo Editor",
+    "switchFromWindsurfAgentWindowToNormalMode.pickWorkspace": "Selecionar um espaço de trabalho para abrir",
+    "switchToWindsurfAgentModeInPlace": "Alternar esta janela para o modo Agente do Devin",
+    "switchToWindsurfAgentWindowMode": "Alternar para a janela de agentes do Devin",
+    "toggleWindsurfAgentWindow": "Alternar janela de agentes",
+    "windsurf.agentManager": "Gerenciador de agentes",
+    "windsurfAgentWindow.revealActiveSessionInSidebar": "Mostrar a sessão ativa na barra lateral",
+    "windsurfAgentWindow.searchSessionsInSidebar": "Pesquisar sessões na barra lateral"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/browser/windsurfAgentWindowFont": {
+    "devin.agentWindow.fontFamily": "Controla a fonte da interface da janela do agente. Se ficar vazio, usa Inter.",
+    "devinConfigurationTitle": "Devin"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/electron-browser/agentWindowReveal": {
+    "revealAgentWindow": "Mostrar janela do agente",
+    "revealEditorWindow": "Mostrar janela do editor"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/electron-browser/agentWorkspacePrewarm": {
+    "join.agentWorkspacePrewarm": "Limpando o espaço de trabalho preparado para o agente"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/electron-browser/windsurfAgentWindowActions": {
+    "convertToAgentWorkspace": "Converter janela em espaço de trabalho do agente",
+    "newAgentWindow": "Nova janela de agente"
+  },
+  "vs/workbench/contrib/windsurfCascade/browser/windsurfCascade.contribution": {
+    "migrateMemories": "Migrar memórias",
+    "openCascade": "Agentes",
+    "windsurf": "Cascade"
+  },
+  "vs/workbench/contrib/windsurfCascade/browser/windsurfCascadeMainThreadCommands": {
+    "windsurf.agentManager": "Gerenciador de agentes"
+  },
+  "vs/workbench/contrib/windsurfCascadeView/browser/cascadeView.contribution": {
+    "cascadeEditor": "Editor Cascade",
+    "chatView": "Conversa",
+    "copySessionUrl": "Copiar URL da sessão",
+    "downloadDevinResourceComplete": "Download de '{0}' concluído",
+    "downloadDevinResourceFailed": "Falha ao baixar '{0}': {1}",
+    "downloadDevinResourceTitle": "Baixar",
+    "openContainingFolder": "Abrir pasta que contém o arquivo",
+    "openSessionOnWeb": "Abrir sessão na Web",
+    "renameCascadeSessionEmpty": "O nome da sessão não pode ficar vazio",
+    "renameCascadeSessionTitle": "Renomear sessão",
+    "showInFileExplorer": "Mostrar no Explorador de Arquivos",
+    "showInFinder": "Mostrar no Finder",
+    "snippetEditor": "Trecho de código"
+  },
+  "vs/workbench/contrib/windsurfCascadeView/browser/dissolveAllSpacesDev.contribution": {
+    "dissolveAllSpaces": "Separar todos os espaços em sessões individuais",
+    "dissolveAllSpaces.button": "Separar",
+    "dissolveAllSpaces.confirm": "Separar todos os espaços em sessões individuais?",
+    "dissolveAllSpaces.detail": "Cada espaço com várias sessões será dividido para que cada sessão fique em seu próprio espaço. Os arquivos anexados serão removidos desses espaços, mas cada sessão manterá sua árvore de trabalho. Os títulos manuais dos espaços serão mantidos apenas na primeira sessão. Não é possível desfazer esta ação.",
+    "dissolveAllSpaces.done": "{0} espaço(s) separado(s) em sessões individuais."
+  },
+  "vs/workbench/contrib/windsurfCascadeView/browser/loadCloudSessionByIdDev.contribution": {
+    "loadCloudSessionById": "Carregar sessão da nuvem por ID (desenvolvimento)",
+    "loadCloudSessionById.failed": "Falha ao carregar sessão da nuvem: {0}",
+    "loadCloudSessionById.prompt": "Digite o ID de uma sessão do Devin Cloud para carregar",
+    "loadCloudSessionById.title": "Carregar sessão da nuvem por ID (desenvolvimento)"
+  },
+  "vs/workbench/contrib/windsurfChatClient/electron-browser/chatClientModuleSelection.contribution": {
+    "chatClientModuleLoadFailed": "A prévia do cliente de conversa \"{0}\" falhou ao carregar e foi descartada. Esta janela está usando o cliente incluído no aplicativo. {1}",
+    "chatClientPreviewDownloading": "Baixando a prévia do cliente de conversa \"{0}\"",
+    "chatClientPreviewFixtureTitle": "Prévia do cliente de conversa: {0}",
+    "chatClientPreviewLabel": "Prévia: {0}",
+    "chatClientPreviewTitle": "Prévia do cliente de conversa: {0} ({1})",
+    "copyChatClientPreviewArtifact": "Copiar ID do artefato",
+    "reloadWithChatClientFixtureModule": "Recarregar com o módulo de teste do cliente de conversa",
+    "reloadWithShippedChatClientModule": "Recarregar com o módulo incluído do cliente de conversa",
+    "returnToNormalChatClient": "Voltar ao cliente de conversa padrão",
+    "showChatClientModule": "Mostrar módulo do cliente de conversa",
+    "viewChatClientPreviewSource": "Ver solicitação de pull do código-fonte"
+  },
+  "vs/workbench/contrib/windsurfCustomAppIcon/browser/windsurfAppIconCustomization.contribution": {
+    "windsurf.customAppIcon": "Personalizar ícone do aplicativo (beta)"
+  },
+  "vs/workbench/contrib/windsurfCustomizationsEditor/browser/customizationsEditor.contribution": {
+    "windsurfCustomizationsEditor": "Personalizações",
+    "windsurfDevinLocalPluginEditor": "Extensão local do Devin"
+  },
+  "vs/workbench/contrib/windsurfCustomizationsEditor/browser/customizationsEditorInput": {
+    "windsurfDevinCustomizationsEditorInputName": "Personalizações do Devin"
+  },
+  "vs/workbench/contrib/windsurfCustomizationsEditor/browser/devinLocalPluginEditorInput": {
+    "windsurfDevinLocalPluginEditorInputName": "Extensão: {0}"
+  },
+  "vs/workbench/contrib/windsurfDatadogRum/browser/datadogRum.contribution": {
+    "datadogRum.copied": "Link da sessão do Datadog copiado.",
+    "datadogRum.copySessionLink": "Copiar link da sessão do Datadog",
+    "datadogRum.noSession": "Nenhuma sessão do Datadog foi encontrada nesta janela."
+  },
+  "vs/workbench/contrib/windsurfDesignTokenEditor/browser/designTokenEditor.contribution": {
+    "designTokenEditor": "Editor de tokens de design",
+    "openDesignTokenEditor": "Abrir editor de tokens de design"
+  },
+  "vs/workbench/contrib/windsurfDesktopBridge/browser/desktopNav.contribution": {
+    "desktopNav.navigateBack": "Voltar",
+    "desktopNav.navigateForward": "Avançar",
+    "desktopNav.openSurface": "Abrir área do Devin",
+    "desktopNav.refreshSurface": "Atualizar página"
+  },
+  "vs/workbench/contrib/windsurfDesktopBridge/browser/openCloudSession": {
+    "desktopNav.openSessionFailed": "Não foi possível abrir esta sessão do Devin no Devin Desktop.",
+    "desktopNav.openSessionInBrowser": "Abrir no navegador"
+  },
+  "vs/workbench/contrib/windsurfDesktopShell/browser/desktopShell.contribution": {
+    "desktopShell.availableContext": "Indica se a janela de agentes do aplicativo Web do Devin está disponível",
+    "desktopShell.mountFailed": "Não foi possível carregar o aplicativo Web do Devin. Recarregue a janela para tentar novamente.",
+    "desktopShell.toggle": "Alternar aplicativo Web do Devin (janela de agentes)"
+  },
+  "vs/workbench/contrib/windsurfDesktopViewer/browser/desktopViewer.contribution": {
+    "desktopViewerEditor": "Visualizador da área de trabalho",
+    "desktopViewerEditor.label": "Editor do visualizador da área de trabalho"
+  },
+  "vs/workbench/contrib/windsurfDiffViewer/browser/spaceDiff.contribution": {
+    "spaceDiff.nativeViewAll": "Alterações",
+    "spaceDiffEditor": "Comparação do espaço",
+    "spaceDiffEditor.label": "Editor de comparação do espaço"
+  },
+  "vs/workbench/contrib/windsurfDiffViewer/browser/spaceDiffEditorPane": {
+    "spaceDiff.nFiles": "{0} arquivos alterados",
+    "spaceDiff.oneFile": "1 arquivo alterado",
+    "spaceDiff.title": "Comparação do espaço"
+  },
+  "vs/workbench/contrib/windsurfMcpService/browser/windsurfMcp.contribution": {
+    "openAcpMcpOutputChannel": "Abrir canal de saída MCP do Devin",
+    "openAcpMcpOutputChannelDescription": "Mostrar os registros de saída do MCP.",
+    "openAcpMcpRegistryMarketplace": "Registro MCP do Devin",
+    "openAcpMcpRegistryMarketplaceDescription": "Abrir o registro MCP da CLI do Devin.",
+    "openAcpMcpRegistryPluginPage": "Página de extensões MCP do Devin",
+    "openAcpMcpRegistryPluginPageDescription": "Abrir a página da extensão do registro MCP da CLI do Devin para um servidor específico.",
+    "openDevinForTerminalMcpConfigFile": "Abrir arquivo de configuração MCP do Devin para Terminal",
+    "openDevinForTerminalMcpConfigFileDescription": "Abrir o arquivo de configuração MCP do Devin para Terminal."
+  },
+  "vs/workbench/contrib/windsurfPlanEditor/browser/planEditor.contribution": {
+    "devin.implementPlan": "Implementar plano",
+    "planEditor": "Editor de planos"
+  },
+  "vs/workbench/contrib/windsurfPlanViewer/browser/planViewer.contribution": {
+    "planViewerEditor": "Visualizador de planos"
+  },
+  "vs/workbench/contrib/windsurfSettingsPage/browser/react/windsurfReactSettingsPage.contribution": {
+    "windsurfReactSettingsPage": "Página de configurações do Devin"
+  },
+  "vs/workbench/contrib/windsurfSettingsPage/browser/react/windsurfReactSettingsPageInput": {
+    "windsurfReactSettingsIcon": "Ícone do título da página de configurações do Devin.",
+    "windsurfReactSettingsPageInputName": "Configurações do Devin"
+  },
+  "vs/workbench/contrib/windsurfSettingsPage/browser/windsurfSettingsPageConstants": {
+    "openWindsurfSettings": "Abrir configurações do Devin"
+  },
+  "vs/workbench/contrib/windsurfShellViewer/browser/shellViewer.contribution": {
+    "shellViewerEditor": "Visualizador do terminal",
+    "shellViewerEditor.label": "Editor do visualizador do terminal"
+  },
+  "vs/workbench/contrib/windsurfStatusBarSettingsService/browser/tabs/keybindingTab": {
+    "view all": "Ver todos os atalhos do Devin"
+  },
+  "vs/workbench/contrib/windsurfStatusBarSettingsService/browser/windsurfStatusBarSettingsPanel": {
+    "hideQuickSettingsPanel": "Ocultar painel de configurações rápidas",
+    "hideQuickSettingsPanelDescription": "Ocultar o painel de configurações rápidas do Devin.",
+    "isQuickSettingsPanelVisible": "Verificar se o painel de configurações rápidas está visível",
+    "openBugReportPanel": "Relatar um problema",
+    "openBugReportPanelDescription": "Abrir o painel para relatar um problema.",
+    "openQuickSettingsPanel": "Painel de configurações rápidas",
+    "openQuickSettingsPanelDescription": "Abrir o painel de configurações rápidas do Devin."
+  },
+  "vs/workbench/contrib/windsurfTestRecordingViewer/browser/testRecordingViewer.contribution": {
+    "testRecordingViewerEditor": "Visualizador de gravações de teste"
+  },
+  "vs/workbench/services/devinCloudFiles/browser/devinCloudEditorError": {
+    "devinCloudFiles.editor.asleep": "Este arquivo está na máquina virtual do Devin, que está suspensa.",
+    "devinCloudFiles.editor.connecting": "A conexão com a máquina da sessão está sendo iniciada. O arquivo será aberto quando os arquivos chegarem.",
+    "devinCloudFiles.editor.failed": "Os arquivos da máquina da sessão não estão disponíveis.",
+    "devinCloudFiles.editor.localPreferred": "Este arquivo está na máquina virtual do Devin. O Explorador mostra suas pastas locais.",
+    "devinCloudFiles.editor.notConnected": "Este arquivo está em uma máquina virtual do Devin. A conexão com a máquina da sessão ainda não foi iniciada.",
+    "devinCloudFiles.editor.otherSession": "Este arquivo está na máquina de outra sessão do Devin. Selecione essa sessão para abrir o arquivo.",
+    "devinCloudFiles.editor.waking": "A máquina da sessão está iniciando. O arquivo será aberto quando os arquivos chegarem.",
+    "devinCloudFiles.retryAction": "Tentar novamente",
+    "devinCloudFiles.useCloudAction": "Mostrar arquivos da máquina virtual do Devin",
+    "devinCloudFiles.wakeAction": "Ativar máquina"
+  },
+  "vs/editor/contrib/gotoError/browser/gotoError": {
+    "windsurfExplainProblem.label": "Explicar e corrigir o problema"
+  },
+  "vs/editor/contrib/hover/browser/markerHoverParticipant": {
+    "windsurf explain and fix problem": "Explicar e corrigir"
+  }
+}

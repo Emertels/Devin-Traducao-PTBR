@@ -1,0 +1,330 @@
+{
+  "vs/platform/windsurfAuth/common/windsurfAuth": {
+    "windsurfAccount": "Conta Devin",
+    "windsurfUsage": "Uso do Devin"
+  },
+  "vs/workbench/browser/parts/editor/editorGroupWindsurfWelcome": {
+    "windsurfWelcome.loggedOut": "Desconectado",
+    "windsurfWelcome.settings": "Configurações",
+    "windsurfWelcome.windsurf": "Devin"
+  },
+  "vs/workbench/contrib/windsurfAcpService/browser/acpRemoteHostActions": {
+    "acpAddNewSSHHost": "Adicionar novo host SSH...",
+    "acpAddNewSSHHostAction": "Adicionar novo host SSH para agentes remotos...",
+    "acpConfigureSSHHosts": "Configurar hosts SSH...",
+    "acpConfigureSSHHostsAction": "Configurar hosts SSH para agentes remotos...",
+    "acpConfigureSSHHostsTitle": "Abrir arquivo de configuração SSH",
+    "acpConnectRemoteHost": "Conectar a host remoto de agentes...",
+    "acpConnectRemoteHostPlaceholder": "Selecione um host SSH configurado ou digite usuário@host",
+    "acpConnectRemoteHostTitle": "Conectar ao host remoto de agentes",
+    "acpDisconnectRemoteHost": "Desconectar host remoto de agentes",
+    "acpRemoteHostInvalid": "Digite um alias de host SSH ou usuário@host.",
+    "acpRemoteHostSaved": "salvo",
+    "acpRemoveRemoteHost": "Remover host remoto de agentes",
+    "devin": "Devin"
+  },
+  "vs/workbench/contrib/windsurfMigration/electron-browser/windsurfMigration.contribution": {
+    "devinDesktopCategory": "Devin Desktop",
+    "resetMigration.confirm.button": "&&Redefinir e reiniciar",
+    "resetMigration.confirm.detail": "Isso exclui as configurações, extensões e o estado atual do editor do Devin Desktop. Em seguida, o aplicativo reinicia e executa novamente a migração inicial do Windsurf. Seus dados do Windsurf não são afetados.",
+    "resetMigration.confirm.message": "Redefinir a migração do Windsurf e reiniciar?",
+    "resetMigration.devOnly": "A redefinição da migração do Windsurf só está disponível em instalações do aplicativo.",
+    "resetMigration.unavailable": "A redefinição da migração do Windsurf não está disponível nesta versão.",
+    "resetMigrationFromWindsurf": "Redefinir migração do Windsurf",
+    "windsurfMigration.welcomeDismiss": "Começar",
+    "windsurfMigration.welcomeImageAlt": "Devin Desktop",
+    "windsurfMigration.welcomeMessage": "Bem-vindo ao Devin Desktop! Gerencie vários agentes locais e na nuvem em um só lugar. Planeje, delegue, revise e entregue sem sair do editor.",
+    "windsurfMigration.welcomeSectionContent": "Gerencie vários agentes locais e na nuvem em um só lugar. Planeje, delegue, revise e entregue sem sair do editor.",
+    "windsurfMigration.welcomeTitle": "Bem-vindo ao Devin Desktop"
+  },
+  "vs/workbench/contrib/windsurfDesktopShell/browser/devinWebappCommands": {
+    "devin.webapp.checkForUpdates": "Verificar atualizações",
+    "devin.webapp.downloadDiagnostics": "Baixar diagnósticos do Devin",
+    "devin.webapp.restartToUpdate": "Reiniciar para atualizar",
+    "devin.webapp.saveLanguageServerCpuProfile": "Salvar perfil de CPU do servidor de linguagem",
+    "devin.webapp.saveLanguageServerMemoryProfile": "Salvar perfil de memória do servidor de linguagem",
+    "devin.webapp.toggleAgentWindow": "Alternar janela do agente"
+  },
+  "vs/workbench/contrib/windsurfFeedback/browser/windsurfFeedback.contribution": {
+    "joinCommunity": "Participar da comunidade",
+    "openDocs": "Documentação",
+    "openFeedbackPanel": "Relatar um problema",
+    "openFeedbackPanelDescription": "Relatar um problema.",
+    "provideFeedback": "Enviar comentários",
+    "WindsurfChangelog": "Registro de alterações",
+    "WindsurfDiagnostics": "Baixar diagnósticos"
+  },
+  "vs/workbench/contrib/windsurfSettingsPage/browser/windsurfSettingsPage.contribution": {
+    "deleteGlobalRules": "Excluir regras globais",
+    "deleteWorkspaceFile": "Excluir arquivo do espaço de trabalho",
+    "openDevinLocalCustomizationsTab": "Aba de personalizações locais do Devin",
+    "openDevinLocalCustomizationsTabDescription": "Abrir a aba de personalizações locais do Devin.",
+    "openFolderInNewWindow": "Abrir pasta em nova janela",
+    "openFoldersInNewWindow": "Abrir pastas em nova janela",
+    "openGlobalRules": "Abrir regras globais",
+    "openWindsurfSettings": "Abrir configurações do usuário do Devin",
+    "openWindsurfSettingsWithId": "Abrir página de configurações do Devin com o ID da configuração",
+    "windsurf": "Devin",
+    "windsurfSettings": "Configurações do Devin"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/agentsVoiceWidget": {
+    "agentsVoice.clickMicToTalk": "Clique no microfone para falar",
+    "agentsVoice.collapseSessions": "Recolher sessões",
+    "agentsVoice.configureKeybinding": "Configurar atalho de teclado",
+    "agentsVoice.disconnect": "Desconectar",
+    "agentsVoice.feedbackError": "Falha ao enviar",
+    "agentsVoice.holdToTalk": "Mantenha {0} pressionado para falar",
+    "agentsVoice.listening": "Ouvindo",
+    "agentsVoice.minimize": "Minimizar",
+    "agentsVoice.pushToTalk": "Pressione para falar",
+    "agentsVoice.pushToTalkKey": "Pressione para falar ({0})",
+    "agentsVoice.pushToTalkSpace": "Pressione Espaço para falar",
+    "agentsVoice.sendFeedback": "Enviar comentários",
+    "agentsVoice.sessions": "Sessões"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/onboardingComponent": {
+    "agentsVoice.changeHotkeySuffix": "para usar em qualquer aplicativo.",
+    "agentsVoice.changePttKey": "Alterar tecla para pressionar para falar",
+    "agentsVoice.configureHotkey": "Configurar atalho de teclado",
+    "agentsVoice.connecting": "Conectando…",
+    "agentsVoice.feedbackDesc": "Use o ícone de comentários para nos ajudar a melhorar sua experiência.",
+    "agentsVoice.getStarted": "Começar",
+    "agentsVoice.miniViewSuffix": "para realizar outras tarefas enquanto o VS Code não está em primeiro plano.",
+    "agentsVoice.openMiniView": "Abrir visualização compacta",
+    "agentsVoice.pttDesc": "Pressione para falar",
+    "agentsVoice.pttHoldDesc": "— mantenha a tecla pressionada enquanto fala e solte quando terminar.",
+    "agentsVoice.welcomeDesc": "Fale com um assistente que controla vários agentes de programação ao mesmo tempo. Receba notificações quando o trabalho terminar ou quando for necessária sua atenção.",
+    "agentsVoice.welcomeTitle": "Boas-vindas ao chat por voz"
+  },
+  "vs/workbench/contrib/deepwiki/browser/deepwiki.contribution": {
+    "deepwiki": "DeepWiki",
+    "deepwiki view": "DeepWiki",
+    "deepwiki-category": "DeepWiki",
+    "deepwiki.attachContext.title": "Anexar DeepWiki como contexto",
+    "deepwiki.moreActions": "Mais ações",
+    "deepwiki.navigateBackward": "Navegar para o artigo anterior no histórico",
+    "deepwiki.navigateForward": "Navegar para o próximo artigo no histórico",
+    "deepwiki.openSymbol": "Ver Wiki",
+    "deepwiki.openSymbol.title": "Abrir símbolo no DeepWiki",
+    "deepwiki.resetSeenStates.title": "Redefinir estados visualizados do DeepWiki",
+    "deepwikiMain": "DeepWiki",
+    "miViewDeepwiki": "Deep&&Wiki"
+  },
+  "vs/workbench/contrib/windsurfPullRequest/browser/pullRequest.contribution": {
+    "devin.openPullRequestEditor": "Abrir solicitação de pull",
+    "devin.pullRequest.findNext": "Localizar próxima no Devin Review",
+    "devin.pullRequest.findPrevious": "Localizar anterior no Devin Review",
+    "devin.pullRequest.hideFind": "Parar busca no Devin Review",
+    "devin.pullRequest.refresh": "Atualizar Devin Review",
+    "devin.pullRequest.showFind": "Buscar no Devin Review",
+    "devin.pullRequest.toggleDevTools": "Alternar ferramentas de desenvolvedor (Devin Review)",
+    "openInDevinReview": "Abrir no Devin Review",
+    "openInGitHub": "Abrir no GitHub",
+    "pullRequest.configuration.title": "Devin Review",
+    "pullRequestEditor": "Solicitação de pull",
+    "windsurf": "Devin",
+    "windsurf.enterPullRequestUrl": "Insira a URL da solicitação de pull"
+  },
+  "vs/workbench/contrib/windsurfCodeMapViewer/browser/codeMapViewer.contribution": {
+    "addCodeMapToCascade": "Adicionar mapa de código ao Cascade",
+    "closeCodeMap": "Início",
+    "codeMapEditor": "Editor de mapas de código",
+    "codeMapHomeEditor": "Mapas de código",
+    "codemaps": "Mapas de código",
+    "generateCodeMap": "Gerar mapa de código",
+    "generateCodeMapFromCascade": "Gerar mapa de código a partir do Cascade",
+    "generateCodeMapFromNavigationHistory": "Gerar mapa de código a partir do histórico de navegação",
+    "generatingCodeMap": "{0} mapa de código sendo gerado",
+    "generatingCodeMaps": "{0} mapas de código sendo gerados",
+    "isCodemapsEnabled": "Verificar se os mapas de código estão ativados",
+    "loadCodeMap": "Carregar mapa de código",
+    "miViewCodemaps": "Mapas de &&código",
+    "openCodeMapById": "Abrir mapa de código pelo ID",
+    "openCodeMapChat": "Abrir chat do mapa de código",
+    "openCodeMapView": "Abrir mapas de código",
+    "openInPlayground": "Abrir painel de testes",
+    "windsurf": "Devin"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/browser/newSessionTabButton": {
+    "windsurfCloudTerminal": "Abrir terminal na máquina do Devin",
+    "windsurfDesktop": "Abrir computador do Devin",
+    "windsurfNewFile": "Novo arquivo",
+    "windsurfNewSession": "Nova sessão",
+    "windsurfNewSessionOptions": "Opções da nova sessão",
+    "windsurfOpenCustomizations": "Abrir personalizações",
+    "windsurfOpenFile": "Abrir arquivo",
+    "windsurfShell": "Ver histórico do shell",
+    "windsurfViewDiffs": "Ver diferenças"
+  },
+  "vs/workbench/contrib/windsurfAgentWindow/browser/devinCloudTerminal": {
+    "devinCloudTerminalNoSession": "Não foi possível abrir um terminal na máquina do Devin: a sessão do Devin Cloud ainda não está pronta. Tente novamente em instantes.",
+    "devinCloudTerminalPick": "Selecione uma sessão do Devin Cloud para abrir um terminal"
+  },
+  "vs/workbench/contrib/windsurfAcpService/browser/cascadeMigrationWizard.contribution": {
+    "cascadeMigrationWizardEditor": "Assistente de migração do Cascade",
+    "cascadeMigrationWizardNoConnector": "O agente CLI do Devin não está conectado. Verifique se está ativado e conectado e tente novamente.",
+    "cascadeMigrationWizardNoWorkspace": "Nenhuma pasta compatível está aberta. Abra uma pasta que contenha suas personalizações do Cascade.",
+    "devin": "Devin",
+    "migrateOffCascade": "Abrir assistente de migração do Cascade"
+  },
+  "vs/workbench/contrib/windsurfAcpService/browser/windsurfAcp.contribution": {
+    "acpSessionsQuickAccess": "Pesquisar sessões",
+    "acpSessionsQuickAccessPlaceholder": "Pesquisar sessões por nome...",
+    "clearAcpMetadataCache": "Limpar cache de metadados do ACP",
+    "windsurf": "Devin"
+  },
+  "vs/workbench/contrib/windsurfAcpService/browser/acpSessionsQuickAccess": {
+    "acpSessionClosedPullRequest": "Solicitação de pull fechada",
+    "acpSessionDraftPullRequest": "Rascunho de solicitação de pull",
+    "acpSessionMergedPullRequest": "Solicitação de pull incorporada",
+    "acpSessionOpenPullRequest": "Solicitação de pull aberta",
+    "acpSessionSlack": "Slack",
+    "noAcpSessionResults": "Nenhuma sessão correspondente"
+  },
+  "vs/workbench/contrib/deepwiki/browser/deepwikiHoverParticipant": {
+    "deepwiki.emptySummary": "O resumo está vazio",
+    "deepwiki.loadingSummary": "Carregando resumo do DeepWiki...",
+    "deepwiki.noSummary": "Nenhum resumo disponível",
+    "deepwiki.seeWiki": "Leia mais",
+    "deepwiki.summaryError": "Erro ao carregar o resumo"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/agentsVoiceSessionsPicker": {
+    "voiceSessions.placeholder": "Selecione uma sessão para entrada de voz",
+    "voiceSessions.setTarget": "Definir como destino de voz"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/agentsVoiceWidgetBinding": {
+    "agentsVoice.chat": "Chat",
+    "agentsVoice.otherSessions": "Outras",
+    "agentsVoice.untitledSession": "Sessão sem título"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/confirmationComponent": {
+    "agentsVoice.approve": "Aprovar",
+    "agentsVoice.deny": "Negar",
+    "agentsVoice.openInVSCode": "Abrir no VS Code"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/feedbackDialog": {
+    "agentsVoice.cancel": "Cancelar",
+    "agentsVoice.feedbackConsent": "Ao enviar, você concorda que os registros da sessão e o histórico da transcrição sejam incluídos nos comentários.",
+    "agentsVoice.feedbackError": "Falha ao enviar comentários",
+    "agentsVoice.feedbackPlaceholder": "O que podemos melhorar?",
+    "agentsVoice.feedbackThanks": "Agradecemos seus comentários!",
+    "agentsVoice.sendFeedback": "Enviar comentários",
+    "agentsVoice.submit": "Enviar",
+    "agentsVoice.submitting": "Enviando..."
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/headerComponent": {
+    "agentsVoice.clickMicToTalk": "Clique no microfone para falar",
+    "agentsVoice.configureKeybinding": "Configurar atalho de teclado",
+    "agentsVoice.disconnect": "Desconectar",
+    "agentsVoice.holdToTalk": "Mantenha {0} pressionado para falar",
+    "agentsVoice.minimize": "Minimizar",
+    "agentsVoice.openMiniView": "Abrir visualização compacta",
+    "agentsVoice.pushToTalkSpace": "Pressione Espaço para falar",
+    "agentsVoice.sendFeedback": "Enviar comentários"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/sessionListComponent": {
+    "agentsVoice.approve": "Aprovar",
+    "agentsVoice.deny": "Negar",
+    "agentsVoice.newSession": "Nova sessão",
+    "agentsVoice.noActiveSessions": "Nenhuma sessão ativa",
+    "agentsVoice.openInVSCode": "Abrir no VS Code",
+    "agentsVoice.sendTo": "Enviar para",
+    "agentsVoice.sendToActive": "Enviar para (ativa)",
+    "agentsVoice.stop": "Parar",
+    "agentsVoice.stopSessionAction": "Parar sessão"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/statusRowsComponent": {
+    "agentsVoice.done": "concluído",
+    "agentsVoice.jumpToSession": "Ir para a sessão",
+    "agentsVoice.needsInput": "precisa de atenção",
+    "agentsVoice.noActiveSessions": "Nenhuma sessão ativa",
+    "agentsVoice.working": "em andamento"
+  },
+  "vs/workbench/contrib/agentsVoice/browser/components/voiceBarComponent": {
+    "agentsVoice.listening": "Ouvindo",
+    "agentsVoice.speaking": "Falando...",
+    "agentsVoice.stopSpeech": "Parar fala"
+  },
+  "vs/workbench/browser/actions/layoutActions": {
+    "auxiliaryActivityBar": "Barra de atividades secundária",
+    "moveSecondSidebarLeft": "Mover barra lateral secundária para a esquerda",
+    "moveSecondSidebarRight": "Mover barra lateral secundária para a direita",
+    "statusBar": "Barra de status"
+  },
+  "vs/workbench/browser/actions/quickAccessActions": {
+    "quickOpenSessions": "Abrir sessões rapidamente"
+  },
+  "vs/workbench/browser/actions/workspaceActions": {
+    "workspaces": "Espaços de trabalho"
+  },
+  "vs/workbench/browser/agentWindowLabels": {
+    "agentWindowDevinCloudWorkspace": "Arquivos do Devin Cloud"
+  },
+  "vs/workbench/browser/parts/auxiliaryactivitybar/auxiliaryactivitybarPart": {
+    "auxiliary activity bar position": "Posição da barra de atividades secundária",
+    "bottom": "Inferior",
+    "default": "Padrão",
+    "hide": "Ocultar",
+    "hideAuxiliaryActivityBar": "Ocultar barra de atividades secundária",
+    "hideMenu": "Ocultar menu",
+    "menu": "Menu",
+    "positionAuxiliaryActivityBarBottom": "Mover barra de atividades secundária para baixo",
+    "positionAuxiliaryActivityBarDefault": "Mover barra de atividades secundária para a lateral",
+    "positionAuxiliaryActivityBarTop": "Mover barra de atividades secundária para cima",
+    "top": "Superior"
+  },
+  "vs/workbench/browser/parts/auxiliarybar/auxiliaryBarActions": {
+    "hide second side bar": "Ocultar barra lateral do agente",
+    "show second side bar": "Mostrar barra lateral do agente"
+  },
+  "vs/workbench/browser/parts/editor/breadcrumbsControl": {
+    "plans": "Planos"
+  },
+  "vs/workbench/browser/parts/editor/breadcrumbsPicker": {
+    "openCascadeConversation": "Abrir conversa Cascade",
+    "openTerminalInWorktree": "Abrir árvore de trabalho no terminal integrado",
+    "openWorktreeNewWindow": "Abrir árvore de trabalho em uma nova janela"
+  },
+  "vs/workbench/browser/parts/editor/editor.contribution": {
+    "downloadDevinResource": "Baixar",
+    "openSessionOnWeb": "Abrir sessão na Web",
+    "putDevinToSleep": "Suspender o Devin",
+    "renameSession": "Renomear sessão…"
+  },
+  "vs/workbench/browser/parts/editor/editorActions": {
+    "openWindsurfAgentWindow": "Nova janela do agente"
+  },
+  "vs/workbench/browser/parts/editor/editorCommands": {
+    "editorGroupLayout.horizontal": "Horizontal",
+    "editorGroupLayout.vertical": "Vertical"
+  },
+  "vs/workbench/browser/parts/globalCompositeBar": {
+    "noAccounts": "Você não está conectado a nenhuma conta",
+    "signIn": "Entrar",
+    "windsurf settings": "Configurações do Devin"
+  },
+  "vs/workbench/browser/parts/titlebar/agentEditorSwitch": {
+    "editorSegment": "Editor",
+    "focusEditorWindow": "Editor",
+    "focusEditorWindowTooltip": "Focar na janela do editor",
+    "openAgentWindowTooltip": "Abrir janela do agente",
+    "switchToAgent": "Alternar para Agente",
+    "switchToEditor": "Alternar para Editor"
+  },
+  "vs/workbench/browser/parts/titlebar/agentSearchButton": {
+    "searchAgents": "Pesquisar agentes"
+  },
+  "vs/workbench/browser/parts/titlebar/commandCenterControl": {
+    "label.agentMode": "Pesquisar sessões..."
+  },
+  "vs/workbench/browser/parts/titlebar/titlebarPart": {
+    "download update_1": "Atualização disponível",
+    "DownloadingUpdate": "Baixando atualização",
+    "installingUpdate": "Instalando atualização",
+    "installUpdate...": "Instalar atualização",
+    "navigateBack": "Voltar",
+    "navigateForward": "Avançar",
+    "quickOpen": "Abertura rápida",
+    "restartToUpdate": "Reiniciar para atualizar"
+  }
+}

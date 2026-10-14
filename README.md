@@ -1,5 +1,5 @@
 # 🤖 Devin AI Desktop — Tradução para Português do Brasil (PT-BR) 🇧🇷
-### Revisão do instalador — 13/10/2026
+### Revisão do instalador — 14/10/2026
 O instalador PowerShell foi recuperado após corrupção de aspas que impedia sua execução e agora carrega acentos corretamente com BOM UTF-8, sem mudar o código de página do CMD. Os metadados NLS são buscados na instalação detectada, inclusive quando está em outra unidade. Se ocorrer uma falha, o CMD permanece aberto para leitura. Nenhuma nova string de interface foi incluída nesta correção.
 
 

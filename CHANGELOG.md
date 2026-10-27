@@ -1,4 +1,16 @@
 # Histórico de Alterações
+## [1.1.1] - 2026-10-27
+
+Compatível com Devin Desktop 3.11.228 e núcleo VS Code OSS 1.126.0.
+
+### Correção da interface principal
+- Corrigida uma falha da varredura dinâmica: ela excluía todos os bundles de idioma com nome `xx-*.js`, inclusive os bundles portugueses usados pela interface web principal do Devin.
+- A varredura agora inclui arquivos `pt-*` e continua preservando bundles de outros idiomas. Na instalação ativa, foram encontrados e corrigidos rótulos em inglês nos dois bundles PT-BR (`Sessions` → `Sessões`; `Review` → `Revisão`), e os textos existentes nos arquivos foram mantidos.
+- O instalador reaplicou as traduções internas, atualizou os checksums e renovou o cache do Devin. A validação confirmou os valores traduzidos nos arquivos ativos e a ausência dos valores ingleses correspondentes.
+- Adicionado teste de regressão que confirma a inclusão de bundles `pt-*`, a exclusão de bundles de outros idiomas e a tradução efetiva de “Sessions”.
+- Esclarecimento da auditoria anterior: os 20.208/21.210 (95,3%) medem somente mensagens NLS e não comprovam a cobertura da interface principal. A versão 1.1.0 também não processava os bundles portugueses; esta versão corrige essa lacuna.
+- ZIP portátil sem README, changelog ou arquivos de agente; o histórico completo fica nas notas da versão no GitHub.
+
 ## [1.1.0] - 2026-10-27
 
 Compatível com Devin Desktop 3.11.228 e núcleo VS Code OSS 1.126.0.

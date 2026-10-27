@@ -1,9 +1,9 @@
 TRADUÇÃO PT-BR PARA DEVIN DESKTOP
 Tradução PT-BR: Emerson Teles
 
-Atualização de 14/10/2026 — Devin Desktop 3.10.48 / VS Code OSS 1.126.0.
+Versão 1.1.1 — 27/10/2026 — Devin Desktop 3.11.228 / VS Code OSS 1.126.0.
 
-Corrigido o formato do catálogo que deixava menus e Sobre em inglês. O carregador e o cache do aplicativo instalado confirmaram 20.267/21.220 mensagens traduzidas (95,5%). Os textos embutidos da tela inicial também foram revisados. O Sobre inclui Tradução PT-BR: Emerson Teles.
+Corrigida a varredura dos bundles PT-BR da interface principal do Devin. Os rótulos “Sessions” e “Review” encontrados nos arquivos portugueses agora são traduzidos, e o instalador renova o cache. A cobertura de 95,3% mede somente as mensagens NLS. O Sobre inclui Tradução PT-BR: Emerson Teles.
 
 INSTALAÇÃO
 1. Extraia o ZIP para uma pasta local.

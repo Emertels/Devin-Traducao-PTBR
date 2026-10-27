@@ -17,7 +17,8 @@ if (inputPath === '--scan') {
     if (!file.endsWith('.js')) return;
     const source = fs.readFileSync(file, 'utf8');
     // Do not overwrite the app's separately bundled non-English locales.
-    if (/^[a-z]{2}-[A-Za-z0-9_]{8,}\.js$/.test(path.basename(file))) return;
+    // Keep the Brazilian Portuguese bundles in scope; skip only other locale chunks.
+    if (/^(?!pt-)[a-z]{2}-[A-Za-z0-9_]{8,}\.js$/.test(path.basename(file))) return;
     if (needles.some(needle => source.includes(needle))) candidates.push(file);
   }
   function walk(directory) {

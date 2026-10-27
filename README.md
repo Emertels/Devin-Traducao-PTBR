@@ -1,9 +1,9 @@
 # 🤖 Devin AI Desktop — Tradução para Português do Brasil (PT-BR) 🇧🇷
-### Atualização v1.1.0 — 27/10/2026
-Atualizada a tradução para a interface Devin Desktop 3.11.228 e ampliada a busca automática de bundles web. A auditoria confirmou 20.208/21.210 mensagens NLS em PT-BR (95,3%) e verificou 352 traduções embutidas, incluindo os rótulos do print, datas relativas e o crédito **Tradução PT-BR: Emerson Teles** no cache gerado pelo aplicativo.
+### Atualização v1.1.1 — 27/10/2026
+Corrigida a varredura dos bundles PT-BR da interface web, que deixava rótulos da interface principal em inglês. O instalador atualiza os dois bundles portugueses e renova o cache do Devin. A cobertura de 95,3% refere-se apenas às mensagens NLS, não à interface web inteira.
 
 
-![Versão](https://img.shields.io/badge/Versão-v1.1.0-blue?style=for-the-badge)
+![Versão](https://img.shields.io/badge/Versão-v1.1.1-blue?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/Idioma-Português%20(Brasil)-green?style=for-the-badge)
 
 Pacote portátil de localização do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. Compatível com Devin Desktop 3.11.228 / núcleo VS Code OSS 1.126.0. O catálogo cobre 20.208 mensagens NLS (95,3%) e inclui tradução de bundles da interface web, com instalador e restaurador automatizados.
@@ -12,7 +12,7 @@ Pacote portátil de localização do **Devin Desktop (Devin AI)** para Portuguê
 ## Estado da atualização — 27/10/2026 · Devin Desktop 3.11.228 / núcleo 1.126.0
 
 - A atualização manteve o núcleo 1.126.0, mas atualizou a interface para 3.11.228. O catálogo reconstruído contra os metadados atuais cobre 20.208/21.210 mensagens NLS (95,3%); 1.002 ainda não têm tradução direta.
-- A busca dinâmica encontrou e traduziu os bundles novos da interface web. A auditoria analisou 183 candidatos, alterou 176 arquivos e conferiu 352 textos do catálogo, incluindo os quatro rótulos críticos mostrados pelo usuário.
+- Corrigida a exclusão indevida de bundles `pt-*`: os rótulos “Sessions” e “Review” dos recursos ativos da interface principal agora são convertidos para “Sessões” e “Revisão”. A instalação atual foi atualizada e o cache renovado.
 - Foram adicionadas 26 entradas para a interface e tempos relativos (dias, horas, minutos, meses, semanas e anos). O instalador agora encerra os processos restantes após tentar o fechamento normal e atualiza o checksum do host web.
 - Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
 <!-- /devin-status -->
@@ -99,7 +99,7 @@ Devin-Traducao-PTBR/
 
 ## 🚀 Como Instalar em 2 Cliques
 
-1. Baixe o pacote portátil `Devin-Traducao-PTBR-v1.1.0-Portable.zip` e extraia para qualquer pasta.
+1. Baixe o pacote portátil `Devin-Traducao-PTBR-v1.1.1-Portable.zip` e extraia para qualquer pasta.
 2. Dê um duplo clique no arquivo:
    ```cmd
    Instalar-Traducao.bat

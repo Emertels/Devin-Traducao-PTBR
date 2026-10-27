@@ -77,11 +77,18 @@ function Get-OriginalArgv([string]$Path) {
 }
 
 function Stop-DevinWindows {
-    $main = @(Get-Process -Name Devin -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowHandle -ne 0 })
+    $processes = @(Get-Process -Name Devin -ErrorAction SilentlyContinue)
+    $main = @($processes | Where-Object { $_.MainWindowHandle -ne 0 })
     foreach ($p in $main) { try { [void]$p.CloseMainWindow() } catch {} }
     $until = (Get-Date).AddSeconds(15)
     do { Start-Sleep -Milliseconds 400; $left = @(Get-Process -Name Devin -ErrorAction SilentlyContinue) } while ($left.Count -and (Get-Date) -lt $until)
-    if ($left.Count) { throw 'O Devin ainda está rodando em segundo plano. Feche todas as janelas e processos do Devin e execute o instalador novamente.' }
+    if ($left.Count) {
+        Write-Host 'O Devin não encerrou normalmente; finalizando os processos restantes para continuar a instalação...' -ForegroundColor Yellow
+        foreach ($p in $left) { try { Stop-Process -Id $p.Id -Force -ErrorAction Stop } catch {} }
+        $until = (Get-Date).AddSeconds(10)
+        do { Start-Sleep -Milliseconds 300; $left = @(Get-Process -Name Devin -ErrorAction SilentlyContinue) } while ($left.Count -and (Get-Date) -lt $until)
+        if ($left.Count) { throw 'Não foi possível encerrar todos os processos do Devin após o fechamento forçado.' }
+    }
 }
 
 function Reset-DevinCaches {
@@ -102,7 +109,7 @@ function Get-DevinTranslationRevision([string]$Root) {
     $hash = [Security.Cryptography.SHA256]::Create()
     $buffer = [IO.MemoryStream]::new()
     try {
-        foreach ($relative in @('tools\build-language-pack.cjs', 'translations\devin.json', 'translations\devin-complemento.json', 'translations\embedded-ui.json', 'tools\patch-embedded-ui.cjs', 'tools\vendor\acorn.cjs')) {
+        foreach ($relative in @('core\instalar.ps1', 'core\Find-Installations.ps1', 'tools\build-language-pack.cjs', 'translations\devin.json', 'translations\devin-complemento.json', 'translations\embedded-ui.json', 'tools\patch-embedded-ui.cjs', 'tools\vendor\acorn.cjs')) {
             $bytes = [IO.File]::ReadAllBytes((Join-Path $Root $relative))
             $buffer.Write($bytes, 0, $bytes.Length)
         }
@@ -124,6 +131,7 @@ function Update-DevinIntegrityChecksums([string]$Install) {
     $checksumFiles = @{
         'resources\app\out\vs\workbench\workbench.desktop.main.js' = 'vs/workbench/workbench.desktop.main.js'
         'resources\app\out\vs\workbench\windsurf-chat-client\index.js' = 'vs/workbench/windsurf-chat-client/index.js'
+        'resources\app\out\vs\workbench\devin-webapp-host\index.js' = 'vs/workbench/devin-webapp-host/index.js'
         'resources\app\out\vs\sessions\sessions.desktop.main.js' = 'vs/sessions/sessions.desktop.main.js'
     }
     foreach ($relativeFile in $checksumFiles.Keys) {
@@ -146,9 +154,24 @@ function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Ro
     if (-not (Test-Path -LiteralPath $replacerPath)) { throw 'O otimizador de textos internos está ausente.' }
     $patchNode = Get-Command node -ErrorAction SilentlyContinue
     if (-not $patchNode) { throw 'Node.js é necessário para traduzir os textos internos do Devin.' }
-    $relativeFiles = @('resources\app\out\vs\workbench\workbench.desktop.main.js', 'resources\app\out\vs\workbench\windsurf-chat-client\index.js', 'resources\app\out\vs\sessions\sessions.desktop.main.js', 'resources\app\node_modules\@exa\chat-client\index.js')
+    $appDir = Join-Path $Install 'resources\app'
+    $scanRoots = @(
+        (Join-Path $appDir 'out\vs\workbench\devin-webapp-host\assets'),
+        (Join-Path $appDir 'out\vs\workbench\workbench.desktop.main.js'),
+        (Join-Path $appDir 'out\vs\workbench\windsurf-chat-client\index.js'),
+        (Join-Path $appDir 'out\vs\workbench\devin-webapp-host\index.js'),
+        (Join-Path $appDir 'out\vs\sessions\sessions.desktop.main.js'),
+        (Join-Path $appDir 'node_modules\@exa\chat-client\index.js'),
+        (Join-Path $appDir 'out\nls.messages.js')
+    )
+    $scanJson = & $patchNode.Source $replacerPath $translationsPath --scan @scanRoots
+    if ($LASTEXITCODE -ne 0) { throw 'Falha ao procurar bundles JavaScript com textos traduzíveis.' }
+    $scanResult = $scanJson | ConvertFrom-Json
+    $relativeFiles = @($scanResult.candidates | ForEach-Object { ([string]$_).Substring($Install.Length).TrimStart('\') })
+    if ($relativeFiles.Count -eq 0) { throw 'A varredura não encontrou bundles com textos traduzíveis nesta versão.' }
     $changed = New-Object System.Collections.ArrayList
     $matchCount = 0
+    $matchedKeys = New-Object 'System.Collections.Generic.HashSet[string]'
     $fileNumber = 0
     foreach ($relativeFile in $relativeFiles) {
         $fileNumber++
@@ -161,9 +184,37 @@ function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Ro
         if ($LASTEXITCODE -ne 0) { throw "Falha ao analisar os textos internos de $relativeFile." }
         $replaceResult = $resultJson | ConvertFrom-Json
         $matchCount += $replaceResult.matchCount
+        foreach ($matchedKey in $replaceResult.matchedKeys) { [void]$matchedKeys.Add([string]$matchedKey) }
         if ($replaceResult.changed) { [void]$changed.Add([pscustomobject]@{ Path = $path; RelativePath = $relativeFile; StagedPath = $staged }) }
     }
     if ($matchCount -eq 0) { throw 'Não encontrei os textos internos do Devin para traduzir nesta versão.' }
+    $requiredKeys = @('Open customizations', 'View diffs', 'More tips for first-time users', 'Session is too old to be revived. Please start a new session.')
+    $missingKeys = @($requiredKeys | Where-Object { -not $matchedKeys.Contains($_) })
+    if ($missingKeys.Count -gt 0) {
+        # The active bundles may already contain PT-BR from a prior run. Check
+        # immutable originals before deciding that the current build is incompatible.
+        $backupAppDir = Join-Path (Join-Path $BackupDir 'embedded-ui') 'resources\app'
+        $backupScanRoots = @($scanRoots | ForEach-Object { Join-Path $backupAppDir ([string]$_).Substring($appDir.Length).TrimStart('\') })
+        $backupScanJson = & $patchNode.Source $replacerPath $translationsPath --scan @backupScanRoots
+        if ($LASTEXITCODE -eq 0) {
+            $backupScan = $backupScanJson | ConvertFrom-Json
+            $checkNumber = 0
+            foreach ($backupFile in $backupScan.candidates) {
+                $checkNumber++
+                $checkOutput = ([string]$backupFile) + ".ptbr-check-$PID-$checkNumber"
+                $checkJson = & $patchNode.Source $replacerPath $translationsPath ([string]$backupFile) $checkOutput
+                Remove-Item -LiteralPath $checkOutput -Force -ErrorAction SilentlyContinue
+                if ($LASTEXITCODE -ne 0) { continue }
+                $checkResult = $checkJson | ConvertFrom-Json
+                foreach ($matchedKey in $checkResult.matchedKeys) { [void]$matchedKeys.Add([string]$matchedKey) }
+            }
+            $missingKeys = @($requiredKeys | Where-Object { -not $matchedKeys.Contains($_) })
+        }
+    }
+    foreach ($requiredKey in $missingKeys) {
+        foreach ($item in $changed) { Remove-Item -LiteralPath $item.StagedPath -Force -ErrorAction SilentlyContinue }
+        throw "A validação do bundle falhou: o texto esperado '$requiredKey' não apareceu nos módulos ativos nem nos backups originais desta versão. Nenhum arquivo foi alterado."
+    }
     foreach ($item in $changed) {
         $backupPath = Join-Path (Join-Path $BackupDir 'embedded-ui') $item.RelativePath
         if (-not (Test-Path -LiteralPath $backupPath)) {

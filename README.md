@@ -1,22 +1,19 @@
 # 🤖 Devin AI Desktop — Tradução para Português do Brasil (PT-BR) 🇧🇷
-### Correção do carregamento da interface — 14/10/2026
-Corrigido o formato do catálogo que deixava menus e o diálogo Sobre em inglês. O pacote agora usa os nomes das chaves esperados pelo carregador do Devin, atualiza instalações da mesma versão quando o conteúdo da tradução muda e renova o cache de idioma com backup. O Sobre mostra **Tradução PT-BR: Emerson Teles**. Os textos embutidos da tela inicial são traduzidos com análise lexical de JavaScript, incluindo recursos JSON e templates. O teste com o carregador real confirmou 20.267 de 21.220 mensagens traduzidas (95,5%).
-
-### Revisão do instalador — 14/10/2026
-O instalador PowerShell foi recuperado após corrupção de aspas que impedia sua execução e agora carrega acentos corretamente com BOM UTF-8, sem mudar o código de página do CMD. Os metadados NLS são buscados na instalação detectada, inclusive quando está em outra unidade. Se ocorrer uma falha, o CMD permanece aberto para leitura. Nenhuma nova string de interface foi incluída nesta correção.
+### Atualização v1.1.0 — 27/10/2026
+Atualizada a tradução para a interface Devin Desktop 3.11.228 e ampliada a busca automática de bundles web. A auditoria confirmou 20.208/21.210 mensagens NLS em PT-BR (95,3%) e verificou 352 traduções embutidas, incluindo os rótulos do print, datas relativas e o crédito **Tradução PT-BR: Emerson Teles** no cache gerado pelo aplicativo.
 
 
-![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue?style=for-the-badge)
+![Versão](https://img.shields.io/badge/Versão-v1.1.0-blue?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/Idioma-Português%20(Brasil)-green?style=for-the-badge)
 
-Pacote portátil de localização do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. A tradução cobre 20.267 mensagens NLS (95,5% de cobertura direta), módulos exclusivos do Devin/Windsurf (agentes, editor, sessões em nuvem, alternâncias, SSH e painéis integrados), com instalador e restaurador automatizados.
+Pacote portátil de localização do **Devin Desktop (Devin AI)** para Português do Brasil (pt-BR), desenvolvido e preparado por **Emerson Teles**. Compatível com Devin Desktop 3.11.228 / núcleo VS Code OSS 1.126.0. O catálogo cobre 20.208 mensagens NLS (95,3%) e inclui tradução de bundles da interface web, com instalador e restaurador automatizados.
 
 <!-- devin-status -->
-## Estado da atualização — 14/10/2026 · Devin Desktop 1.126.0 / mecanismo 3.10.48
+## Estado da atualização — 27/10/2026 · Devin Desktop 3.11.228 / núcleo 1.126.0
 
-- O pacote gerado foi auditado contra os metadados NLS da instalação Devin 1.126.0: 20.267/21.220 mensagens traduzidas diretamente (95,5%), com 953 entradas restantes, em grande parte conteúdo técnico e de acessibilidade. A auditoria encontrou dois rótulos visíveis sem tradução — “Explain and Fix Problem” e “Explain and Fix” — agora mapeados em PT-BR.
-- Corrigido o catálogo incompatível, o reconhecimento da revisão instalada e os textos embutidos da tela inicial. O aplicativo foi aberto após a instalação, e seu cache NLS confirmou as mensagens em português e o crédito no Sobre.
-- Em 14/10/2026, o usuário confirmou que testou a instalação e a restauração do Devin; ambas estão funcionando. A correção de BOM UTF-8 do instalador também foi validada sintaticamente.
+- A atualização manteve o núcleo 1.126.0, mas atualizou a interface para 3.11.228. O catálogo reconstruído contra os metadados atuais cobre 20.208/21.210 mensagens NLS (95,3%); 1.002 ainda não têm tradução direta.
+- A busca dinâmica encontrou e traduziu os bundles novos da interface web. A auditoria analisou 183 candidatos, alterou 176 arquivos e conferiu 352 textos do catálogo, incluindo os quatro rótulos críticos mostrados pelo usuário.
+- Foram adicionadas 26 entradas para a interface e tempos relativos (dias, horas, minutos, meses, semanas e anos). O instalador agora encerra os processos restantes após tentar o fechamento normal e atualiza o checksum do host web.
 - Instalador e restaurador validam primeiro caminhos do processo, registro e locais conhecidos; só quando nenhum candidato válido contém Devin.exe e `resources\app\package.json` iniciam a busca profunda em unidades fixas e removíveis. A busca ignora pastas raiz do sistema e junctions, deduplica caminhos, mantém instalações distintas selecionáveis e não usa a barra sobreposta do PowerShell. Mantenha `Find-Installations.ps1` ao lado dos scripts.
 <!-- /devin-status -->
 
@@ -57,7 +54,7 @@ Este pacote foi desenvolvido para localizar profundamente as mensagens e interfa
 
 | Categoria | Detalhes da Localização |
 | :--- | :--- |
-| **Catálogo NLS (20.267+ Mensagens)** | Cobertura de 95,5% das mensagens do Devin Desktop, abrangendo menus, comandos, sessões na nuvem, alternância Agente/Editor, diagnósticos, barra lateral e atalhos. |
+| **Catálogo NLS (20.208 Mensagens)** | Cobertura de 95,3% das mensagens do Devin Desktop, abrangendo menus, comandos, sessões na nuvem, alternância Agente/Editor, diagnósticos, barra lateral e atalhos. |
 | **Módulos do Devin/Windsurf** | Telas de boas-vindas, configurações do modelo, alternância entre chat e editor de código, SSH para agentes remotos e comandos de interface. |
 | **Diálogo "Sobre o Devin"** | Crédito oficial integrado: *"Tradução PT-BR: Emerson Teles"* visível diretamente na caixa Sobre em português. |
 | **Ações de IA e Diagnóstico** | Localização de botões como *"Explicar e corrigir o problema"* (*Explain and Fix Problem*) e orientações de execução de agentes. |
@@ -92,8 +89,8 @@ Devin-Traducao-PTBR/
 │   ├── devin-complemento.json          # Complementos e termos específicos
 │   └── embedded-ui.json                # Rótulos da interface web e componentes
 ├── assets/
-│   ├── base-language-pack-ptbr-1.128.vsix
-│   └── Devin-PTBR.vsix                 # VSIX base para remontagem
+│   ├── Devin-PTBR.vsix                 # base PT-BR compatível com o núcleo 1.126.0
+│   └── base-language-pack-ptbr-1.128.vsix # referência histórica, não usada pelo instalador
 ├── Instalar-Traducao.bat               # Instalador executável em 2 cliques
 └── Restaurar-Original.bat              # Restaurador executável em 2 cliques
 ```
@@ -102,7 +99,7 @@ Devin-Traducao-PTBR/
 
 ## 🚀 Como Instalar em 2 Cliques
 
-1. Baixe o pacote portátil `Devin-Traducao-PTBR-v1.0.0-Portable.zip` e extraia para qualquer pasta.
+1. Baixe o pacote portátil `Devin-Traducao-PTBR-v1.1.0-Portable.zip` e extraia para qualquer pasta.
 2. Dê um duplo clique no arquivo:
    ```cmd
    Instalar-Traducao.bat

@@ -88,7 +88,7 @@ pkg.description = 'Pacote PT-BR adaptado para Devin Desktop, com base no pacote 
 pkg.publisher = 'EmersonTeles';
 pkg.version = appVersion;
 const revision = crypto.createHash('sha256');
-for (const file of [__filename, extraPath, supplementalPath, path.resolve(__dirname, '..', 'translations', 'embedded-ui.json'), path.resolve(__dirname, 'patch-embedded-ui.cjs'), path.resolve(__dirname, 'vendor', 'acorn.cjs')]) {
+for (const file of [path.resolve(__dirname, '..', 'core', 'instalar.ps1'), path.resolve(__dirname, '..', 'core', 'Find-Installations.ps1'), __filename, extraPath, supplementalPath, path.resolve(__dirname, '..', 'translations', 'embedded-ui.json'), path.resolve(__dirname, 'patch-embedded-ui.cjs'), path.resolve(__dirname, 'vendor', 'acorn.cjs')]) {
   revision.update(fs.readFileSync(file));
 }
 pkg.devinTranslationRevision = revision.digest('hex');

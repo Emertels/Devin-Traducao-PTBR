@@ -1,6 +1,6 @@
 # Devin PT-BR — montagem e auditoria
 
-Revisão de 14/10/2026 para Devin Desktop 3.10.48 / VS Code OSS 1.126.0.
+Revisão de 27/10/2026 para Devin Desktop 3.11.228 / VS Code OSS 1.126.0.
 
 O catálogo precisa usar `contents[moduleId][key]`, com o nome simbólico de cada chave de `nls.keys.json`. Um catálogo com índices numéricos é ignorado pelo carregador do Devin. A limpeza de cache é necessária após corrigir o conteúdo, mas não corrige um catálogo incompatível.
 
@@ -19,10 +19,10 @@ A base e o aplicativo devem ter a mesma versão. O pacote `base-language-pack-pt
 - `node tools/verify-shipped-nls.cjs <pasta-out-do-Devin> <main.i18n.json>`: extrai e executa o gerador NLS do aplicativo em uma pasta temporária isolada, sem iniciar Electron nem alterar o perfil do usuário. Verifica menus, campos do Sobre e crédito único. A extração é específica da compilação analisada e falha explicitamente se o carregador mudar.
 - `node tests/embedded-ui.cjs`: verifica recursos JSON, chaves de objeto, expressões regulares, comentários, templates e reaplicação.
 
-O carregador real confirmou 20.267 de 21.220 mensagens diferentes do inglês (95,5%). O mesmo resultado foi observado no cache criado pelo Devin instalado após a aplicação. As 953 entradas restantes incluem nomes, termos técnicos, textos de acessibilidade e outros rótulos ainda sem tradução direta; os textos embutidos fora do NLS são contados separadamente.
+O carregador real confirmou 20.208 de 21.210 mensagens diferentes do inglês (95,3%). A conferência foi repetida no cache gerado pelo Devin 3.11.228 após a aplicação. As 1.002 entradas restantes incluem nomes, termos técnicos, textos de acessibilidade e outros rótulos ainda sem tradução direta; os textos embutidos fora do NLS são contados separadamente.
 
 ## Instalador e restaurador
 
-Ambos oferecem `-NoPrompt` para execução sem a pergunta de abertura. O instalador calcula a revisão dos arquivos da tradução e a compara com a extensão instalada, evitando considerar um pacote antigo atualizado apenas por ter a mesma versão. A revisão precisa corresponder aos arquivos publicados no ZIP. O cache `clp` é arquivado antes de ser recriado. O restaurador usa os backups originais da versão selecionada e remove a extensão do mesmo identificador.
+Ambos oferecem `-NoPrompt` para execução sem a pergunta de abertura. O instalador calcula a revisão dos arquivos da tradução e dos scripts de instalação e a compara com a extensão instalada, evitando considerar um pacote antigo atualizado apenas por ter a mesma versão. A revisão precisa corresponder aos arquivos publicados no ZIP. O cache `clp` é arquivado antes de ser recriado. O restaurador usa os backups originais da versão selecionada e remove a extensão do mesmo identificador.
 
-O tradutor embutido usa Acorn 8.16.0, incluído sob licença MIT em `tools/vendor`. Os arquivos JavaScript são preparados antes da troca, e os backups originais são preservados.
+O tradutor embutido usa Acorn 8.16.0, incluído sob licença MIT em `tools/vendor`. Ele descobre os bundles web com strings do catálogo, ignora os pacotes de idioma auxiliares e prepara todos os arquivos antes da troca. Os backups originais são preservados. O instalador tenta encerrar o Devin normalmente e finaliza os processos restantes após 15 segundos.

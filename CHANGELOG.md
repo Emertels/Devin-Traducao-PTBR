@@ -1,4 +1,18 @@
 # Histórico de Alterações
+## [1.1.0] - 2026-10-27
+
+Compatível com Devin Desktop 3.11.228 e núcleo VS Code OSS 1.126.0.
+
+### Traduções e varredura
+- Adicionadas 26 entradas para rótulos da tela mostrada pelo usuário e tempos relativos: 30 palavras de origem correspondem a 31 palavras em PT-BR. Inclui dias, horas, minutos, meses, semanas e anos (por exemplo, “17d ago” → “há 17 dias”).
+- A busca agora identifica bundles JavaScript com nomes gerados na interface web do Devin, além dos arquivos de sessão, chat e mensagens NLS. Na auditoria da versão instalada, 183 bundles candidatos foram analisados, 176 receberam alterações e 352 textos do catálogo foram localizados; todos os quatro rótulos usados como verificação obrigatória foram encontrados.
+- Auditoria do pacote gerado contra a instalação atual: 20.208/21.210 mensagens NLS traduzidas (95,3%); 1.002 seguem sem tradução direta no catálogo.
+
+### Instalador e pacote
+- O instalador pede o encerramento normal do Devin e finaliza processos restantes se continuarem abertos após 15 segundos; atualiza também o checksum do host web.
+- Construtor e instalador agora calculam a mesma revisão incluindo traduções, tokenizer e scripts de instalação. Ao reaplicar, o validador consulta os backups imutáveis caso o bundle ativo já tenha sido traduzido.
+- Aplicação feita na instalação atual e cache de idioma renovado com cópia preservada. Pacote portátil v1.1.0 sem README, changelog ou arquivos de agente; histórico completo permanece nestas notas de versão.
+
 ### Correção do carregamento PT-BR — Devin Desktop 1.126.0 / 3.10.48 — 14/10/2026
 - Corrigido o catálogo para gravar os nomes simbólicos de `nls.keys.json`, conforme o carregador distribuído com o Devin. O catálogo numérico anterior era ignorado e produzia um cache em inglês; limpar o cache sozinho não resolvia.
 - O instalador compara a revisão do conteúdo da tradução, além da versão do aplicativo e do locale, para atualizar instalações que ainda tenham o catálogo incompatível.

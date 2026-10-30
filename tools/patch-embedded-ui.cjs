@@ -37,6 +37,20 @@ const source = fs.readFileSync(inputPath, 'utf8');
 const patches = [];
 let matchCount = 0;
 const matchedKeys = new Set();
+function translateStringOrJson(value) {
+  let translated = translateValue(value);
+  // Devin ships some UI catalogs as JSON inside JavaScript template literals.
+  // Translate only catalog values; keys are identifiers and must stay stable.
+  if (typeof translated === 'string' && translated.trimStart().startsWith('{')) {
+    try {
+      const parsed = JSON.parse(translated);
+      const before = JSON.stringify(parsed);
+      const after = JSON.stringify(translateValue(parsed));
+      if (after !== before) translated = after;
+    } catch { /* A regular template/string is not a JSON resource. */ }
+  }
+  return translated;
+}
 function translateValue(value) {
   if (typeof value === 'string') {
     if (Object.hasOwn(dictionary, value)) { matchCount++; matchedKeys.add(value); return dictionary[value]; }
@@ -55,18 +69,10 @@ function inspect(token, next) {
   if (token.type.label === 'string') {
     // Never rename object keys, even when they happen to match a UI label.
     if (next.type.label === ':') return;
-    let value = translateValue(token.value);
-    if (typeof value === 'string' && value.trimStart().startsWith('{')) {
-      try {
-        const json = JSON.parse(value);
-        const translated = JSON.stringify(translateValue(json));
-        // Preserve JSON resource keys; change only dictionary-matched values.
-        if (translated !== JSON.stringify(JSON.parse(value))) value = translated;
-      } catch { /* Ordinary JavaScript strings are not JSON resources. */ }
-    }
+    const value = translateStringOrJson(token.value);
     if (value !== token.value) patches.push({ start: token.start, end: token.end, text: JSON.stringify(value) });
   } else if (token.type.label === 'template' && typeof token.value === 'string') {
-    const value = translateValue(token.value);
+    const value = translateStringOrJson(token.value);
     if (value !== token.value) {
       const raw = JSON.stringify(value).slice(1, -1).replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
       patches.push({ start: token.start, end: token.end, text: raw });

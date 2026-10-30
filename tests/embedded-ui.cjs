@@ -11,6 +11,7 @@ const helper = path.resolve(__dirname, '../tools/patch-embedded-ui.cjs');
 const dictionary = path.resolve(__dirname, '../translations/embedded-ui.json');
 fs.writeFileSync(input, [
   `const resources = JSON.parse('{"nav":{"spaces":"Spaces","automations":"Automations","cloudSettings":"Cloud settings"},"shortAgo":"{{count}}d ago"}');`,
+  'const templateResources = `{"manage":"Manage your personal preferences","contrast":"High contrast mode"}`;',
   'const welcome = "Congrats on starting your first session!";',
   'const recovery = "Session is too old to be revived. Please start a new session.";',
   'const action = "Open customizations";',
@@ -24,11 +25,13 @@ const result = JSON.parse(execFileSync(process.execPath, [helper, dictionary, in
 assert.ok(result.changed);
 const patched = fs.readFileSync(output, 'utf8');
 assert.ok(patched.includes('// "Sessions" must remain'));
-const values = vm.runInNewContext(patched + ';({resources, welcome, recovery, action, object, pattern:pattern.source, tip, label})');
+const values = vm.runInNewContext(patched + ';({resources, templateResources, welcome, recovery, action, object, pattern:pattern.source, tip, label})');
 assert.equal(values.resources.nav.spaces, 'Espaços');
 assert.equal(values.resources.nav.automations, 'Automações');
 assert.equal(values.resources.nav.cloudSettings, 'Configurações da nuvem');
 assert.equal(values.resources.shortAgo, 'há {{count}} dias');
+assert.equal(JSON.parse(values.templateResources).manage, 'Gerencie suas preferências pessoais');
+assert.equal(JSON.parse(values.templateResources).contrast, 'Modo de alto contraste');
 assert.equal(values.welcome, 'Parabéns por iniciar sua primeira sessão!');
 assert.equal(values.recovery, 'Esta sessão é antiga demais para ser retomada. Inicie uma nova sessão.');
 assert.equal(values.action, 'Abrir personalizações');

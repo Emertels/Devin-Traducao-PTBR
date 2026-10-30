@@ -1,11 +1,13 @@
 # Histórico de Alterações
 ## [1.1.0] — Devin Desktop 3.11.238 / núcleo VS Code OSS 1.126.0 — 30/10/2026
 
-### Atualização do catálogo e teste no aplicativo
-- Adicionadas 91 traduções NLS para controles de sessões, ações de edição, navegação lateral, atalhos, comandos de revisão e descrições de comandos do agente.
-- Reconstruído e aplicado o pacote PT-BR na instalação Windows atual (3.11.238). O catálogo passou de 20.208/21.210 (95,3%) para 20.267/21.210 (95,6%); 59 mensagens antes sem cobertura já estavam no complemento, além das 91 entradas novas. Restam 943 lacunas, em sua maioria metadados técnicos, acessibilidade e nomes próprios.
-- Atualizados os bundles da interface web e o cache. O idioma foi configurado e o instalador confirmou a aplicação.
-- ZIP portátil sem README, CHANGELOG e arquivos de desenvolvimento; notas desta versão acompanham a release e permanecem no repositório.
+### Correção das telas de preferências e dos menus
+- Corrigido o patcher dos textos internos para processar catálogos JSON dentro de template literals JavaScript, sem alterar as chaves do catálogo. Era por isso que o bundle era localizado, mas as preferências continuavam em inglês.
+- Adicionadas 38 traduções de interface para preferências pessoais, perfil, aparência, fontes, sessões e atalhos, incluindo as frases exibidas no print.
+- Traduzidas as 55 chaves NLS do menu nativo do Devin (File, Edit, View, Go, Help e comandos associados), usando as chaves reais do módulo `desktopShellMenubar`.
+- Reinstalado e reaberto no Devin 3.11.238. Verificação dos bundles: 7/7 textos de preferências selecionados em português e nenhuma das cinco frases de origem inglesas correspondentes; menu sem lacunas no módulo NLS.
+- Teste de regressão para JSON em template literal aprovado. Cobertura NLS: 20.322/21.210 (95,8%), ante 20.208/21.210 (95,3%) antes da revisão desta versão; permanecem 888 entradas, principalmente metadados técnicos, acessibilidade e nomes próprios.
+- ZIP portátil atualizado sem README, changelog ou arquivos de agente; o changelog completo fica nesta release e no repositório.
 ## [1.1.1] - 2026-10-27
 
 Compatível com Devin Desktop 3.11.228 e núcleo VS Code OSS 1.126.0.

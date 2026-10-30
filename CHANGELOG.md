@@ -1,4 +1,11 @@
 # Histórico de Alterações
+## [1.1.0] — Devin Desktop 3.11.238 / núcleo VS Code OSS 1.126.0 — 30/10/2026
+
+### Atualização do catálogo e teste no aplicativo
+- Adicionadas 91 traduções NLS para controles de sessões, ações de edição, navegação lateral, atalhos, comandos de revisão e descrições de comandos do agente.
+- Reconstruído e aplicado o pacote PT-BR na instalação Windows atual (3.11.238). O catálogo passou de 20.208/21.210 (95,3%) para 20.267/21.210 (95,6%); 59 mensagens antes sem cobertura já estavam no complemento, além das 91 entradas novas. Restam 943 lacunas, em sua maioria metadados técnicos, acessibilidade e nomes próprios.
+- Atualizados os bundles da interface web e o cache. O idioma foi configurado e o instalador confirmou a aplicação.
+- ZIP portátil sem README, CHANGELOG e arquivos de desenvolvimento; notas desta versão acompanham a release e permanecem no repositório.
 ## [1.1.1] - 2026-10-27
 
 Compatível com Devin Desktop 3.11.228 e núcleo VS Code OSS 1.126.0.

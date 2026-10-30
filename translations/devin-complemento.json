@@ -211,5 +211,184 @@
   },
   "vs/editor/contrib/hover/browser/markerHoverParticipant": {
     "windsurf explain and fix problem": "Explicar e corrigir"
+  },
+  "vs/base/browser/ui/dialog/dialog": {
+    "ok": "OK"
+  },
+  "vs/base/browser/ui/tree/abstractTree": {
+    "filter": "Filtrar"
+  },
+  "vs/base/common/date": {
+    "duration.s": "{0}s"
+  },
+  "vs/base/common/keybindingLabels": {
+    "altKey": "Alt",
+    "altKey.long": "Alt",
+    "cmdKey.long": "Command",
+    "ctrlKey": "Ctrl",
+    "ctrlKey.long": "Control",
+    "shiftKey": "Shift",
+    "shiftKey.long": "Shift",
+    "superKey": "Super",
+    "superKey.long": "Super",
+    "windowsKey": "Windows",
+    "windowsKey.long": "Windows"
+  },
+  "vs/platform/agentHost/browser/agentHostConnectionsService": {
+    "agentHost.connection.ambient": "Local"
+  },
+  "vs/platform/agentHost/common/agentHostSchema": {
+    "agentHost.sessionConfig.mode.autopilot": "Piloto automático"
+  },
+  "vs/platform/agentHost/node/copilot/copilotAgent": {
+    "copilot.modelContextTier.default": "Padrão",
+    "copilot.modelContextTier.description": "Selecione o tamanho da janela de contexto deste modelo.",
+    "copilot.modelContextTier.longerSessions": "Sessões mais longas",
+    "copilot.modelContextTier.longerSessionsNoCompaction": "Sessões mais longas sem compactação",
+    "copilot.modelContextTier.title": "Tamanho do contexto"
+  },
+  "vs/platform/agentHost/node/copilot/copilotAgentSession": {
+    "agentHost.planReview.viewPlanLink": "Ver plano completo",
+    "copilotSlashCommand.unsupportedRuntimeResult": "O comando /{0} retornou um resultado incompatível com este ambiente."
+  },
+  "vs/platform/agentHost/node/copilot/copilotSlashCommandCompletionProvider": {
+    "copilotSlashCommand.compact.description": "Libere contexto compactando o histórico da conversa",
+    "copilotSlashCommand.env.description": "Mostrar detalhes do ambiente carregado",
+    "copilotSlashCommand.plan.description": "Criar um plano de implementação antes de programar",
+    "copilotSlashCommand.research.description": "Pesquisar um tema em profundidade usando buscas e fontes da web",
+    "copilotSlashCommand.review.description": "Executar um agente de revisão de código para analisar as alterações",
+    "copilotSlashCommand.rubberDuck.description": "Obter uma avaliação independente da abordagem atual",
+    "copilotSlashCommand.securityReview.description": "Analisar alterações preparadas e não preparadas em busca de vulnerabilidades de segurança"
+  },
+  "vs/platform/agentHost/node/copilot/copilotToolDisplay": {
+    "toolName.patch": "Patch"
+  },
+  "vs/platform/browserView/common/browserView": {
+    "browserZoomPercent": "{0}%"
+  },
+  "vs/platform/browserView/electron-main/browserViewMainService": {
+    "browser.contextMenu.copyLinkUrl": "Copiar URL"
+  },
+  "vs/platform/dialogs/common/dialogs": {
+    "okButton": "&&OK"
+  },
+  "vs/platform/keybinding/common/abstractKeybindingService": {
+    "keybindingLabel": "{0} ({1})"
+  },
+  "vs/platform/languagePacks/common/localizedStrings": {
+    "find": "Localizar"
+  },
+  "vs/platform/list/browser/listService": {
+    "workbenchConfigurationTitle": "Área de trabalho"
+  },
+  "vs/platform/menubar/electron-main/menubar": {
+    "confirmRestartUpdate.cancel": "Cancelar",
+    "confirmRestartUpdate.yes": "Sim",
+    "mTerminal": "&&Terminal"
+  },
+  "vs/platform/native/electron-main/nativeHostMainService": {
+    "ok": "&&OK",
+    "trace.ok": "&&OK"
+  },
+  "vs/platform/process/electron-main/processMainService": {
+    "local": "Local"
+  },
+  "vs/platform/quickinput/browser/quickInput": {
+    "ok": "OK"
+  },
+  "vs/platform/quickinput/browser/quickInputController": {
+    "ok": "OK"
+  },
+  "vs/platform/terminal/common/terminalLogService": {
+    "terminalLoggerName": "Terminal"
+  },
+  "vs/sessions/browser/layoutActions": {
+    "sidePanelHidden": "Painel lateral oculto",
+    "sidePanelVisible": "Painel lateral exibido",
+    "toggleSecondarySidebar": "Alternar painel lateral"
+  },
+  "vs/sessions/browser/parts/chatCompositeBar": {
+    "chatTabsAriaLabel": "Conversas",
+    "closeChat": "Fechar"
+  },
+  "vs/sessions/browser/parts/menubar.contribution": {
+    "mTerminal": "&&Terminal"
+  },
+  "vs/sessions/browser/parts/sessionHeader": {
+    "agentSessions.newSession": "Nova sessão"
+  },
+  "vs/sessions/contrib/changes/browser/changesActions": {
+    "agentSessions.viewChanges": "Ver todas as alterações",
+    "sessions.changes.title": "Alterações da sessão"
+  },
+  "vs/sessions/contrib/changes/browser/changesView": {
+    "sessions.changes.title": "Alterações da sessão"
+  },
+  "vs/sessions/contrib/changes/browser/checksWidget": {
+    "ci.fixChecks": "Corrigir verificações"
+  },
+  "vs/sessions/contrib/chat/browser/chat.contribution": {
+    "chat.newEdits.label": "Novo chat"
+  },
+  "vs/sessions/contrib/chat/browser/sessionWorkspacePicker": {
+    "pickWorkspace": "espaço de trabalho",
+    "workspacePicker.experimental": "Experimental"
+  },
+  "vs/sessions/contrib/codeReview/browser/codeReview.contributions": {
+    "sessions.runCodeReview.tooltip": "Executar revisão de código"
+  },
+  "vs/sessions/contrib/editor/browser/editor.contribution": {
+    "addFileAsContext": "Adicionar arquivo como contexto",
+    "closeMainEditorPart": "Fechar área do editor",
+    "maximizeMainEditorPart": "Maximizar área do editor",
+    "openEditorInModal": "Abrir no editor modal",
+    "openModalEditorInEditor": "Abrir na área do editor",
+    "pullEditorLeft": "Mostrar barra lateral secundária",
+    "pushEditorRight": "Mover editor para a direita",
+    "restoreMainEditorPart": "Restaurar área do editor"
+  },
+  "vs/sessions/contrib/providers/copilotChatSessions/browser/branchPicker": {
+    "branchPicker.select": "Branch"
+  },
+  "vs/sessions/contrib/providers/copilotChatSessions/browser/copilotChatSessionsActions": {
+    "branchPicker": "Branch"
+  },
+  "vs/sessions/contrib/providers/remoteAgentHost/browser/remoteHostOptions": {
+    "workspacePicker.statusOffline": "Desconectado",
+    "workspacePicker.statusOnline": "Conectado"
+  },
+  "vs/sessions/contrib/sessions/browser/customizationsToolbar.contribution": {
+    "hooks": "Hooks",
+    "plugins": "Plug-ins"
+  },
+  "vs/sessions/contrib/sessions/browser/views/sessionsList": {
+    "lastSevenDays": "Últimos 7 dias",
+    "today": "Hoje",
+    "yesterday": "Ontem"
+  },
+  "vs/sessions/contrib/sessions/browser/views/sessionsView": {
+    "newCompact": "Novo",
+    "newSessionButtonAriaLabelWithoutKeybinding": "Nova sessão",
+    "newSessionButtonTitleWithoutKeybinding": "Nova sessão"
+  },
+  "vs/sessions/contrib/sessions/browser/views/sessionsViewActions": {
+    "filter": "Filtrar",
+    "find": "Localizar sessão"
+  },
+  "vs/workbench/browser/actions/layoutActions": {
+    "compositePart.showSideBarLabel": "Mostrar barra lateral principal"
+  },
+  "vs/workbench/browser/parts/editor/editor.contribution": {
+    "copySessionId": "Copiar ID da sessão",
+    "copySessionUrl": "Copiar URL da sessão"
+  },
+  "vs/workbench/browser/parts/editor/editorCommands": {
+    "editorGroupLayout.horizontal": "Horizontal",
+    "editorGroupLayout.vertical": "Vertical"
+  },
+  "vs/workbench/browser/parts/editor/editorStatus": {
+    "addToGitignore": "Adicionar ao .gitignore",
+    "alreadyInGitignore": "O arquivo já está no .gitignore",
+    "cannotReadGitignore": "Não foi possível ler o .gitignore"
   }
 }

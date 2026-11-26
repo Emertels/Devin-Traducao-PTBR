@@ -50,7 +50,7 @@ const pkgPath = path.join(outExt, 'package.json');
 const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
 const baseVersion = pkg.version;
 if (baseVersion !== appVersion) {
-  throw new Error(`A versão da base PT-BR (${baseVersion}) não corresponde ao Devin instalado (${appVersion}). Use um pacote-base da mesma versão para preservar os índices NLS.`);
+  console.log(`[*] Adaptando base oficial PT-BR (${baseVersion}) por chave para o núcleo Devin ${appVersion}...`);
 }
 const mapped = {};
 for (const [moduleId, entryKeys] of Object.entries(metadata.keys)) {
@@ -92,7 +92,7 @@ for (const file of [path.resolve(__dirname, '..', 'core', 'instalar.ps1'), path.
   revision.update(fs.readFileSync(file));
 }
 pkg.devinTranslationRevision = revision.digest('hex');
-pkg.engines.vscode = '^1.126.0';
+pkg.engines.vscode = `^${appVersion}`;
 const localization = pkg.contributes.localizations.find(item => item.languageId.toLowerCase() === 'pt-br');
 if (localization) {
   localization.languageName = 'Portuguese (Brazil)';
@@ -108,7 +108,7 @@ manifest = manifest.replace(/<Identity\s+([^>]*?)\s*\/>/, (_m, attrs) => {
     .replace(/Id="[^"]*"/, 'Id="devin-language-pack-pt-br"');
   return `<Identity ${attrs} />`;
 });
-manifest = manifest.replace(/Value="\^1\.128\.0"/g, 'Value="^1.126.0"');
+manifest = manifest.replace(/Value="\^1\.\d+\.\d+"/g, `Value="^${appVersion}"`);
 manifest = manifest.replace(/<DisplayName>[^<]*<\/DisplayName>/, '<DisplayName>Tradução PT-BR para Devin — Emerson Teles</DisplayName>');
 manifest = manifest.replace(/(LocalizedLanguages" Value=")[^"]*(")/, '$1português (Brasil)$2');
 fs.writeFileSync(manifestPath, manifest);

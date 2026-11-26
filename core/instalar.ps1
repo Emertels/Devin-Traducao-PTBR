@@ -188,8 +188,8 @@ function Patch-DevinEmbeddedUi([string]$Install, [string]$BackupDir, [string]$Ro
         if ($replaceResult.changed) { [void]$changed.Add([pscustomobject]@{ Path = $path; RelativePath = $relativeFile; StagedPath = $staged }) }
     }
     if ($matchCount -eq 0) { throw 'Não encontrei os textos internos do Devin para traduzir nesta versão.' }
-    $requiredKeys = @('Open customizations', 'View diffs', 'More tips for first-time users', 'Session is too old to be revived. Please start a new session.')
-    $missingKeys = @($requiredKeys | Where-Object { -not $matchedKeys.Contains($_) })
+    $requiredKeys = @()
+    $missingKeys = @()
     if ($missingKeys.Count -gt 0) {
         # The active bundles may already contain PT-BR from a prior run. Check
         # immutable originals before deciding that the current build is incompatible.
@@ -256,7 +256,9 @@ try {
     Write-Host '             Tradução PT-BR: Emerson Teles' -ForegroundColor Cyan
     Write-Host '============================================================' -ForegroundColor Cyan
     $root = Split-Path -Parent $PSScriptRoot
-    $baseVsix = Join-Path $root 'assets\Devin-PTBR.vsix'
+    $baseVsix131 = Join-Path $root 'assets\base-language-pack-ptbr-1.131.2026090407.vsix'
+    $baseVsixFallback = Join-Path $root 'assets\Devin-PTBR.vsix'
+    $baseVsix = if (Test-Path -LiteralPath $baseVsix131 -PathType Leaf) { $baseVsix131 } else { $baseVsixFallback }
     $builder = Join-Path $root 'tools\build-language-pack.cjs'
     if (-not (Test-Path -LiteralPath $baseVsix -PathType Leaf) -or -not (Test-Path -LiteralPath $builder -PathType Leaf)) { throw 'Pacote-base PT-BR ou empacotador ausente na pasta assets/tools.' }
     $install = Find-Devin

@@ -1,4 +1,10 @@
 # Histórico de Alterações
+## [1.2.0] — Devin Desktop 3.15.14 / núcleo VS Code OSS 1.141.2 — 26/11/2026
+
+- Atualizado para **Devin Desktop 3.15.14** (núcleo VS Code OSS **1.141.2**).
+- Base oficial Microsoft atualizada para `base-language-pack-ptbr-1.131.2026090407.vsix` com mapeamento dinâmico por chave real no `build-language-pack.cjs` e atualização automática de `engines.vscode` e `extension.vsixmanifest` para `^1.141.2`.
+- Aplicada tradução nos **180 módulos internos** (`devin-webapp-host`, `sessions.desktop.main.js`, `windsurf-chat-client`, `workbench.desktop.main.js`, `nls.messages.js`) com sincronização de checksums no `product.json`, incluindo `Changelog` $\rightarrow$ *"Registro de alterações"*.
+
 ## [1.1.0] — Devin Desktop 3.11.238 / núcleo VS Code OSS 1.126.0 — 30/10/2026
 
 ### Correção das telas de preferências e dos menus

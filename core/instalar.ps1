@@ -371,7 +371,7 @@ try {
     }
     if ($workDir -and (Test-Path -LiteralPath $workDir)) { Remove-Item -LiteralPath $workDir -Recurse -Force }
     Remove-Item Env:\DEVIN_APP_VERSION, Env:\DEVIN_NLS_METADATA, Env:\DEVIN_NLS_KEYS, Env:\DEVIN_NLS_MESSAGES -ErrorAction SilentlyContinue
-    if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath $exe -ArgumentList '--locale=pt-br' }
+    if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath 'explorer.exe' -ArgumentList "`"$exe`"" }
     exit 0
 } catch {
     if ($langPackInstalled -and $cli -and $extensionsDir) { try { & $cli --extensions-dir $extensionsDir --uninstall-extension emersonteles.devin-language-pack-pt-br *> $null } catch {} }

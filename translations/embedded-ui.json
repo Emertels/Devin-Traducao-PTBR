@@ -483,5 +483,17 @@
   "Close Window": "Fechar janela",
   "Exit": "Sair",
   "Save": "Salvar",
-  "Changelog": "Registro de alterações"
+  "Changelog": "Registro de alterações",
+  "&&File": "&&Arquivo",
+  "&&Edit": "&&Editar",
+  "&&View": "&&Exibir",
+  "&&Go": "&&Ir",
+  "&&Help": "&&Ajuda",
+  "Keyboard Shortcuts": "Atalhos de teclado",
+  "View License": "Exibir licença",
+  "Toggle Developer Tools": "Alternar ferramentas de desenvolvedor",
+  "Open Process Explorer": "Abrir explorador de processos",
+  "Check for Updates...": "Verificar atualizações...",
+  "Open &&Process Explorer": "Abrir explorador de &&processos",
+  "View &&License": "Exibir &&licença"
 }

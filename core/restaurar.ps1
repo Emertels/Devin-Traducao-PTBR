@@ -120,10 +120,15 @@ try {
         }
     }
     if (Test-Path -LiteralPath $productJsonBackup) { Copy-Item -LiteralPath $productJsonBackup -Destination $productJsonPath -Force }
+    $langpacks = Join-Path $env:APPDATA 'Devin\languagepacks.json'
+    $langpackBackup = Join-Path $backupDir 'languagepacks.json'
+    if (Test-Path -LiteralPath $langpackBackup) { Copy-Item -LiteralPath $langpackBackup -Destination $langpacks -Force }
+    elseif (Test-Path -LiteralPath $langpacks) { Remove-Item -LiteralPath $langpacks -Force -ErrorAction SilentlyContinue }
+    Get-ChildItem -LiteralPath (Join-Path $env:USERPROFILE '.devin\extensions') -Filter 'emersonteles.devin-language-pack-pt-br-*' -Directory -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
     Copy-Item -LiteralPath $backup -Destination $argv -Force
     Reset-DevinCaches
     Write-Host "A configuração original do Devin $version foi restaurada." -ForegroundColor Green
-    if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath $exe }
+    if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath 'explorer.exe' -ArgumentList "`"$exe`"" }
     exit 0
 } catch {
     Write-Host "`n[ERRO] $($_.Exception.Message)" -ForegroundColor Red

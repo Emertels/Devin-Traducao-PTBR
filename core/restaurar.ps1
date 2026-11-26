@@ -98,7 +98,7 @@ try {
     $list = & $cli --extensions-dir (Join-Path $env:USERPROFILE '.devin\extensions') --list-extensions --show-versions 2>$null | Out-String
     if (Test-DevinAlreadyRestored $install $argv $backup $productJsonPath $productJsonBackup $backupDir $list) {
         Write-Host "O Devin $version já está no idioma original. Nenhuma restauração foi necessária." -ForegroundColor Green
-        if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath $exe }
+        if (Read-OpenChoice 'Deseja abrir o Devin AI? [S = sim | N/Enter/Esc = sair]: ') { Start-Process -FilePath 'explorer.exe' -ArgumentList "`"$exe`"" }
         exit 0
     }
     $running = @(Get-Process -Name Devin -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowHandle -ne 0 })
